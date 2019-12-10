@@ -18,3 +18,6 @@
     ~/.xonshrc: xonsh/xonshrc.xsh
     ~/.pylintrc: pylint/pylintrc
     ~/.config/flake8: flake8/flake8
+    ~/.config/regolith: regolith
+    ~/.Xresources-regolith: Xresources/Xresources-regolith
+    ~/.Xresources.d/i3xrocks: Xresources/i3xrocks
