@@ -1,0 +1,9 @@
+channels:
+  - conda-forge
+  - defaults
+ssl_verify: true
+create_default_packages:
+  - pip
+  - pylint
+  - black
+  - pynvim

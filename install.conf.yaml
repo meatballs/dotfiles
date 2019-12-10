@@ -1,0 +1,20 @@
+- defaults:
+    link:
+      relink: true
+
+- clean:
+    - '~'
+    - ~/.config
+
+- link:
+    ~/dotfiles: ''
+    ~/.condarc: conda/condarc
+    ~/.config/nvim/init.vim: nvim/init.vim
+    ~/.config/nvim/mutt.init.vim: nvim/mutt.init.vim
+    ~/.tmux.conf: tmux/tmux.conf
+    ~/bin/start_tmux:
+          create: true
+          path: tmux/start_tmux
+    ~/.xonshrc: xonsh/xonshrc.xsh
+    ~/.pylintrc: pylint/pylintrc
+    ~/.config/flake8: flake8/flake8

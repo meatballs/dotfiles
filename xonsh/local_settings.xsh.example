@@ -1,0 +1,16 @@
+print('Loaded ~/local_settings.xsh')
+
+# Add paths using a list:
+# paths = [
+#     [$HOME, 'Applications', 'oracle', 'instantclient_11_2'],
+#     ['Applications', 'Postgres.app', 'Contents', 'MacOS', 'bin'],
+# ]
+paths = []
+
+# Set some shortcuts (aliases)
+# shortcuts = {
+#     'gst': ['git', 'status']
+# }
+shortcuts = {}
+
+start_folder = '~'
