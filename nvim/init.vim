@@ -57,9 +57,6 @@ Plug 'majutsushi/tagbar'
 " Autocompleter
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 
-" Fuzzy finder
-Plug '/usr/local/bin/fzf'
-
 " Tag manager
 Plug 'ludovicchabant/vim-gutentags'
 
