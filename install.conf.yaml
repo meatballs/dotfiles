@@ -14,6 +14,7 @@
         path: nvim/init.vim
     ~/.config/nvim/mutt.init.vim: nvim/mutt.init.vim
     ~/.config/nvim/base.vim: nvim/base.vim
+    ~/.config/nvim/mutt.vim: nvim/mutt.vim
     ~/.config/nvim/ide.vim: nvim/ide.vim
     ~/.config/nvim/base_plugins.vim: nvim/base_plugins.vim
     ~/.config/nvim/ide_plugins.vim: nvim/ide_plugins.vim
