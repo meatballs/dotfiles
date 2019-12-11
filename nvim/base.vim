@@ -12,6 +12,10 @@ if exists('+termguicolors') && ($TERM == "st-256color" || $TERM == "tmux-256colo
     set termguicolors
 endif
 
+" Use bash as the shell because xonsh has a bug that stops plugins working
+" https://github.com/xonsh/xonsh/issues/3402
+set shell=bash
+
 " Airline plugin settings
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme='nord'

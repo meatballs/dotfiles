@@ -8,10 +8,6 @@ autocmd TermOpen * set bufhidden=hide
 " Ale plugin settings
 let g:ale_python_pylint_options = '--rcfile ~/.pylintrc'
 
-" Use bash as the shell because xonsh has a bug that stops plugins working
-" https://github.com/xonsh/xonsh/issues/3402
-set shell=/usr/bin/bash
-
 " Custom Key Mappings
 map <F4> :split term://xonsh<CR> :startinsert<CR>
 map <F5> :NERDTreeToggle<CR>
