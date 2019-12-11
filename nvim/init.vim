@@ -55,7 +55,7 @@ Plug 'Yggdroot/indentLine'
 Plug 'majutsushi/tagbar'
 
 " Autocompleter
-Plug 'davidhalter/jedi-vim'
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 
 " Fuzzy finder
 Plug '/usr/local/bin/fzf'
