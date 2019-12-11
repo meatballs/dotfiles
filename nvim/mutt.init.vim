@@ -1,31 +1,12 @@
+source ~/.config/nvim/base.vim
+source ~/.config/nvim/mutt.vim
+
 call plug#begin()
-
-" Status bar at bottom of window
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-
-" Nord colour theme
-Plug 'arcticicestudio/nord-vim'
-
-" Common navigation of tmux and nvim windows
-Plug 'christoomey/vim-tmux-navigator'
-
-" This plugin must be the last in the list
-" Add icons for use by other plugins
-Plug 'ryanoasis/vim-devicons'
-
+source ~/.config/nvim/base_plugins.vim
 call plug#end()
 
-" General Settings
-set nu
-set colorcolumn=79
-set wrap
-set linebreak
-set nolist
-set textwidth=0
-set wrapmargin=0
-set autoread
-set cursorline
+source ~/.config/nvim/base.vim
+source ~/.config/nvim/mutt.vim
 
 " Nord theme plugin settings
 colorscheme nord
