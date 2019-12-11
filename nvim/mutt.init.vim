@@ -27,7 +27,7 @@ set wrapmargin=0
 set autoread
 set cursorline
 
-" Solarized theme plugin settings
+" Nord theme plugin settings
 colorscheme nord
 let g:airline_powerline_fonts = 1
 let g:airline_theme='nord'
