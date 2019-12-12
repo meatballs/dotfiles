@@ -1,6 +1,6 @@
 call plug#begin()
-source ~/.config/nvim/base_plugins.vim
+source ~/.config/nvim/settings/plugins/base.vim
 call plug#end()
 
-source ~/.config/nvim/base.vim
-source ~/.config/nvim/mutt.vim
+source ~/.config/nvim/settings/general/base.vim
+source ~/.config/nvim/settings/general/mail.vim

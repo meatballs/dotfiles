@@ -1,7 +1,7 @@
 call plug#begin()
-source ~/.config/nvim/ide_plugins.vim
-source ~/.config/nvim/base_plugins.vim
+source ~/.config/nvim/settings/plugins/full.vim
+source ~/.config/nvim/settings/plugins/base.vim
 call plug#end()
 
-source ~/.config/nvim/base.vim
-source ~/.config/nvim/ide.vim
+source ~/.config/nvim/settings/general/base.vim
+source ~/.config/nvim/settings/general/full.vim
