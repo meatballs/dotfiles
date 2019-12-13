@@ -8,6 +8,9 @@ autocmd TermOpen * set bufhidden=hide
 " Ale plugin settings
 let g:ale_python_pylint_options = '--rcfile ~/.pylintrc'
 
+" Use deoplete.
+let g:deoplete#enable_at_startup = 1
+
 " Custom Key Mappings
 map <F4> :split term://xonsh<CR> :startinsert<CR>
 map <F5> :NERDTreeToggle<CR>
