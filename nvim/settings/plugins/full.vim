@@ -47,6 +47,7 @@ Plug 'majutsushi/tagbar'
 
 " Autocompleter
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'deoplete-plugins/deoplete-jedi'
 
 " Tag manager
 Plug 'ludovicchabant/vim-gutentags'
