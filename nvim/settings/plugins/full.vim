@@ -1,3 +1,4 @@
+" editorconfig support
 Plug 'editorconfig/editorconfig-vim'
 
 " File explorer tree in LH sidebar
@@ -47,6 +48,7 @@ Plug 'majutsushi/tagbar'
 
 " Autocompleter
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+" Deoplete plugin for Python autocompletion using jedi
 Plug 'deoplete-plugins/deoplete-jedi'
 
 " Tag manager
