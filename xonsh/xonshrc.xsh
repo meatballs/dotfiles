@@ -137,6 +137,13 @@ try:
 except AttributeError:
     pass
 
+
+@events.autovox_policy
+def vox_policy(path, **_):
+    venv = Path($VIRTUALENV_HOME, path.name)
+    if venv.exists():
+        return venv
+
 try:
     cd @(local_settings.start_folder)  # noqa
 except AttributeError:
