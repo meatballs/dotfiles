@@ -126,6 +126,7 @@ aliases.update(local_settings.shortcuts)
 xontrib load autoxsh
 xontrib load coreutils
 xontrib load vox
+xontrib load autovox
 xontrib load powerline2
 
 try:
