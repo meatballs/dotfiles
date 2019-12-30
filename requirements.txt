@@ -3,3 +3,4 @@ pynvim
 muacrypt
 keyring
 todd
+urlscan
