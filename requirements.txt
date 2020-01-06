@@ -4,3 +4,4 @@ muacrypt
 keyring
 todd
 urlscan
+neovim-remote

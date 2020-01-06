@@ -53,3 +53,6 @@ Plug 'deoplete-plugins/deoplete-jedi'
 
 " Tag manager
 Plug 'ludovicchabant/vim-gutentags'
+
+" LaTeX integration
+Plug 'lervag/vimtex'
