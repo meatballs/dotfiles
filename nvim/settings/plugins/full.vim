@@ -56,3 +56,6 @@ Plug 'ludovicchabant/vim-gutentags'
 
 " LaTeX integration
 Plug 'lervag/vimtex'
+
+" Auto session management
+Plug 'tpope/vim-obsession'
