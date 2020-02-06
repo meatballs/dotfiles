@@ -21,3 +21,6 @@ interval=10
 # Date Time
 [time]
 interval=60
+
+[temperature]
+interval=10
