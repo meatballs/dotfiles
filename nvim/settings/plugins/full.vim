@@ -48,6 +48,7 @@ Plug 'majutsushi/tagbar'
 
 " Autocompleter
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+"
 " Deoplete plugin for Python autocompletion using jedi
 Plug 'deoplete-plugins/deoplete-jedi'
 
@@ -59,3 +60,6 @@ Plug 'lervag/vimtex'
 
 " Auto session management
 Plug 'tpope/vim-obsession'
+
+" Live collaboration
+Plug 'floobits/floobits-neovim', {'do': ':UpdateRemotePlugins'}
