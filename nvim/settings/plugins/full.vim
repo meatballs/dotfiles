@@ -61,5 +61,5 @@ Plug 'lervag/vimtex'
 " Auto session management
 Plug 'tpope/vim-obsession'
 
-" Live collaboration
-Plug 'floobits/floobits-neovim', {'do': ':UpdateRemotePlugins'}
+" PUDB Integration
+Plug 'SkyLeach/pudb.vim', {'do': ':UpdateRemotePlugins'}
