@@ -35,7 +35,7 @@ Plug 'tpope/vim-commentary'
 Plug 'airblade/vim-gitgutter'
 
 " Syntax highlighting of .xsh and .xonshrc files
-Plug 'meatballs/vim-xonsh'
+Plug 'linkinpark342/xonsh-vim'
 
 " Syntax for toml files
 Plug 'cespare/vim-toml'
