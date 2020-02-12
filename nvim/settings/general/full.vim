@@ -4,6 +4,7 @@ set path+=**
 set splitbelow
 set splitright
 autocmd TermOpen * set bufhidden=hide
+autocmd TermOpen * setlocal nonumber
 
 " Ale plugin settings
 let g:ale_python_pylint_options = '--rcfile ~/.pylintrc'
@@ -19,6 +20,7 @@ noremap <Leader>f :Autoformat<CR>
 noremap <Leader>t :TagbarToggle<CR>
 :autocmd FileType python nnoremap <buffer> <localleader>d :PUDBLaunchDebuggerTab<CR><CR>
 :autocmd FileType python nnoremap <buffer> <localleader>i :Isort<CR>
+
 
 let g:tex_flavor  = 'latex'
 let g:tex_conceal = ''

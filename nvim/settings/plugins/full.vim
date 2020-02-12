@@ -40,9 +40,6 @@ Plug 'linkinpark342/xonsh-vim'
 " Syntax for toml files
 Plug 'cespare/vim-toml'
 
-" Show vertical lines for indent level
-Plug 'Yggdroot/indentLine'
-
 " Tag explorer in RH sidebar
 Plug 'majutsushi/tagbar'
 
