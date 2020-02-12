@@ -3,6 +3,8 @@ set nu
 set t_Co=256
 set colorcolumn=88
 set cursorline
+let mapleader=" "
+let maplocalleader=" "
 
 " Fix colours on simple terminal and tmux
 " https://github.com/arcticicestudio/nord-vim/issues/166
