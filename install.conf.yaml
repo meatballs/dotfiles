@@ -26,3 +26,4 @@
     ~/.config/regolith: regolith
     ~/.Xresources-regolith: Xresources/Xresources-regolith
     ~/.Xresources.d/i3xrocks: Xresources/i3xrocks
+    ~/.config/pudb/pudb.cfg: pudb/pudb.cfg
