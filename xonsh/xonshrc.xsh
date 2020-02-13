@@ -105,6 +105,8 @@ $PL_PROMPT = 'history'  # noqa
 $PL_RPROMPT = '!'
 $PL_TOOLBAR = 'who>cwd>branch>virtualenv'
 
+$PYTEST_ADDOPTS="--pdbcls pudb.debugger:Debugger --capture=no"
+
 def replay_command(args):
     history_index = args[0]
     @$(history @(history_index))
@@ -123,7 +125,6 @@ for command in shortcuts:
 
 aliases.update(local_settings.shortcuts)
 
-xontrib load autoxsh
 xontrib load coreutils
 xontrib load vox
 xontrib load autovox
