@@ -60,3 +60,6 @@ Plug 'tpope/vim-obsession'
 
 " PUDB Integration
 Plug 'SkyLeach/pudb.vim', {'do': ':UpdateRemotePlugins'}
+
+" CSV Tools
+Plug 'mechatroner/rainbow_csv'

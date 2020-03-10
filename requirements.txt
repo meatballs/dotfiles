@@ -1,7 +1,10 @@
 prompt_toolkit>=3.0
 pynvim
+neovim-remote
 muacrypt
 keyring
 todd
 urlscan
 neovim-remote
+zathura
+msgpack>=1.0.0
