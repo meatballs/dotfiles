@@ -7,8 +7,7 @@ autocmd TermOpen * set bufhidden=hide
 autocmd TermOpen * setlocal nonumber
 
 " Ale plugin settings
-" let g:ale_python_pylint_options = '--rcfile ~/.pylintrc'
-let g:airline#extensions#ale#enabled = 1
+let g:ale_python_pylint_options = '--rcfile ~/.pylintrc'
 
 " Use deoplete.
 let g:deoplete#enable_at_startup = 1
