@@ -63,3 +63,6 @@ Plug 'SkyLeach/pudb.vim', {'do': ':UpdateRemotePlugins'}
 
 " CSV Tools
 Plug 'chrisbra/csv.vim'
+
+" Python code folding
+Plug 'tmhedberg/SimpylFold'
