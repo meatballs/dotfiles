@@ -39,6 +39,8 @@ global_shortcuts = {
     'tmux': {
         'main': ['tmux', 'attach-session', '-t', 'main'],
         'tma': ['tmux', 'attach-session', '-t'],
+        'tmc': ['tmux', 'new-session', '-s'],
+        'tmk': ['tmux', 'kill-session', '-t'],
     },
 }
 
