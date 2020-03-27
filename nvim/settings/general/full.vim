@@ -14,6 +14,7 @@ let g:deoplete#enable_at_startup = 1
 
 " Custom Key Mappings
 noremap <Leader>c :vsplit term://xonsh<CR> :startinsert<CR>
+noremap <Leader>ch :split term://xonsh<CR> :startinsert<CR>
 tnoremap <Esc> <C-\><C-n>
 noremap <Leader>e :NERDTreeToggle<CR>
 noremap <Leader>f :Autoformat<CR>
