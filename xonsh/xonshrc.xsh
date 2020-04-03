@@ -58,6 +58,9 @@ platform_specific_shortcuts = {
         'trash': {
             'rm': ['trash'],
         },
+        'xclip': {
+            'xclip': ['xclip', '-selection', 'c'],
+        }
     }
 }
 
