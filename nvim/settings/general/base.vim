@@ -2,18 +2,10 @@
 set nu
 set t_Co=256
 set colorcolumn=88
-set cursorline
 let mapleader=" "
 let maplocalleader=" "
 let g:python3_host_prog = '/usr/bin/python3'
-
-" Fix colours on simple terminal and tmux
-" https://github.com/arcticicestudio/nord-vim/issues/166
-if exists('+termguicolors') && ($TERM == "st-256color" || $TERM == "tmux-256color")
-    let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
-    let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
-    set termguicolors
-endif
+set termguicolors
 
 " Use bash as the shell because xonsh has a bug that stops plugins working
 " https://github.com/xonsh/xonsh/issues/3402
@@ -29,7 +21,8 @@ let g:airline_powerline_fonts = 1
 let g:nord_italic = 1
 let g:nord_italic_comments = 1
 let g:nord_underline = 1
-let g:nord_uniform_status_lines = 1
-let g:nord_uniform_diff_background = 1
+" let g:nord_uniform_status_lines = 1
+" let g:nord_uniform_diff_background = 1
 let g:nord_cursor_line_number_background = 1
 colorscheme nord
+set cursorline
