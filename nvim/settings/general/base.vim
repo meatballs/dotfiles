@@ -5,6 +5,7 @@ set colorcolumn=88
 set cursorline
 let mapleader=" "
 let maplocalleader=" "
+let g:python3_host_prog = '/usr/bin/python3'
 
 " Fix colours on simple terminal and tmux
 " https://github.com/arcticicestudio/nord-vim/issues/166
