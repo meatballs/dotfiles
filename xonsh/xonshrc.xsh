@@ -150,6 +150,8 @@ def vox_policy(path, **_):
     if venv.exists():
         return venv
 
+__xonsh__.commands_cache.threadable_predictors["glances"] = lambda x: False
+
 try:
     cd @(local_settings.start_folder)  # noqa
 except AttributeError:
