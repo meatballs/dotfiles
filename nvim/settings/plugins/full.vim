@@ -68,3 +68,6 @@ Plug 'chrisbra/csv.vim'
 
 " Python code folding
 Plug 'tmhedberg/SimpylFold'
+
+" Tmux command runner
+Plug 'christoomey/vim-tmux-runner'
