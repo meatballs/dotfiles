@@ -1,9 +1,10 @@
-tmux new-session -d -s main wtfutil
-tmux split-window -h htop
-tmux split-window -t 0 -v weechat
-tmux split-window -t 2 -v todd
-tmux split-window -t 3 -v neomutt
-tmux resize-pane -t 1 -U 5
-tmux resize-pane -t 2 -U 15
-tmux resize-pane -t 3 -U 15
+tmux new-session -d -s main
+tmux split-window -h glances
+tmux split-window -t 0 -v neomutt
+tmux split-window -t 0 -h todd
+tmux split-window -t 1 -v
+tmux split-window -t 4 -v
+tmux resize-pane -t 2 -x 150 -y 15
+tmux resize-pane -t 4 -U 15
+tmux resize-pane -t 5 -U 15
 echo "Created main session"
