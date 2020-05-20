@@ -29,3 +29,7 @@ autocmd BufWinEnter * silent! :%foldopen!
 let g:vimtex_latexmk_continuous = 1
 let g:vimtex_compiler_progname = 'nvr'
 let g:vimtex_view_method = 'zathura'
+let g:VtrUseVtrMaps = 1
+let g:VtrStripLeadingWhitespace = 1
+let g:VtrClearEmptyLines = 1
+
