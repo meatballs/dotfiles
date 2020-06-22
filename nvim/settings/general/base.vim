@@ -4,7 +4,7 @@ set t_Co=256
 set colorcolumn=88
 let mapleader=" "
 let maplocalleader=" "
-let g:python3_host_prog = '/usr/bin/python3'
+let g:python3_host_prog = '/home/owen/.pyenv/versions/nvim/bin/python3'
 set termguicolors
 
 " Use bash as the shell because xonsh has a bug that stops plugins working
