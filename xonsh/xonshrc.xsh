@@ -1,6 +1,7 @@
 import subprocess
 import sys
 from pathlib import Path
+from uuid import uuid4
 
 sys.path.append(str(Path.home()))
 import local_settings
@@ -118,6 +119,11 @@ def replay_command(args):
     return 0
 
 aliases['h'] = replay_command
+
+def _uuid():
+    return uuid4().hex
+
+aliases["uuid"] = _uuid
 
 shortcuts = global_shortcuts.copy()
 shortcuts.update(platform_specific_shortcuts[sys.platform])
