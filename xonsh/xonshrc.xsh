@@ -115,8 +115,11 @@ $PL_TOOLBAR = 'who>cwd>branch>virtualenv'
 $PYTEST_ADDOPTS="--pdbcls pudb.debugger:Debugger --capture=no"
 
 def replay_command(args):
-    history_index = args[0]
-    @$(history @(history_index))
+    if not args:
+        history show -n
+    else:
+        history_index = args[0]
+        @$(history @(history_index))
     return 0
 
 aliases['h'] = replay_command
