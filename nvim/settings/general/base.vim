@@ -26,3 +26,7 @@ let g:nord_underline = 1
 let g:nord_cursor_line_number_background = 1
 colorscheme nord
 set cursorline
+
+inoremap jk <esc>
+inoremap <esc> <nop>
+nnoremap <silent> <leader>nb :set relativenumber!<CR>
