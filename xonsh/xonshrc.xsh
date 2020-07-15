@@ -83,8 +83,8 @@ def path_strings(paths):
     """
     return [str(Path(*path)) for path in paths if Path(*path).exists]
 
-$PATH[:0] = (path_strings(paths[sys.platform]))  # noqa
-$PATH[:0] = (path_strings(local_settings.paths))  # noqa
+$PATH[:0] = (path_strings(paths[sys.platform]))
+$PATH[:0] = (path_strings(local_settings.paths))
 
 #######################################################################################
 # Fix for tmux environment variables only being simple strings so the defaults
@@ -108,7 +108,7 @@ $PL_COLORS = {
 $PL_EXTRA_SEC = {'fix_for_tmux': int}
 #######################################################################################
 
-$PL_PROMPT = 'history'  # noqa
+$PL_PROMPT = 'history'
 $PL_RPROMPT = '!'
 $PL_TOOLBAR = 'who>cwd>branch>virtualenv'
 
@@ -133,7 +133,7 @@ shortcuts = global_shortcuts.copy()
 shortcuts.update(platform_specific_shortcuts[sys.platform])
 for command in shortcuts:
     try:
-        if !(which @(command)):  # noqa
+        if !(which @(command)):
             aliases.update(shortcuts[command])
     except AttributeError:
         pass
@@ -148,7 +148,7 @@ xontrib load powerline2
 try:
     for key in local_settings.SSH_KEYS:
         key_path = Path(Path.home(), '.ssh', key)
-        $(ssh-add @(str(key_path)))  # noqa
+        $(ssh-add @(str(key_path)))
 except AttributeError:
     pass
 
@@ -162,6 +162,6 @@ def vox_policy(path, **_):
 __xonsh__.commands_cache.threadable_predictors["glances"] = lambda x: False
 
 try:
-    cd @(local_settings.start_folder)  # noqa
+    cd @(local_settings.start_folder)
 except AttributeError:
     pass
