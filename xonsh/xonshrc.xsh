@@ -9,6 +9,7 @@ import local_settings
 paths = {
     'darwin': [
         [$HOME, 'bin'],
+        [$HOME, '.local', 'bin'],
         ['/usr', 'local', 'bin'],
     ],
     'win32': [],
@@ -145,7 +146,6 @@ xontrib load pyenv
 try:
     for key in local_settings.SSH_KEYS:
         key_path = Path(Path.home(), '.ssh', key)
-        # subprocess.run(['ssh-add', str(key_path)])
         $(ssh-add @(str(key_path)))  # noqa
 except AttributeError:
     pass
