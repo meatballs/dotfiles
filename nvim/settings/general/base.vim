@@ -29,4 +29,4 @@ set cursorline
 
 inoremap jk <esc>
 inoremap <esc> <nop>
-nnoremap <silent> <leader>nb :set relativenumber!<CR>
+nnoremap <silent> <leader>n :set relativenumber!<CR>
