@@ -141,7 +141,6 @@ xontrib load coreutils
 xontrib load vox
 xontrib load autovox
 xontrib load powerline2
-xontrib load pyenv
 
 try:
     for key in local_settings.SSH_KEYS:
