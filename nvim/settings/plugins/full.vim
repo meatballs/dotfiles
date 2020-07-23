@@ -5,7 +5,7 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'scrooloose/nerdtree'
 
 " Git status flags in nerdtree file explorer
-Plug 'albfan/nerdtree-git-plugin'
+Plug 'Xuyuanp/nerdtree-git-plugin'
 
 " Asynchronous Linting Engine
 Plug 'dense-analysis/ale'
