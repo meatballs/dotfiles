@@ -40,6 +40,9 @@ Plug 'linkinpark342/xonsh-vim'
 " Syntax for toml files
 Plug 'cespare/vim-toml'
 
+" Syntax for postresgl
+Plug 'lifepillar/pgsql.vim'
+
 " Tag explorer in RH sidebar
 Plug 'majutsushi/tagbar'
 
