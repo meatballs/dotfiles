@@ -74,3 +74,6 @@ Plug 'tmhedberg/SimpylFold'
 
 " Tmux command runner
 Plug 'christoomey/vim-tmux-runner'
+
+" Docker files syntax
+Plug 'ekalinin/Dockerfile.vim'
