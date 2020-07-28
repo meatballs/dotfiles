@@ -118,8 +118,7 @@ def replay_command(args):
     if not args:
         history show -n
     else:
-        history_index = args[0]
-        @$(history @(history_index))
+        @$(history @(args[0]))
     return 0
 
 aliases['h'] = replay_command
