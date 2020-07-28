@@ -49,8 +49,6 @@ Plug 'majutsushi/tagbar'
 " Autocompleter
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 
-Plug 'davidhalter/jedi-vim'
-
 " Deoplete plugin for Python autocompletion using jedi
 Plug 'deoplete-plugins/deoplete-jedi'
 
