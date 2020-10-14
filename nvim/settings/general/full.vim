@@ -12,6 +12,24 @@ let g:ale_python_pylint_options = '--rcfile ~/.pylintrc'
 " Use deoplete.
 let g:deoplete#enable_at_startup = 1
 
+" Don't use jedi-vim for autocomplete because we're using deoplete for that
+let g:jedi#completions_enabled = 0
+
+let g:firenvim_config = {
+    \ 'globalSettings': {
+        \ 'alt': 'all',
+    \  },
+    \ 'localSettings': {
+        \ '.*': {
+            \ 'cmdline': 'neovim',
+            \ 'priority': 0,
+            \ 'selector': 'textarea',
+            \ 'takeover': 'never',
+        \ },
+    \ }
+\ }
+let fc = g:firenvim_config['localSettings']
+
 " Custom Key Mappings
 noremap <Leader>c :vsplit term://xonsh<CR> :startinsert<CR>
 noremap <Leader>ch :split term://xonsh<CR> :startinsert<CR>

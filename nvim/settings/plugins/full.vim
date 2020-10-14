@@ -52,6 +52,9 @@ Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 " Deoplete plugin for Python autocompletion using jedi
 Plug 'deoplete-plugins/deoplete-jedi'
 
+" Further plugin for jedi with extra features
+Plug 'davidhalter/jedi-vim'
+
 " Tag manager
 Plug 'ludovicchabant/vim-gutentags'
 
@@ -75,3 +78,6 @@ Plug 'christoomey/vim-tmux-runner'
 
 " Docker files syntax
 Plug 'ekalinin/Dockerfile.vim'
+
+" Neovim in the browser
+Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
