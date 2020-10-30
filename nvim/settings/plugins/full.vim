@@ -81,3 +81,6 @@ Plug 'ekalinin/Dockerfile.vim'
 
 " Neovim in the browser
 Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
+
+" Help file for strftime formats
+Plug 'sjl/strftimedammit.vim'
