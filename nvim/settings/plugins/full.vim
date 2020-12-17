@@ -84,3 +84,7 @@ Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
 
 " Help file for strftime formats
 Plug 'sjl/strftimedammit.vim'
+
+" Fuzzy Finder
+Plug '/usr/local/opt/fzf'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }

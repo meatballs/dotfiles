@@ -51,3 +51,4 @@ let g:VtrUseVtrMaps = 1
 let g:VtrStripLeadingWhitespace = 1
 let g:VtrClearEmptyLines = 1
 
+set rtp+=/usr/bin/fzf
