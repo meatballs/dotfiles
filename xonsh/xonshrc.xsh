@@ -27,7 +27,7 @@ global_shortcuts = {
         'ga': ['git', 'add'],
         'gaa': ['git', 'add', '-A'],
         'gca': ['git', 'commit', '-a', '-m'],
-        'gcm': ['git', 'checkout', 'master'],
+        'gcm': ['git', 'checkout', 'main'],
         'gco': ['git', 'checkout'],
         'gpl': ['git', 'pull'],
         'gps': ['git', 'push'],
