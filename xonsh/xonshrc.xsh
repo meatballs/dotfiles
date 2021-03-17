@@ -19,8 +19,6 @@ paths = {
     ]
 }
 
-git_log_format = '%C(yellow)%h%C(green)%d %Creset%s%C(blue) [%cn]'
-
 global_shortcuts = {
     'git': {
         'gst': ['git', 'status'],
@@ -33,13 +31,11 @@ global_shortcuts = {
         'gps': ['git', 'push'],
         'glg': [
             'git', 'log',
-            # '--pretty=format:"{}"'.format(git_log_format),
             '--oneline',
             '--graph',
             '--decorate'],
     },
     'tmux': {
-        'main': ['tmux', 'attach-session', '-t', 'main'],
         'tma': ['tmux', 'attach-session', '-t'],
         'tmc': ['tmux', 'new-session', '-s'],
         'tmk': ['tmux', 'kill-session', '-t'],
