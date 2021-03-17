@@ -6,12 +6,8 @@ let mapleader=" "
 let maplocalleader=" "
 let g:python3_host_prog = '/home/owen/.pyenv/versions/nvim/bin/python3'
 set termguicolors
-set guifont=SourceCodePro:h11
+set guifont=SourceCodePro:h9
 set shiftwidth=4
-
-" Use bash as the shell because xonsh has a bug that stops plugins working
-" https://github.com/xonsh/xonsh/issues/3402
-set shell=bash
 
 " Airline plugin settings
 let g:airline#extensions#tabline#enabled = 1
