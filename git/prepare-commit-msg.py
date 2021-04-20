@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 # This script is intended to be used a a git hook and will prepend the issue
 # number to a commit message in the correct format for Github to parse.
