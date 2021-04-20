@@ -3,7 +3,7 @@
 # This script is intended to be used a a git hook and will prepend the issue
 # number to a commit message in the correct format for Github to parse.
 #
-# To use, create a shortcut to this file in .git/hooks called
+# To use, either create a copy this file or a shortcut to it in .git/hooks called
 # 'prepare-commit-msg'
 import argparse
 import re
