@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
+"""
+This script is intended to be used a a git hook and will prepend the issue
+number to a commit message in the correct format for Github to parse.
 
-# This script is intended to be used a a git hook and will prepend the issue
-# number to a commit message in the correct format for Github to parse.
-#
-# To use, either create a copy this file or a shortcut to it in .git/hooks called
-# 'prepare-commit-msg'
+To use, either create a copy of this file or a shortcut to it in .git/hooks called
+'prepare-commit-msg'
+"""
 import argparse
 import re
 from subprocess import check_output
