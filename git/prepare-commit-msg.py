@@ -5,18 +5,17 @@
 #
 # To use, create a shortcut to this file in .git/hooks called
 # 'prepare-commit-msg'
+import argparse
 import re
 from subprocess import check_output
 
-import click
-
 prefix = "issue-"
+parser = argparse.ArgumentParser()
+parser.add_argument("commit_msg_filepath")
+parser.add_argument("commit_type", nargs="?", default="")
+parser.add_argument("commit_hash", nargs="?", default="")
 
 
-@click.command()
-@click.argument("commit_msg_filepath")
-@click.argument("commit_type", default="")
-@click.argument("commit_hash", default="")
 def main(commit_msg_filepath, commit_type, commit_hash):
     branch = (
         check_output(["git", "symbolic-ref", "--short", "HEAD"])
@@ -36,4 +35,5 @@ def main(commit_msg_filepath, commit_type, commit_hash):
 
 
 if __name__ == "__main__":
-    main()
+    args = parser.parse_args()
+    main(args.commit_msg_filepath, args.commit_type, args.commit_hash)
