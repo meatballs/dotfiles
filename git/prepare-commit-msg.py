@@ -16,7 +16,7 @@ parser.add_argument("commit_type", nargs="?", default="")
 parser.add_argument("commit_hash", nargs="?", default="")
 
 
-def main(commit_msg_filepath, commit_type, commit_hash):
+def main(commit_msg_filepath):
     branch = (
         check_output(["git", "symbolic-ref", "--short", "HEAD"])
         .strip()
@@ -36,4 +36,4 @@ def main(commit_msg_filepath, commit_type, commit_hash):
 
 if __name__ == "__main__":
     args = parser.parse_args()
-    main(args.commit_msg_filepath, args.commit_type, args.commit_hash)
+    main(args.commit_msg_filepath)
