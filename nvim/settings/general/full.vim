@@ -37,7 +37,7 @@ tnoremap <Esc> <C-\><C-n>
 noremap <Leader>e :NERDTreeToggle<CR>
 noremap <Leader>f :Autoformat<CR>
 noremap <Leader>t :TagbarToggle<CR>
-:autocmd FileType python nnoremap <buffer> <localleader>d :PUDBLaunchDebuggerTab<CR><CR>
+:autocmd FileType python nnoremap <buffer> <localleader>p :PUDBLaunchDebuggerTab<CR><CR>
 :autocmd FileType python nnoremap <buffer> <localleader>i :Isort<CR>
 
 let g:tex_flavor  = 'latex'
