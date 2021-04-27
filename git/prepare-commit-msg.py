@@ -10,7 +10,8 @@ import argparse
 import re
 from subprocess import check_output
 
-prefix = "issue-"
+prefix = "-"
+suffix = "-"
 parser = argparse.ArgumentParser()
 parser.add_argument("commit_msg_filepath")
 parser.add_argument("commit_type", nargs="?", default="")
@@ -24,9 +25,10 @@ def main(commit_msg_filepath):
         .decode(encoding="UTF-8")
     )
 
-    if branch.startswith(prefix):
+    issue_branch_match = re.search(f"{prefix}(\\d*){suffix}", branch)
+    if issue_branch_match:
         print("prepare-commit-msg: Issue branch detected.")
-        issue_number = re.match(f"{prefix}(\d*)", branch).group(1)
+        issue_number = issue_branch_match.group(1)
         with open(commit_msg_filepath, "r+") as f:
             content = f.read()
             f.seek(0, 0)
