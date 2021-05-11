@@ -24,3 +24,7 @@
     ~/.pylintrc: pylint/pylintrc
     ~/.config/flake8: flake8/flake8
     ~/.config/pudb/pudb.cfg: pudb/pudb.cfg
+    ~/.config/kitty/kitty.conf:
+        create: true
+        path: kitty/kitty.conf
+    ~/.config/kitty/nord.conf: kitty/nord.conf
