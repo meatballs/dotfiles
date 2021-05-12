@@ -62,7 +62,7 @@ Plug 'ludovicchabant/vim-gutentags'
 Plug 'lervag/vimtex'
 
 " Auto session management
-Plug 'tpope/vim-obsession'
+" Plug 'tpope/vim-obsession'
 
 " PUDB Integration
 Plug 'SkyLeach/pudb.vim', {'do': ':UpdateRemotePlugins'}
@@ -74,7 +74,7 @@ Plug 'chrisbra/csv.vim'
 Plug 'tmhedberg/SimpylFold'
 
 " Tmux command runner
-Plug 'christoomey/vim-tmux-runner'
+" Plug 'christoomey/vim-tmux-runner'
 
 " Docker files syntax
 Plug 'ekalinin/Dockerfile.vim'

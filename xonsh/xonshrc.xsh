@@ -146,6 +146,23 @@ def _dashboard():
 
 aliases["dashboard"] = _dashboard
 
+try:
+    projects = local_settings.projects
+except AttributeError:
+    projects = None
+
+
+def start_project(args):
+    dir = projects[args[0]]["directory"]
+    kitty @ launch --type overlay --cwd @(dir) nvim
+    kitty @ launch --location vsplit --cwd @(dir) lazygit
+    kitty @ focus-window --match title:nvim
+    kitty @ launch --location hsplit --cwd @(dir)
+    kitty @ focus-window --match title:nvim
+    kitty @ resize-window --axis horizontal --increment 75
+    kitty @ resize-window --axis vertical --increment 15
+
+aliases["project"] = start_project
 
 shortcuts = global_shortcuts.copy()
 shortcuts.update(platform_specific_shortcuts[sys.platform])
