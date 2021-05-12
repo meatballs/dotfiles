@@ -152,15 +152,49 @@ except AttributeError:
     projects = None
 
 
+def add_lazydocker(dir):
+    kitty @ focus-window --match title:lazygit
+    kitty @ launch --location hsplit --cwd @(dir) lazydocker
+
+
+def add_second_terminal(dir):
+    kitty @ focus-window --match title:terminal
+    kitty @ launch --location vsplit --cwd @(dir)
+
+
+
 def start_project(args):
-    dir = projects[args[0]]["directory"]
+    try:
+        project = projects[args[0]]
+    except KeyError:
+        print(f"Cannot find {project} in local_settings")
+        return
+    try:
+        dir = project["directory"]
+    except KeyError:
+        print(f"{project} has no directory defined in local_settings")
+        return
     kitty @ launch --type overlay --cwd @(dir) nvim
     kitty @ launch --location vsplit --cwd @(dir) lazygit
     kitty @ focus-window --match title:nvim
-    kitty @ launch --location hsplit --cwd @(dir)
+    kitty @ launch --title terminal --location hsplit --cwd @(dir)
     kitty @ focus-window --match title:nvim
     kitty @ resize-window --axis horizontal --increment 75
     kitty @ resize-window --axis vertical --increment 15
+    try:
+        with_docker = project["with_docker"]
+    except KeyError:
+        with_docker = False
+    if with_docker:
+        add_lazydocker(dir)
+    try:
+        with_extra_terminal = project["with_extra_terminal"]
+    except KeyError:
+        with_extra_terminal = False
+    if with_extra_terminal:
+        add_second_terminal(dir)
+    kitty @ focus-window --match title:nvim
+
 
 aliases["project"] = start_project
 
