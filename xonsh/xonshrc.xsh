@@ -181,17 +181,9 @@ def start_project(args):
     kitty @ focus-window --match title:nvim
     kitty @ resize-window --axis horizontal --increment 75
     kitty @ resize-window --axis vertical --increment 15
-    try:
-        with_docker = project["with_docker"]
-    except KeyError:
-        with_docker = False
-    if with_docker:
+    if project.get("with_docker", False):
         add_lazydocker(dir)
-    try:
-        with_extra_terminal = project["with_extra_terminal"]
-    except KeyError:
-        with_extra_terminal = False
-    if with_extra_terminal:
+    if project.get("with_extra_terminal", False):
         add_second_terminal(dir)
     kitty @ focus-window --match title:nvim
 
