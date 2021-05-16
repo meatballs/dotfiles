@@ -8,7 +8,6 @@
 
 - link:
     ~/dotfiles: ''
-    ~/.condarc: conda/condarc
     ~/.config/nvim/init.vim:
         create: true
         path: nvim/init.vim
@@ -23,7 +22,9 @@
     ~/.xonshrc: xonsh/xonshrc.xsh
     ~/.pylintrc: pylint/pylintrc
     ~/.config/flake8: flake8/flake8
-    ~/.config/pudb/pudb.cfg: pudb/pudb.cfg
+    ~/.config/pudb/pudb.cfg:
+        create: true
+        path: pudb/pudb.cfg
     ~/.config/kitty/kitty.conf:
         create: true
         path: kitty/kitty.conf
@@ -31,4 +32,4 @@
     ~/.config/kitty/zoom_toggle.py: kitty/zoom_toggle.py
     ~/.config/kitty/pass_keys.py: ~/.config/nvim/plugged/vim-kitty-navigator/pass_keys.py
     ~/.config/kitty/neighboring_window.py: ~/.config/nvim/plugged/vim-kitty-navigator/neighboring_window.py
-    ~/dashboard.xsh: kitty/dashboard.xsh
+    ~/.config/kitty/macos-launch-services-cmdline: kitty/macos-launch-services-cmdline
