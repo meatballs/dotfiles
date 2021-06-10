@@ -40,6 +40,9 @@ global_shortcuts = {
         'tmc': ['tmux', 'new-session', '-s'],
         'tmk': ['tmux', 'kill-session', '-t'],
     },
+    'kitty': {
+        'ssh': ['kitty', '+kitten', 'ssh'],
+    },
 }
 
 platform_specific_shortcuts = {
@@ -127,22 +130,26 @@ aliases["uuid"] = _uuid
 
 def _dashboard():
     kitty @ launch --title glances --type overlay glances
-    kitty @ launch --title shell --location vsplit
-    kitty @ launch --title mail --location hsplit neomutt
+    kitty @ launch --title spt --location vsplit
+    kitty @ launch --title mail --location hsplit
+    kitty @ launch --type overlay neomutt
     kitty @ resize-window --axis vertical --increment 5
-    kitty @ focus-window --match title:shell
-    kitty @ launch --title calendar --location vsplit ikhal
+    kitty @ focus-window --match title:spt
+    kitty @ launch --type overlay spt
+    kitty @ launch --title calendar --location vsplit
+    kitty @ launch --type overlay ikhal
     kitty @ focus-window --match title:glances
     kitty @ launch --title chat --location hsplit
     kitty @ resize-window --axis vertical --increment 15
     kitty @ focus-window --match title:glances
-    kitty @ launch --title todo --location vsplit todd
+    kitty @ launch --title todo --location vsplit
+    kitty @ launch --type overlay todd
     kitty @ focus-window --match title:chat
     kitty @ launch --type overlay weechat
     kitty @ send-text --match title:todo v
     kitty @ send-text --match title:glances 4 f
     kitty @ send-text /window splith \r
-    kitty @ focus-window --match title:shell
+    kitty @ focus-window --match title:mail
 
 aliases["dashboard"] = _dashboard
 
