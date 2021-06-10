@@ -4,7 +4,7 @@ set t_Co=256
 set colorcolumn=88
 let mapleader=" "
 let maplocalleader=" "
-let g:python3_host_prog = '/home/owen/.pyenv/versions/nvim/bin/python3'
+let g:python3_host_prog = '~/.pyenv/versions/nvim/bin/python3'
 set termguicolors
 set guifont=SourceCodePro:h9
 set shiftwidth=4
