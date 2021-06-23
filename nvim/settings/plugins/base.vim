@@ -5,8 +5,8 @@ Plug 'vim-airline/vim-airline-themes'
 " Nord colour theme
 Plug 'arcticicestudio/nord-vim'
 
-" Common navigation of tmux and nvim windows
-Plug 'christoomey/vim-tmux-navigator'
+" kitty navigation
+Plug 'knubie/vim-kitty-navigator'
 
 " This plugin must be the last in the list
 " Add icons for use by other plugins

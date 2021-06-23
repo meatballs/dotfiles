@@ -143,10 +143,9 @@ def _dashboard():
     kitty @ resize-window --axis vertical --increment 15
     kitty @ focus-window --match title:glances
     kitty @ launch --title todo --location vsplit
-    kitty @ launch --type overlay todd
+    kitty @ launch --type overlay todotxt-machine
     kitty @ focus-window --match title:chat
-    kitty @ launch --type overlay weechat
-    kitty @ send-text --match title:todo v
+    kitty @ launch --type overlay gomuks
     kitty @ send-text --match title:glances 4 f
     kitty @ send-text /window splith \r
     kitty @ focus-window --match title:mail

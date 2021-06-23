@@ -73,9 +73,6 @@ Plug 'chrisbra/csv.vim'
 " Python code folding
 Plug 'tmhedberg/SimpylFold'
 
-" Tmux command runner
-" Plug 'christoomey/vim-tmux-runner'
-
 " Docker files syntax
 Plug 'ekalinin/Dockerfile.vim'
 
@@ -88,9 +85,6 @@ Plug 'sjl/strftimedammit.vim'
 " Fuzzy Finder
 Plug '/usr/local/opt/fzf'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-
-" kitty navigation
-Plug 'knubie/vim-kitty-navigator'
 
 " kitty runner
 Plug 'lkemitchll/vim-kitty-runner'
