@@ -22,8 +22,15 @@ let g:nord_underline = 1
 " let g:nord_uniform_status_lines = 1
 " let g:nord_uniform_diff_background = 1
 let g:nord_cursor_line_number_background = 1
+augroup nord-theme-overrides
+    autocmd!
+    " Use nord8 as color for toml tables
+    autocmd ColorScheme nord highlight tomlTable ctermfg=8 guifg=#88C0D0
+    autocmd ColorScheme nord highlight tomlTableArray ctermfg=8 guifg=#88C0D0
+augroup END
 colorscheme nord
 set cursorline
+
 
 inoremap jk <esc>
 inoremap <esc> <nop>
