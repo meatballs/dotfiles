@@ -147,7 +147,6 @@ def _dashboard():
     kitty @ focus-window --match title:chat
     kitty @ launch --type overlay gomuks
     kitty @ send-text --match title:glances 4 f
-    kitty @ send-text /window splith \r
     kitty @ focus-window --match title:mail
 
 aliases["dashboard"] = _dashboard
