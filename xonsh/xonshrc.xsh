@@ -129,7 +129,7 @@ aliases["uuid"] = _uuid
 
 
 def _dashboard():
-    kitty @ launch --title glances --type overlay glances
+    kitty @ launch --title glances --type overlay glances --enable-plugin ip
     kitty @ launch --title spt --location vsplit
     kitty @ launch --title mail --location hsplit
     kitty @ launch --type overlay neomutt

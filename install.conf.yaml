@@ -33,3 +33,6 @@
     ~/.config/kitty/pass_keys.py: ~/.config/nvim/plugged/vim-kitty-navigator/pass_keys.py
     ~/.config/kitty/neighboring_window.py: ~/.config/nvim/plugged/vim-kitty-navigator/neighboring_window.py
     ~/.config/kitty/macos-launch-services-cmdline: kitty/macos-launch-services-cmdline
+    ~/.config/glances/glances.conf:
+        create: true
+        path: glances/glances.conf
