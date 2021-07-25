@@ -1,0 +1,8 @@
+reporting: "off"
+startuppopupversion: 1
+gui:
+  theme:
+    selectedLineBgColor:
+      - reverse
+    selectedRangeBgColor:
+      - reverse

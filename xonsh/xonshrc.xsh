@@ -47,10 +47,7 @@ global_shortcuts = {
 
 platform_specific_shortcuts = {
     'darwin': {},
-    'win32': {
-        'cmd': {
-            'ls': ['cmd', '/c', 'dir']
-        },
+    'win32': { 'cmd': { 'ls': ['cmd', '/c', 'dir'] },
     },
     'linux': {
         'xdg-open': {
