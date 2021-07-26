@@ -43,6 +43,7 @@ global_shortcuts = {
     'kitty': {
         'ssh': ['kitty', '+kitten', 'ssh'],
     },
+    'docker-compose': {'dc': ['docker-compose']},
 }
 
 platform_specific_shortcuts = {
