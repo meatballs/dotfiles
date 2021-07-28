@@ -43,3 +43,5 @@
     ~/.config/lazydocker/config.yml:
         create: true
         path: lazydocker/config.yml
+    ~/.gitignore_global: git/.gitignore_global
+    ~/.gitconfig: git/.gitconfig

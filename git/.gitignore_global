@@ -1,5 +1,5 @@
 .python-version
 .DS_Store
-*.sublime-workspace
-build
 .autoxsh
+Session.vim
+tags
