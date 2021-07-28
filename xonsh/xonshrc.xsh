@@ -208,14 +208,7 @@ xontrib load coreutils
 xontrib load vox
 xontrib load autovox
 xontrib load powerline2
-
-try:
-    for key in local_settings.SSH_KEYS:
-        key_path = Path(Path.home(), '.ssh', key)
-        $(ssh-add @(str(key_path)))
-except AttributeError:
-    pass
-
+xontrib load kitty
 
 @events.autovox_policy
 def vox_policy(path, **_):
