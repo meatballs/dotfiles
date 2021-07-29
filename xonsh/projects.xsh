@@ -28,15 +28,16 @@ def add_second_terminal(dir):
 
 def open_project(args):
     projects = get_projects()
+    project_name = args[0]
     try:
-        project = projects[args[0]]
+        project = projects[project_name]
     except KeyError:
-        print(f"Cannot find {project} in {projects_file}")
+        print(f"Cannot find {project_name} in projects file ({projects_file})")
         return
     try:
         dir = project["directory"]
     except KeyError:
-        print(f"{project} has no directory defined in {projects_file}")
+        print(f"{project} has no directory defined in projects file ({projects_file})")
         return
     kitty @ launch --type overlay --cwd @(dir) nvim
     kitty @ launch --location vsplit --cwd @(dir) lazygit
