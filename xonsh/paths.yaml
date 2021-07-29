@@ -1,0 +1,7 @@
+darwin:
+    - $HOME/bin
+    - $HOME/.local/bin
+    - /usr/local/bin
+
+linux:
+    - $HOME/cargo/bin

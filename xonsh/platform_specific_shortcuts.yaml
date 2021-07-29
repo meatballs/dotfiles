@@ -1,0 +1,8 @@
+darwin: []
+linux:
+    xdg-open:
+        open: [xdg-open]
+    trash:
+        rm: [trash]
+    xclip:
+        xclip: [xclip, -selection, c]

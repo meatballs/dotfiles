@@ -45,6 +45,15 @@
     ~/.pylintrc: pylint/pylintrc
 
     ~/.tmux.conf: tmux/tmux.conf
+    
+    ~/.config/xonsh/rc.d:
+        create: true
+        glob: true
+        path: xonsh/**
+        relink: true 
+        exclude: [xonsh/xonsrc.xsh]
+
+
 
     ~/.xonshrc: xonsh/xonshrc.xsh
 

@@ -1,0 +1,11 @@
+git:
+    gst: [git, status]
+    ga: [git, add]
+    gaa: [git, add, -A]
+    gcm: [git, checkout, main]
+    gco: [git, checkout]
+    glg: [git, log, --oneline, --graph, --decorate]
+kitty:
+    ssh: [kitty, +kitten, ssh]
+docker-compose:
+    dc: [docker-compse]
