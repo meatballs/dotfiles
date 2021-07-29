@@ -8,40 +8,47 @@
 
 - link:
     ~/dotfiles: ''
-    ~/.config/nvim/init.vim:
-        create: true
-        path: nvim/init.vim
-    ~/.config/nvim/mutt.init.vim: nvim/mutt.init.vim
-    ~/.config/nvim/settings:
-        create: true
-        path: nvim/settings
-    ~/.tmux.conf: tmux/tmux.conf
-    ~/bin/start_tmux:
-        create: true
-        path: tmux/start_tmux
-    ~/.xonshrc: xonsh/xonshrc.xsh
-    ~/.pylintrc: pylint/pylintrc
+
     ~/.config/flake8: flake8/flake8
-    ~/.config/pudb/pudb.cfg:
-        create: true
-        path: pudb/pudb.cfg
-    ~/.config/kitty/kitty.conf:
-        create: true
-        path: kitty/kitty.conf
-    ~/.config/kitty/nord.conf: kitty/nord.conf
-    ~/.config/kitty/zoom_toggle.py: kitty/zoom_toggle.py
-    ~/.config/kitty/pass_keys.py: ~/.config/nvim/plugged/vim-kitty-navigator/pass_keys.py
-    ~/.config/kitty/neighboring_window.py: ~/.config/nvim/plugged/vim-kitty-navigator/neighboring_window.py
-    ~/.config/kitty/macos-launch-services-cmdline: kitty/macos-launch-services-cmdline
-    ~/.config/kitty/unicode-input-favorites.conf: kitty/unicode-input-favorites.conf
+
+    ~/.gitignore_global: git/.gitignore_global
+    ~/.gitconfig: git/.gitconfig
+
     ~/.config/glances/glances.conf:
         create: true
         path: glances/glances.conf
-    ~/.config/lazygit/config.yml:
+
+    ~/.config/kitty:
         create: true
-        path: lazygit/config.yml
+        glob: true
+        path: kitty/**
+        relink: true 
+
     ~/.config/lazydocker/config.yml:
         create: true
         path: lazydocker/config.yml
-    ~/.gitignore_global: git/.gitignore_global
-    ~/.gitconfig: git/.gitconfig
+
+    ~/.config/lazygit/config.yml:
+        create: true
+        path: lazygit/config.yml
+
+    ~/.config/nvim:
+        create: true
+        glob: true
+        path: nvim/**
+        relink: true 
+
+    ~/.config/pudb/pudb.cfg:
+        create: true
+        path: pudb/pudb.cfg
+        
+    ~/.pylintrc: pylint/pylintrc
+
+    ~/.tmux.conf: tmux/tmux.conf
+
+    ~/.xonshrc: xonsh/xonshrc.xsh
+
+
+
+
+
