@@ -7,7 +7,7 @@ Each project must have a 'directory' key and can optionally have keys
 from pathlib import Path
 import yaml
 
-projects_file = Path($HOME, "projects.toml")
+projects_file = Path($HOME, "projects.yaml")
 
 
 def get_projects():
