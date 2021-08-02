@@ -8,4 +8,4 @@ git:
 kitty:
     ssh: [kitty, +kitten, ssh]
 docker-compose:
-    dc: [docker-compse]
+    dc: [docker-compose]
