@@ -9,6 +9,14 @@ set termguicolors
 set guifont=SourceCodePro:h9
 set shiftwidth=4
 
+lua <<EOF
+require'lualine'.setup {
+  options = {
+    theme = 'nord',
+  },
+}
+EOF
+
 " Airline plugin settings
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme='nord'

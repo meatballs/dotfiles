@@ -1,6 +1,4 @@
-" This should be after any plugins that it integrates with
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+Plug 'hoob3rt/lualine.nvim'
 
 " Nord colour theme
 Plug 'arcticicestudio/nord-vim'
@@ -8,6 +6,4 @@ Plug 'arcticicestudio/nord-vim'
 " kitty navigation
 Plug 'knubie/vim-kitty-navigator'
 
-" This plugin must be the last in the list
-" Add icons for use by other plugins
-Plug 'ryanoasis/vim-devicons'
+Plug 'kyazdani42/nvim-web-devicons'
