@@ -104,10 +104,10 @@ nnoremap <silent> <A-d> :Lspsaga open_floaterm<CR>
 tnoremap <silent> <A-d> <C-\><C-n>:Lspsaga close_floaterm<CR>
 
 " Telescope Key Bindings
-nnoremap <silent> <leader>ef <cmd>Telescope find_files<cr>
-nnoremap <silent> <leader>eg <cmd>Telescope live_grep<cr>
+nnoremap <silent> <leader>ef <cmd>Telescope file_browser<cr>
 nnoremap <silent> <leader>eb <cmd>Telescope buffers<cr>
 nnoremap <silent> <leader>et <cmd>Telescope help_tags<cr>
+nnoremap <silent> <leader>eg <cmd>Telescope git_files<cr>
 lua <<EOF
 local actions = require('telescope.actions')
 require('telescope').setup{
