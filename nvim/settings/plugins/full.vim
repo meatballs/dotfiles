@@ -1,8 +1,6 @@
 " editorconfig support
 Plug 'editorconfig/editorconfig-vim'
 
-" RestructuredText notes and highlighting Plug 'Rykka/riv.vim'
-
 " Git wrapper (git commands within nvim)
 Plug 'tpope/vim-fugitive'
 
@@ -50,6 +48,5 @@ Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 
-" Status Line
-Plug 'hoob3rt/lualine.nvim'
-
+" Indentation guide lines
+Plug 'lukas-reineke/indent-blankline.nvim'

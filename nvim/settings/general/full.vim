@@ -129,3 +129,9 @@ require('telescope').setup{
   }
 }
 EOF
+
+lua <<EOF
+require("indent_blankline").setup {
+    use_treesitter = true,
+}
+EOF
