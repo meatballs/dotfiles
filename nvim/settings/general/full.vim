@@ -87,7 +87,16 @@ end
 EOF
 
 " Improved UI for language server functions
-lua require 'lspsaga'.init_lsp_saga()
+lua <<EOF
+local saga = require 'lspsaga'
+saga.init_lsp_saga {
+  error_sign = '',
+  warn_sign = '',
+  hint_sign = '',
+  infor_sign = '',
+  border_style = "round",
+}
+EOF
 nnoremap <silent> gh :Lspsaga lsp_finder<CR>
 nnoremap <silent>K :Lspsaga hover_doc<CR>
 nnoremap <silent> <C-f> <cmd>lua require('lspsaga.action').smart_scroll_with_saga(1)<CR>

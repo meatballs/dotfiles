@@ -1,7 +1,7 @@
 Plug 'hoob3rt/lualine.nvim'
 
 " Nord colour theme
-Plug 'arcticicestudio/nord-vim'
+Plug 'shaunsingh/nord.nvim'
 
 " kitty navigation
 Plug 'knubie/vim-kitty-navigator'
