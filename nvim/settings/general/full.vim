@@ -109,14 +109,13 @@ nnoremap <silent>gd :Lspsaga preview_definition<CR>
 nnoremap <silent> <leader>cd :Lspsaga show_line_diagnostics<CR>
 nnoremap <silent> [e :Lspsaga diagnostic_jump_next<CR>
 nnoremap <silent> ]e :Lspsaga diagnostic_jump_prev<CR>
-nnoremap <silent> <A-d> :Lspsaga open_floaterm<CR>
-tnoremap <silent> <A-d> <C-\><C-n>:Lspsaga close_floaterm<CR>
+nnoremap <silent> <leader>t :Lspsaga open_floaterm<CR>
+tnoremap <silent> <leader>t <C-\><C-n>:Lspsaga close_floaterm<CR>
 
 " Telescope Key Bindings
 nnoremap <silent> <leader>ef <cmd>Telescope file_browser<cr>
 nnoremap <silent> <leader>eb <cmd>Telescope buffers<cr>
 nnoremap <silent> <leader>et <cmd>Telescope treesitter<cr>
-nnoremap <silent> <leader>eg <cmd>Telescope git_files<cr>
 nnoremap <silent> <leader>eg <cmd>Telescope git_files<cr>
 lua <<EOF
 local actions = require('telescope.actions')
