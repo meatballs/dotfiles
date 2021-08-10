@@ -1,6 +1,7 @@
 " General Settings
 set path+=**
 :au FocusLost * :wa
+set completeopt=menuone,noinsert
 
 let g:firenvim_config = {
     \ 'globalSettings': {
@@ -95,6 +96,7 @@ saga.init_lsp_saga {
   hint_sign = '',
   infor_sign = '',
   border_style = "round",
+  max_preview_lines = 25,
 }
 EOF
 nnoremap <silent> gh :Lspsaga lsp_finder<CR>
@@ -133,5 +135,6 @@ EOF
 lua <<EOF
 require("indent_blankline").setup {
     use_treesitter = true,
+    show_first_indent_level = false,
 }
 EOF

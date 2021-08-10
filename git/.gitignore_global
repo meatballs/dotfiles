@@ -3,3 +3,4 @@
 .autoxsh
 Session.vim
 tags*
+pylsp-mypy.cfg
