@@ -10,6 +10,7 @@ require("telescope").setup{
     },
   }
 }
+require('telescope').load_extension('dap')
 
 keybindings = {
     {"n", "<leader>tf", "<cmd>Telescope file_browser<cr>"},

@@ -57,6 +57,11 @@ local full_plugins = {
     -- Improved lsp ui
     {"glepnir/lspsaga.nvim"},
 
+    -- Debug Adapter Protocol
+    {"mfussenegger/nvim-dap"},
+    {"mfussenegger/nvim-dap-python"},
+    {"rcarriga/nvim-dap-ui"},
+
     --Common lsp config settings
     {"neovim/nvim-lspconfig"},
 
@@ -69,12 +74,6 @@ local full_plugins = {
         run = ":TSUpdate"
     },
 
-    -- PUDB Integration
-    {
-        "SkyLeach/pudb.vim",
-        run = ":UpdateRemotePlugins"
-    },
-
     -- Help file for strftime formats
     {"sjl/strftimedammit.vim"},
 
@@ -82,6 +81,7 @@ local full_plugins = {
     {"nvim-lua/popup.nvim"},
     {"nvim-lua/plenary.nvim"},
     {"nvim-telescope/telescope.nvim"},
+    {"nvim-telescope/telescope-dap.nvim"},
 
     -- LaTeX integration
     {"lervag/vimtex"},
