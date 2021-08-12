@@ -3,6 +3,7 @@ local map = require("keybindings")
 
 function basic()
     vim.g.termguicolors = true
+    vim.cmd("set guifont=SauceCodePro\\ Nerd\\ Font\\ Mono:h10")
     vim.g.mapleader = " "
     vim.g.maplocalleader = " "
     vim.g.python3_host_prog = "~/pyenv/versions/nvim/bin/python3"
