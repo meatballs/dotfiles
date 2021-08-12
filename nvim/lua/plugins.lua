@@ -54,6 +54,9 @@ local full_plugins = {
     -- Indentation guide lines
     {"lukas-reineke/indent-blankline.nvim"},
 
+    -- Code commenting
+    {"b3nj5m1n/kommentary"},
+
     -- Improved lsp ui
     {"glepnir/lspsaga.nvim"},
 
@@ -85,9 +88,6 @@ local full_plugins = {
 
     -- LaTeX integration
     {"lervag/vimtex"},
-
-    -- Comment lines and blocks
-    {"tpope/vim-commentary"},
 
     -- Git status flags in LHS gutter
     {"airblade/vim-gitgutter"},
