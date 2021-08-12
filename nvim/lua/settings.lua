@@ -25,6 +25,7 @@ function full()
     vim.cmd(":au FocusLost * :wa")
     vim.cmd("autocmd BufWinEnter * silent! :%foldopen!")
     vim.opt.completeopt = {"menuone", "noinsert"}
+    require("plugins.cheatsheet")
     require("plugins.firenvim")
     require("plugins.indent_blankline")
     require("plugins.lspconfig")
