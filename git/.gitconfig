@@ -3,7 +3,7 @@
     name = Owen Campbell
 [core]
     excludesfile = /home/owen/.gitignore_global
-    editor = nvim
+    editor = nvim -u ~/.config/nvim/basic.lua
 [gpg]
     program = /usr/bin/gpg
 [commit]

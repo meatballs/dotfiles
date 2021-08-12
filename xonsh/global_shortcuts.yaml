@@ -9,3 +9,5 @@ kitty:
     ssh: [kitty, +kitten, ssh]
 docker-compose:
     dc: [docker-compose]
+nvim:
+    nvim.basic: [nvim, -u, ~/.config/nvim/basic.lua]
