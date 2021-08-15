@@ -22,7 +22,7 @@
         create: true
         glob: true
         path: kitty/**
-        relink: true 
+        relink: true
 
     ~/.config/lazydocker/config.yml:
         create: true
@@ -36,28 +36,19 @@
         create: true
         glob: true
         path: nvim/**
-        relink: true 
+        relink: true
 
     ~/.config/pudb/pudb.cfg:
         create: true
         path: pudb/pudb.cfg
-        
+
     ~/.pylintrc: pylint/pylintrc
 
-    ~/.tmux.conf: tmux/tmux.conf
-    
     ~/.config/xonsh/rc.d:
         create: true
         glob: true
         path: xonsh/**
-        relink: true 
+        relink: true
         exclude: [xonsh/xonsrc.xsh]
 
-
-
     ~/.xonshrc: xonsh/xonshrc.xsh
-
-
-
-
-
