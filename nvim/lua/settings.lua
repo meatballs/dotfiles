@@ -11,6 +11,7 @@ global_settings = {
 }
 
 options = {
+    completeopt = {"menuone", "noinsert"},
     number = true,
     colorcolumn = {88},
     cursorline = true,
@@ -48,7 +49,6 @@ function full()
     -- and that seems to work fine.
     vim.cmd("set guifont=SauceCodePro\\ Nerd\\ Font\\ Mono:h10")
 
-    vim.opt.completeopt = {"menuone", "noinsert"}
     require("plugins.cheatsheet")
     require("plugins.firenvim")
     require("plugins.indent_blankline")
