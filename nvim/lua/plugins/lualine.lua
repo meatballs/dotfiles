@@ -2,4 +2,5 @@
         options = {
             theme = 'nord',
         },
+        extensions = {'fugitive', 'nvim-tree'},
     }
