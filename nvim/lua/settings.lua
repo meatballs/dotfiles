@@ -1,30 +1,53 @@
 local M = {}
 local map = require("keybindings")
 
+global_settings = {
+    mapleader = " ",
+    maplocalleader = " ",
+    python3_host_prog = "~/pyenv/versions/nvim/bin/python3",
+    splitbelow = true,
+    splitright = true,
+    termguicolors = true,
+}
+
+options = {
+    number = true,
+    colorcolumn = {88},
+    cursorline = true,
+}
+
+keybindings = {
+    {"i", "jk", "<esc>"},
+    {"i", "<esc>", "<nop>"},
+    {"n", "<leader>n", ":set relativenumber!<CR>"}
+}
+
 function basic()
-    vim.g.termguicolors = true
-    vim.cmd("set guifont=SauceCodePro\\ Nerd\\ Font\\ Mono:h10")
-    vim.g.mapleader = " "
-    vim.g.maplocalleader = " "
-    vim.g.python3_host_prog = "~/pyenv/versions/nvim/bin/python3"
-    vim.opt.number = true
-    vim.opt.colorcolumn = {88}
-    vim.opt.cursorline = true
-    require("plugins.nord")
-    keybindings = {
-        {"i", "jk", "<esc>"},
-        {"i", "<esc>", "<nop>"},
-        {"n", "<leader>n", ":set relativenumber!<CR>"}
-    }
+    for k, v in pairs(global_settings) do
+        vim.g[k] = v
+    end
+
+    for k, v in pairs(options) do
+        vim.opt[k] = v
+    end
+
     for k, v in pairs(keybindings) do
         map(v)
     end
+
+    require("plugins.nord")
 end
 
 
 function full()
-    vim.cmd(":au FocusLost * :wa")
+    vim.cmd("autocmd FocusLost * :wa")
     vim.cmd("autocmd BufWinEnter * silent! :%foldopen!")
+
+    -- for firenvim, we have to set guifont, but that is no longer supported
+    -- in neovim, so using vim.g has no effect. Instead, we can use vim.cmd
+    -- and that seems to work fine.
+    vim.cmd("set guifont=SauceCodePro\\ Nerd\\ Font\\ Mono:h10")
+
     vim.opt.completeopt = {"menuone", "noinsert"}
     require("plugins.cheatsheet")
     require("plugins.firenvim")
