@@ -33,9 +33,6 @@ local base_plugins = {
 }
 
 local full_plugins = {
-    -- Cheatsheets
-    {"sudormrfbin/cheatsheet.nvim"},
-
     -- CSV Tools
     {"chrisbra/csv.vim"},
 
@@ -86,6 +83,9 @@ local full_plugins = {
     {"nvim-telescope/telescope.nvim"},
     {"nvim-telescope/telescope-dap.nvim"},
 
+    -- Persistent, toggled terminals
+    {"akinsho/toggleterm.nvim"},
+
     -- LaTeX integration
     {"lervag/vimtex"},
 
@@ -94,9 +94,6 @@ local full_plugins = {
 
     -- Git wrapper (git commands within nvim)
     {"tpope/vim-fugitive"},
-
-    -- kitty runner
-    {"lkemitchll/vim-kitty-runner"},
 
     -- Syntax highlighting of .xsh and .xonshrc files
     {"linkinpark342/xonsh-vim"},

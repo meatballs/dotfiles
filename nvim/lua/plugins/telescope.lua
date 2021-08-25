@@ -13,10 +13,10 @@ require("telescope").setup{
 require('telescope').load_extension('dap')
 
 keybindings = {
-    {"n", "<leader>tf", "<cmd>Telescope file_browser<cr>"},
-    {"n", "<leader>tb", "<cmd>Telescope buffers<cr>"},
-    {"n", "<leader>tt", "<cmd>Telescope treesitter<cr>"},
-    {"n", "<leader>tg", "<cmd>Telescope git_files<cr>"},
+    {"n", "<leader>ee", "<cmd>Telescope file_browser<cr>"},
+    {"n", "<leader>eb", "<cmd>Telescope buffers<cr>"},
+    {"n", "<leader>et", "<cmd>Telescope treesitter<cr>"},
+    {"n", "<leader>eg", "<cmd>Telescope git_files<cr>"},
 }
 
 for k, v in pairs(keybindings) do

@@ -11,11 +11,13 @@ global_settings = {
 }
 
 options = {
-    completeopt = {"menuone", "noinsert"},
-    guifont= "SauceCodePro Nerd Font Mono:h10",
-    number = true,
     colorcolumn = {88},
+    completeopt = {"menuone", "noinsert"},
     cursorline = true,
+    guifont= "SauceCodePro Nerd Font Mono:h10",
+    hidden = true,
+    number = true,
+    shell = "/usr/bin/bash",
 }
 
 keybindings = {
@@ -35,6 +37,7 @@ plugin_modules = {
     "pudb",
     "telescope",
     "nvim_tree",
+    "toggleterm",
     "treesitter",
     "vimtex",
 }
