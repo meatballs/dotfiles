@@ -39,9 +39,21 @@ local lazygit = Terminal:new({
     border = "single",
   },
 })
+local lazydocker = Terminal:new({
+  cmd = "lazydocker",
+  hidden = true,
+  direction = "float",
+  float_opts = {
+    border = "single",
+  },
+})
 
 function _lazygit_toggle()
   lazygit:toggle()
 end
+function _lazydocker_toggle()
+  lazydocker:toggle()
+end
 
 vim.api.nvim_set_keymap("n", "<leader>g", "<cmd>lua _lazygit_toggle()<CR>", {noremap = true, silent = true})
+vim.api.nvim_set_keymap("n", "<leader>d", "<cmd>lua _lazydocker_toggle()<CR>", {noremap = true, silent = true})
