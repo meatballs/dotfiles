@@ -22,8 +22,6 @@ keybindings = {
     {"n", "<leader>cd", ":Lspsaga show_line_diagnostics<cr>"},
     {"n", "[e", ":Lspsaga diagnostic_jump_next<cr>"},
     {"n", "]e", ":Lspsaga diagnostic_jump_prev<cr>"},
-    {"n", "<leader>t", ":Lspsaga open_floaterm<cr>"},
-    {"t", "<leader>t", "<C-\\><C-n>:Lspsaga close_floaterm<cr>"},
 }
 
 for k, v in pairs(keybindings) do
