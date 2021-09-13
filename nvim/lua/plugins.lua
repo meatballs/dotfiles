@@ -4,16 +4,16 @@ local fn = vim.fn
 local install_path = fn.stdpath("data").."/site/pack/packer/start/packer.nvim"
 
 
+if fn.empty(fn.glob(install_path)) > 0 then
+  fn.system({"git", "clone", "https://github.com/wbthomason/packer.nvim", install_path})
+  execute "packadd packer.nvim"
+end
+
 local packer_config = {
     display = {
         open_fn = require('packer.util').float,
     },
 }
-
-if fn.empty(fn.glob(install_path)) > 0 then
-  fn.system({"git", "clone", "https://github.com/wbthomason/packer.nvim", install_path})
-  execute "packadd packer.nvim"
-end
 
 local base_plugins = {
     -- Packer can manage itself
@@ -100,10 +100,13 @@ local full_plugins = {
 }
 
 function M.load(config)
-    local plugins = base_plugins
+    plugins = {}
+    for _, value in ipairs(base_plugins) do
+	table.insert(plugins, value)
+    end
     if config == "full" then
-        for key, value in pairs(full_plugins) do
-                plugins[key] = value
+        for _, value in ipairs(full_plugins) do
+            table.insert(plugins, value)
         end
     end
     require("packer").startup(

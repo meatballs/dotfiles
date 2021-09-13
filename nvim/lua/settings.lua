@@ -27,7 +27,6 @@ keybindings = {
 }
 
 plugin_modules = {
-    "cheatsheet",
     "firenvim",
     "indent_blankline",
     "lspconfig",
