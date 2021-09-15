@@ -3,7 +3,7 @@ local map = require("keybindings")
 
 global_settings = {
     mapleader = " ",
-    maplocalleader = " ",
+    maplocalleader = ",",
     python3_host_prog = "~/.pyenv/versions/nvim/bin/python3",
     splitbelow = true,
     splitright = true,
@@ -36,6 +36,7 @@ plugin_modules = {
     "pudb",
     "telescope",
     "nvim_tree",
+    "splice",
     "toggleterm",
     "treesitter",
     "vimtex",

@@ -74,6 +74,9 @@ local full_plugins = {
         run = ":TSUpdate"
     },
 
+    -- Merge Conflicts
+    {"sjl/splice.vim"},
+
     -- Help file for strftime formats
     {"sjl/strftimedammit.vim"},
 
