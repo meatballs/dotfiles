@@ -1,3 +1,4 @@
+require("nvim-tree").setup()
 local map = require("keybindings")
 
 keybindings = {
