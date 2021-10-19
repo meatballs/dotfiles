@@ -55,7 +55,7 @@ local full_plugins = {
     {"b3nj5m1n/kommentary"},
 
     -- Improved lsp ui
-    {"glepnir/lspsaga.nvim"},
+    {"tami5/lspsaga.nvim"},
 
     -- Debug Adapter Protocol
     {"mfussenegger/nvim-dap"},
