@@ -95,9 +95,6 @@ local full_plugins = {
     -- Git status flags in LHS gutter
     {"airblade/vim-gitgutter"},
 
-    -- Git wrapper (git commands within nvim)
-    {"tpope/vim-fugitive"},
-
     -- Syntax highlighting of .xsh and .xonshrc files
     {"linkinpark342/xonsh-vim"},
 }
