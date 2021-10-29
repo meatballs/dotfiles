@@ -27,6 +27,7 @@ keybindings = {
 }
 
 plugin_modules = {
+    "coq_nvim",
     "firenvim",
     "indent_blankline",
     "lspconfig",

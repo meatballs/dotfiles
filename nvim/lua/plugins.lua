@@ -36,8 +36,15 @@ local full_plugins = {
     -- CSV Tools
     {"chrisbra/csv.vim"},
 
-    -- Autocomplete
-    {"nvim-lua/completion-nvim"},
+    -- Completion
+    {
+        "ms-jpq/coq_nvim",
+        branch = "coq"
+    },
+    {
+        "ms-jpq/coq.artifacts",
+        branch = "artifacts"
+    },
 
     -- editorconfig support
     {"editorconfig/editorconfig-vim"},
