@@ -33,6 +33,8 @@ local base_plugins = {
 }
 
 local full_plugins = {
+    {"github/copilot.vim"},
+
     -- CSV Tools
     {"chrisbra/csv.vim"},
 

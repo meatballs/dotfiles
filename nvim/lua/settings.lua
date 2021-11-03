@@ -27,6 +27,7 @@ keybindings = {
 }
 
 plugin_modules = {
+    "copilot",
     "coq_nvim",
     "firenvim",
     "indent_blankline",
