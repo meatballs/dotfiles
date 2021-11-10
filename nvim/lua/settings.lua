@@ -41,6 +41,7 @@ plugin_modules = {
     "splice",
     "toggleterm",
     "treesitter",
+    "trouble",
     "vimtex",
 }
 

@@ -98,6 +98,9 @@ local full_plugins = {
     -- Persistent, toggled terminals
     {"akinsho/toggleterm.nvim"},
 
+    -- Code linting helper
+    {"folke/trouble.nvim"},
+
     -- LaTeX integration
     {"lervag/vimtex"},
 
