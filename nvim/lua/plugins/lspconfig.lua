@@ -53,6 +53,10 @@ local function get_python_path(workspace)
 end
 
 nvim_lsp.pylsp.setup {
+    on_attach = on_attach,
+    flags = {
+        debounce_text_changes = 150,
+    },
     cmd = { "pylsp" },
     filetypes = { "python" },
     root_dir = function(fname)
