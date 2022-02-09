@@ -30,6 +30,7 @@ plugin_modules = {
     "copilot",
     "coq_nvim",
     "firenvim",
+    "gitsigns",
     "indent_blankline",
     "lspconfig",
     "lspsaga",

@@ -1,5 +1,6 @@
 local nvim_lsp = require("lspconfig")
-local servers = { "pylsp", "yamlls", "texlab"}
+local util = require("lspconfig/util")
+local servers = {"pylsp", "yamlls", "texlab"}
 
 local on_attach = function(client, bufnr)
   local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
@@ -30,3 +31,50 @@ for _, lsp in ipairs(servers) do
         }
     }
 end
+
+local path = util.path
+
+local function get_python_path(workspace)
+  -- Use activated virtualenv.
+  if vim.env.VIRTUAL_ENV then
+    return path.join(vim.env.VIRTUAL_ENV, 'bin', 'python')
+  end
+
+  -- Find and use virtualenv in workspace directory.
+  for _, pattern in ipairs({'*', '.*'}) do
+    local match = vim.fn.glob(path.join(workspace, pattern, 'pyvenv.cfg'))
+    if match ~= '' then
+      return path.join(path.dirname(match), 'bin', 'python')
+    end
+  end
+
+  -- Fallback to system Python.
+  return "python"
+end
+
+nvim_lsp.pylsp.setup {
+    cmd = { "pylsp" },
+    filetypes = { "python" },
+    root_dir = function(fname)
+          local root_files = {
+            'pyproject.toml',
+            'setup.py',
+            'setup.cfg',
+            'requirements.txt',
+            'Pipfile',
+          }
+          return util.root_pattern(unpack(root_files))(fname) or util.find_git_ancestor(fname)
+        end,
+    single_file_support = true,
+    settings = {
+	pylsp = {
+	    configurationSources = {"flake8"},
+	    plugins = {
+		jedi = {
+		    environment = get_python_path(root_dir),
+		},
+	    },
+	},
+    },
+}
+

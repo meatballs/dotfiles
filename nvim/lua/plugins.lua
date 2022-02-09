@@ -57,6 +57,9 @@ local full_plugins = {
         run = function() vim.fn["firenvim#install"](0) end
     },
 
+    -- Git decorations
+    {"lewis6991/gitsigns.nvim"},
+
     -- Indentation guide lines
     {"lukas-reineke/indent-blankline.nvim"},
 
@@ -105,7 +108,7 @@ local full_plugins = {
     {"lervag/vimtex"},
 
     -- Git status flags in LHS gutter
-    {"airblade/vim-gitgutter"},
+    -- {"airblade/vim-gitgutter"},
 
     -- Syntax highlighting of .xsh and .xonshrc files
     {"linkinpark342/xonsh-vim"},
