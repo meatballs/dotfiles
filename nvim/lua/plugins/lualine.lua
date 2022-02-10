@@ -4,17 +4,12 @@ local function lsp_provider()
     local icon = ' '
 
     for _, client in pairs(vim.lsp.buf_get_clients()) do
-        if client.name == "pylsp" then
-            local venv_name = ""
-            if vim.env.VIRTUAL_ENV then
-                venv_name = vim.env.VIRTUAL_ENV:match("([^/]+)$")
-            else
-                venv_name = client.config.settings.pylsp.plugins.jedi.environment
-            end
-            clients[#clients+1] = icon .. client.name .. '('.. venv_name .. ')'
-        else
-          clients[#clients+1] = icon .. client.name
+        local label = icon .. client.name
+        if (client.name == "pylsp" and vim.env.VIRTUAL_ENV) then
+            local venv_name = vim.env.VIRTUAL_ENV:match("([^/]+)$")
+            label = label .."(".. venv_name ..")"
         end
+        clients[#clients+1] = label
     end
 
     return table.concat(clients, ' ')
