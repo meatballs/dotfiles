@@ -2,18 +2,22 @@ local function lsp_provider()
 
     local clients = {}
     local icon = ' '
-    local snake = '🐍️ '
 
     for _, client in pairs(vim.lsp.buf_get_clients()) do
         local label = icon .. client.name
-        if (client.name == "pylsp" and vim.env.VIRTUAL_ENV) then
-            local venv_name = vim.env.VIRTUAL_ENV:match("([^/]+)$")
-            label = label .."(".. snake .. venv_name ..")"
-        end
         clients[#clients+1] = label
     end
 
     return table.concat(clients, ' ')
+end
+
+local function virtualenv()
+    local snake = '🐍️ '
+    local venv = vim.env.VIRTUAL_ENV
+    if venv then
+        local venv_name = venv:match("([^/]+)$")
+        return snake .. venv_name
+    end
 end
 
 
@@ -30,7 +34,7 @@ require('lualine').setup {
     lualine_a = {'mode'},
     lualine_b = {'branch', 'diff', 'diagnostics'},
     lualine_c = {'filename'},
-    lualine_x = {'encoding', 'fileformat', 'filetype', lsp_provider},
+    lualine_x = {'encoding', 'fileformat', 'filetype', virtualenv, lsp_provider},
     lualine_y = {'progress'},
     lualine_z = {'location'}
   },
