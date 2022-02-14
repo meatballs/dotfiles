@@ -47,6 +47,7 @@ local full_plugins = {
         "ms-jpq/coq.artifacts",
         branch = "artifacts"
     },
+    {"ms-jpq/coq.thirdparty"},
 
     -- editorconfig support
     {"editorconfig/editorconfig-vim"},
