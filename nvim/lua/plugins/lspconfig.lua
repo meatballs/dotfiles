@@ -25,23 +25,12 @@ local on_attach = function(client, bufnr)
 
 end
 
-local function get_python_path(workspace)
+local function get_python_path()
   if vim.env.VIRTUAL_ENV then
     return path.join(vim.env.VIRTUAL_ENV, 'bin', 'python')
   end
 
   return "python"
-end
-
-local function get_python_root()
-    local root_files = {
-        'pyproject.toml',
-        'setup.py',
-        'setup.cfg',
-        'requirements.txt',
-        'Pipfile',
-    }
-    return util.root_pattern(unpack(root_files))(fname) or util.find_git_ancestor(fname)
 end
 
 local defaults = {
@@ -55,14 +44,23 @@ local server_config = {
      pylsp = {
         cmd = { "pylsp" },
         filetypes = { "python" },
-        root_dir = get_python_root(),
+        root_dir = function(fname)
+          local root_files = {
+            'pyproject.toml',
+            'setup.py',
+            'setup.cfg',
+            'requirements.txt',
+            'Pipfile',
+          }
+          return util.root_pattern(unpack(root_files))(fname) or util.find_git_ancestor(fname)
+        end,
         single_file_support = true,
         settings = {
 	    pylsp = {
 	        configurationSources = {"flake8"},
 	        plugins = {
 		    jedi = {
-		        environment = get_python_path(root_dir),
+		        environment = get_python_path(),
 		    },
 	        },
 	    },
@@ -70,7 +68,7 @@ local server_config = {
     },
 }
 
-for _, server in ipairs(servers) do
+for _, server in pairs(servers) do
     local config = {}
     for k, v in pairs(defaults) do
         config[k] = v
@@ -80,5 +78,6 @@ for _, server in ipairs(servers) do
             config[k] = v
         end
     end
-    nvim_lsp[server].setup{config}
+    nvim_lsp[server].setup(config)
 end
+
