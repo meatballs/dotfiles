@@ -5,7 +5,6 @@ def _dashboard():
     kitty @ launch --type overlay neomutt
     kitty @ resize-window --axis vertical --increment 5
     kitty @ focus-window --match title:spt
-    kitty @ launch --type overlay spt
     kitty @ launch --title calendar --location vsplit
     kitty @ launch --type overlay ikhal
     kitty @ focus-window --match title:glances
