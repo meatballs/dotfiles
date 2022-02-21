@@ -5,6 +5,11 @@ local servers = {"pylsp", "yamlls", "texlab"}
 local path = util.path
 
 local on_attach = function(client, bufnr)
+  -- Fix for https://github.com/redhat-developer/yaml-language-server/issues/486
+  if client.name == "yamlls" then
+    client.resolved_capabilities.document_formatting = true
+  end
+
   local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
   local function buf_set_option(...) vim.api.nvim_buf_set_option(bufnr, ...) end
 
@@ -66,6 +71,13 @@ local server_config = {
 	    },
         },
     },
+    yamlls = {
+        settings = {
+            yaml = {
+                format = {enable = true},
+            }
+        }
+    }
 }
 
 for _, server in pairs(servers) do
