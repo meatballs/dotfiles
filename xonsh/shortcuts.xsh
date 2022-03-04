@@ -1,5 +1,6 @@
 from pathlib import Path
 import sys
+from uuid import uuid4
 import yaml
 
 config_dir = Path($HOME, ".config", "xonsh", "rc.d")
@@ -18,7 +19,7 @@ aliases['h'] = replay_command
 
 
 def _uuid():
-    return uuid4().hex
+    return str(uuid4())
 
 aliases["uuid"] = _uuid
 
@@ -43,5 +44,5 @@ def set_aliases():
                 aliases.update(content)
         except AttributeError:
             pass
-            
+
 set_aliases()
