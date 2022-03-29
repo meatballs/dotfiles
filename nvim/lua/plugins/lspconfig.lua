@@ -35,7 +35,7 @@ local function get_python_path()
     return path.join(vim.env.VIRTUAL_ENV, 'bin', 'python')
   end
 
-  return "python"
+  return "/home/owen/.pyenv/versions/nvim/bin/python"
 end
 
 local defaults = {
