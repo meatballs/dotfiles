@@ -22,7 +22,6 @@ options = {
 
 keybindings = {
     {"i", "jk", "<esc>"},
-    {"i", "<esc>", "<nop>"},
     {"n", "<leader>n", ":set relativenumber!<CR>"}
 }
 
