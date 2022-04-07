@@ -56,6 +56,7 @@ local server_config = {
             'setup.cfg',
             'requirements.txt',
             'Pipfile',
+            'anvil.yaml',
           }
           return util.root_pattern(unpack(root_files))(fname) or util.find_git_ancestor(fname)
         end,
