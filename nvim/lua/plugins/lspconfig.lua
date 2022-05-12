@@ -1,6 +1,6 @@
 local nvim_lsp = require("lspconfig")
 local util = require("lspconfig/util")
-local servers = {"pylsp", "yamlls", "texlab"}
+local servers = {"pylsp", "yamlls", "texlab", "dockerls"}
 
 local path = util.path
 
