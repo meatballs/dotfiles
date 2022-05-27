@@ -27,3 +27,5 @@
 [mergetool "splice"]
     cmd = "nvim -f $BASE $LOCAL $REMOTE $MERGED -c 'SpliceInit'"
     trustExitCode = true
+[init]
+	defaultBranch = main
