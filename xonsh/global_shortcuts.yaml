@@ -5,8 +5,6 @@ git:
     gcm: [git, checkout, main]
     gco: [git, checkout]
     glg: [git, log, --oneline, --graph, --decorate]
-kitty:
-    ssh: [kitty, +kitten, ssh]
 docker-compose:
     dc: [docker-compose]
 nvim:
