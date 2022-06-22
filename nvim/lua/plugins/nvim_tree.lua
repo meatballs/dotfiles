@@ -1,4 +1,6 @@
-require("nvim-tree").setup()
+require("nvim-tree").setup {
+    update_cwd = true,
+}
 local map = require("keybindings")
 
 keybindings = {
