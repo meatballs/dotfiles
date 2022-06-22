@@ -52,8 +52,12 @@ require('lualine').setup {
     lualine_c = {},
     lualine_x = {},
     lualine_y = {},
-    lualine_z = {'tabs'}
+    lualine_z = {
+      {
+        'tabs',
+        mode = 2,
+      },
+    }
   },
-  extensions = {'fugitive', 'nvim-tree'},
+  extensions = {'fugitive', 'nvim-tree', 'toggleterm'},
 }
-
