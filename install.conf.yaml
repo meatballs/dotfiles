@@ -49,6 +49,6 @@
         glob: true
         path: xonsh/**
         relink: true
-        exclude: [xonsh/xonsrc.xsh]
+        exclude: [xonsh/xonshrc.xsh]
 
     ~/.xonshrc: xonsh/xonshrc.xsh
