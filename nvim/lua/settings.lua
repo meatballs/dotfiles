@@ -17,7 +17,7 @@ options = {
     guifont= "SauceCodePro Nerd Font Mono:h10",
     hidden = true,
     number = true,
-    shell = "/usr/bin/bash",
+    shell = "/home/owen/.local/bin/xonsh",
 }
 
 keybindings = {
