@@ -22,7 +22,8 @@ options = {
 
 keybindings = {
     {"i", "jk", "<esc>"},
-    {"n", "<leader>n", ":set relativenumber!<CR>"}
+    {"n", "<leader>n", ":set relativenumber!<CR>"},
+    {"n", "<leader>l", ":make --max-line-length 88<CR><CR>:copen<CR>"},
 }
 
 plugin_modules = {
@@ -65,6 +66,7 @@ function full()
     cmds = {
         "autocmd FocusLost * :wa",
         "autocmd BufWinEnter * silent! :%foldopen!",
+        "autocmd Filetype python setlocal makeprg=flake8",
     }
     for k, v in pairs(cmds) do
         vim.cmd(v)
