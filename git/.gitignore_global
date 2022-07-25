@@ -2,6 +2,5 @@
 .DS_Store
 .autoxsh
 Session.vim
-tags*
 pylsp-mypy.cfg
 .vscode/
