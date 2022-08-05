@@ -58,6 +58,12 @@ local full_plugins = {
 
     -- Git decorations
     {"lewis6991/gitsigns.nvim"},
+    --
+    -- Hop based navigation
+    {
+        "phaazon/hop.nvim",
+        branch = "v2",
+    },
 
     -- Indentation guide lines
     {"lukas-reineke/indent-blankline.nvim"},

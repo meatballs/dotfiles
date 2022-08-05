@@ -31,6 +31,7 @@ plugin_modules = {
     "coq_3p",
     "firenvim",
     "gitsigns",
+    "hop",
     "indent_blankline",
     "lspconfig",
     "lspsaga",
