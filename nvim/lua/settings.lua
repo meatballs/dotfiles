@@ -37,6 +37,8 @@ plugin_modules = {
     "lspsaga",
     "lualine",
     "nvim_dap",
+    "notify",
+    "project",
     "pudb",
     "telescope",
     "nvim_tree",
@@ -45,6 +47,7 @@ plugin_modules = {
     "treesitter",
     "trouble",
     "vimtex",
+    "which-key",
 }
 
 function basic()

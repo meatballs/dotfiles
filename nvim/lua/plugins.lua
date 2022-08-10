@@ -28,7 +28,7 @@ local base_plugins = {
     -- icon set
     {"kyazdani42/nvim-web-devicons"},
 
-    -- kitty navigation
+    --kitty navigation
     {"knubie/vim-kitty-navigator"},
 }
 
@@ -82,6 +82,8 @@ local full_plugins = {
     --Common lsp config settings
     {"neovim/nvim-lspconfig"},
 
+    {"rcarriga/nvim-notify"},
+
     -- File Explorer Tree
     {"kyazdani42/nvim-tree.lua"},
 
@@ -90,6 +92,8 @@ local full_plugins = {
         "nvim-treesitter/nvim-treesitter",
         run = ":TSUpdate"
     },
+
+    {"ahmedkhalf/project.nvim"},
 
     -- Merge Conflicts
     {"sjl/splice.vim"},
@@ -111,6 +115,8 @@ local full_plugins = {
 
     -- LaTeX integration
     {"lervag/vimtex"},
+
+    {"folke/which-key.nvim"},
 
     -- Git status flags in LHS gutter
     -- {"airblade/vim-gitgutter"},

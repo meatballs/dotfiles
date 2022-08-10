@@ -17,6 +17,7 @@ keybindings = {
     {"n", "<leader>fb", "<cmd>Telescope buffers<cr>"},
     {"n", "<leader>ft", "<cmd>Telescope treesitter<cr>"},
     {"n", "<leader>fg", "<cmd>Telescope live_grep<cr>"},
+    {"n", "<leader>fp", "<cmd>Telescope projects<cr>"},
 }
 
 for k, v in pairs(keybindings) do
