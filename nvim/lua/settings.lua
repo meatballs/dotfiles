@@ -22,8 +22,6 @@ options = {
 
 keybindings = {
     {"i", "jk", "<esc>"},
-    {"n", "<leader>n", ":set relativenumber!<CR>"},
-    {"n", "<leader>l", ":make --max-line-length 88<CR><CR>:copen<CR>"},
 }
 
 plugin_modules = {
