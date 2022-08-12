@@ -36,6 +36,14 @@ wk.register({
             p = {":Telescope projects", "Projects"},
             t = {":Telescope treesitter", "Treesitter"},
         },
+        j = {
+            name = "+jupyter",
+            d = {":MagmaDelete<CR>", "Delete cell"},
+            e = {":MagmaEvaluateLine<CR>", "Evaluate cell"},
+            i = {":MagmaInit<CR>", "Initialise"},
+            r = {":MagmaReevaluateCell<CR>, "Re-evaluate cell"},
+
+        },
         l = {
             name = "+lazy",
             g = {":lua lazygit_toggle()<CR>", "Git"},
@@ -43,3 +51,12 @@ wk.register({
         },
     },
 })
+
+wk.register({
+    ["<leader>"] = {
+        j = {
+            name = "+jupyter",
+            e = {":<C-U>MagmaEvaluateVisual<CR>", "Evaluate"},
+        },
+    }
+}, {mode="x"})
