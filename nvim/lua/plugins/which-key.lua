@@ -1,5 +1,7 @@
 local wk = require("which-key")
 wk.setup {}
+
+-- Normal mode bindings
 wk.register({
     ["f"] = {":lua require'hop'.hint_char2({ direction = require'hop.hint'.HintDirection.AFTER_CURSOR, current_line_only = true })<cr>", "Find (forward)"},
     ["F"] = {":lua require'hop'.hint_char2({ direction = require'hop.hint'.HintDirection.BEFORE_CURSOR, current_line_only = true })<cr>", "Find (backward)"},
@@ -42,6 +44,7 @@ wk.register({
             e = {":MagmaEvaluateLine<CR>", "Evaluate cell"},
             i = {":MagmaInit<CR>", "Initialise"},
             r = {":MagmaReevaluateCell<CR>", "Re-evaluate cell"},
+            s = {":MagmaDeinit<CR>", "Stop"},
         },
         l = {
             name = "+lazy",
@@ -51,6 +54,7 @@ wk.register({
     },
 })
 
+-- Visual mode bindings
 wk.register({
     ["<leader>"] = {
         j = {
