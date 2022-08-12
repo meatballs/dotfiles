@@ -41,8 +41,7 @@ wk.register({
             d = {":MagmaDelete<CR>", "Delete cell"},
             e = {":MagmaEvaluateLine<CR>", "Evaluate cell"},
             i = {":MagmaInit<CR>", "Initialise"},
-            r = {":MagmaReevaluateCell<CR>, "Re-evaluate cell"},
-
+            r = {":MagmaReevaluateCell<CR>", "Re-evaluate cell"},
         },
         l = {
             name = "+lazy",
