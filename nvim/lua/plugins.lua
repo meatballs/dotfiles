@@ -6,8 +6,17 @@ local install_path = fn.stdpath("data").."/site/pack/packer/start/packer.nvim"
 
 if fn.empty(fn.glob(install_path)) > 0 then
   fn.system({"git", "clone", "https://github.com/wbthomason/packer.nvim", install_path})
+  print("Installing packer. You'll need to restart neovim...")
   execute "packadd packer.nvim"
 end
+
+-- Autocommand that reloads neovim whenever you save the plugins.lua file
+vim.cmd([[
+  augroup packer_user_config
+    autocmd!
+    autocmd BufWritePost plugins.lua source <afile> | PackerSync
+  augroup end
+]])
 
 local packer_config = {
     display = {
@@ -142,6 +151,9 @@ function M.load(config)
             config = packer_config
         }
     )
+    if PACKER_BOOTSTRAP then
+	require("packer").sync()
+    end
 end
 
 return M
