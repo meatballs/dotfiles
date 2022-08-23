@@ -92,7 +92,7 @@ local full_plugins = {
     {"neovim/nvim-lspconfig"},
 
     -- Jupyter Integration
-    {"dccsillag/magma-nvim", run = ":UpdateRemotePlugins"},
+    {"dccsillag/magma-nvim", config = "vim.cmd [[UpdateRemotePlugins]]"},
 
     -- Popup notifications
     {"rcarriga/nvim-notify"},
