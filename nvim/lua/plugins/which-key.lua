@@ -51,6 +51,12 @@ wk.register({
             g = {":lua lazygit_toggle()<CR>", "Git"},
             d = {":lua lazydocker_toggle<CR>", "Docker"},
         },
+        t = {
+            name = "+terminal",
+            v = {":ToggleTerm direction=vertical<CR>", "Vertical"},
+            h = {":ToggleTerm direction=horizontal<CR>", "Horizontal"},
+            f = {":ToggleTerm direction=float<CR>", "Float"},
+        },
     },
 })
 
