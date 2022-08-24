@@ -21,8 +21,8 @@ wk.register({
             name = "+debug",
             b = {":lua require'dap'.toggle_breakpoint()<CR>", "Breakpoint"},
             c = {":lua require'dap'.continue()<CR>", "Continue"},
-            so = {":lua require'dap'.step_over()<CR>", "Step over"},
             si = {":lua require'dap'.step_into()<CR>", "Step into"},
+            so = {":lua require'dap'.step_over()<CR>", "Step over"},
             sx = {":lua require'dap'.step_out()<CR>", "Step out"},
         },
         e = {
@@ -35,6 +35,7 @@ wk.register({
             b = {":Telescope buffers<CR>", "Buffers"},
             f = {":Telescope file_browser<CR>", "Files"},
             g = {":Telescope live_grep<CR>", "Grep"},
+            n = {":Telescope notify<CR>", "Notifications"},
             p = {":Telescope projects<CR>", "Projects"},
             t = {":Telescope treesitter<CR>", "Treesitter"},
         },
@@ -48,14 +49,14 @@ wk.register({
         },
         l = {
             name = "+lazy",
-            g = {":lua lazygit_toggle()<CR>", "Git"},
             d = {":lua lazydocker_toggle<CR>", "Docker"},
+            g = {":lua lazygit_toggle()<CR>", "Git"},
         },
         t = {
             name = "+terminal",
-            v = {":ToggleTerm direction=vertical<CR>", "Vertical"},
             h = {":ToggleTerm direction=horizontal<CR>", "Horizontal"},
             f = {":ToggleTerm direction=float<CR>", "Float"},
+            v = {":ToggleTerm direction=vertical<CR>", "Vertical"},
         },
     },
 })
