@@ -67,7 +67,6 @@ function full()
         "autocmd FocusLost * :wa",
         "autocmd BufWinEnter * silent! :%foldopen!",
         "autocmd Filetype python setlocal makeprg=flake8",
-        "autocmd BufEnter anvil* set filetype=python",
     }
     for k, v in pairs(cmds) do
         vim.cmd(v)
