@@ -33,10 +33,10 @@ wk.register({
         f = {
             name = "+finder",
             b = {":Telescope buffers<CR>", "Buffers"},
-            f = {":Telescope file_browser", "Files"},
-            g = {":Telescope live_grep", "Grep"},
-            p = {":Telescope projects", "Projects"},
-            t = {":Telescope treesitter", "Treesitter"},
+            f = {":Telescope file_browser<CR>", "Files"},
+            g = {":Telescope live_grep<CR>", "Grep"},
+            p = {":Telescope projects<CR>", "Projects"},
+            t = {":Telescope treesitter<CR>", "Treesitter"},
         },
         j = {
             name = "+jupyter",
