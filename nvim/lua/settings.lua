@@ -31,6 +31,7 @@ plugin_modules = {
     "gitsigns",
     "hop",
     "indent_blankline",
+    "kommentary",
     "lspconfig",
     "lspsaga",
     "lualine",

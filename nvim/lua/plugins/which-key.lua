@@ -10,6 +10,7 @@ wk.register({
             name = "+code",
             a = {":Lspsaga code_action<CR>", "Action"},
             d = {":Lspsaga preview_definition<CR>", "Definition"},
+            c = {"<Plug>kommentary_line_default", "Comment"},
             f = {":lua vim.lsp.buf.formatting()<CR>", "Format"},
             l = {":make --max-line-length 88<CR><CR>:copen<CR>", "Lint"},
             n = {":set relativenumber!<CR>", "Line numbers"},
@@ -64,6 +65,10 @@ wk.register({
 -- Visual mode bindings
 wk.register({
     ["<leader>"] = {
+        c = {
+            name = "+code",
+            c = {"<Plug>kommentary_visual_default", "Comment"},
+        },
         j = {
             name = "+jupyter",
             e = {":<C-U>MagmaEvaluateVisual<CR>", "Evaluate"},
