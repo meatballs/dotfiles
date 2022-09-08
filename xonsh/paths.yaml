@@ -6,4 +6,4 @@ darwin:
 linux:
     - $HOME/bin
     - $HOME/.local/bin
-    - $HOME/cargo/bin
+    - $HOME/.cargo/bin
