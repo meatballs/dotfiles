@@ -59,6 +59,13 @@ wk.register({
             f = {":ToggleTerm direction=float<CR>", "Float"},
             v = {":ToggleTerm direction=vertical<CR>", "Vertical"},
         },
+        x = {
+            name = "+latex",
+            c = {":VimtexCompile<CR>", "Start compiler"},
+            o = {":VimtexCompileSS<CR>", "Compile once"},
+            s = {":VimtexStop<CR>", "Stop compiler"},
+            v = {":VimtexView<CR>", "View"},
+        },
     },
 })
 
