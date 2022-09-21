@@ -18,6 +18,8 @@ options = {
     hidden = true,
     number = true,
     shell = "/home/owen/.local/bin/xonsh",
+    foldmethod = "expr",
+    foldexpr = "nvim_treesitter#foldexpr()",
 }
 
 keybindings = {
