@@ -22,14 +22,14 @@ end
 
 local function getWords()
         local file_type = vim.bo.filetype
-        if file_type == "markdown" or file_type == "restructuredText" or file_type == "text" then
+        if file_type == "markdown" or file_type == "text" or file_type == "rst" then
                 local total_words = vim.fn.wordcount().words
                 local visual_words = vim.fn.wordcount().visual_words
                 local cursor_words = vim.fn.wordcount().cursor_words
 
-                if not (visual_words == nil) then
+                if visual_words ~= nil then
                         return tostring(visual_words) .. "/" .. tostring(total_words) .. " words"
-                elseif not (cursor_words == nil) then
+                elseif cursor_words ~= nil then
                         return tostring(cursor_words) .. "/" .. tostring(total_words) .. " words"
                 else
                         return tostring(total_words) .. " words"
