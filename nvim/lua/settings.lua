@@ -86,4 +86,9 @@ function M.setup(config)
     if config == "full" then full() end
 end
 
+vim.api.nvim_create_autocmd(
+    { "BufRead", "BufNewFile" },
+    { pattern = { "*.txt", "*.md", "*.tex", "*.rst"}, command = "setlocal spell" }
+)
+
 return M

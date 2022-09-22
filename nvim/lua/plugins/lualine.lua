@@ -22,7 +22,7 @@ end
 
 local function getWords()
         local file_type = vim.bo.filetype
-        if file_type == "markdown" or file_type == "text" or file_type == "rst" then
+        if file_type == "markdown" or file_type == "text" or file_type == "rst" or file_type == "tex" then
                 local total_words = vim.fn.wordcount().words
                 local visual_words = vim.fn.wordcount().visual_words
                 local cursor_words = vim.fn.wordcount().cursor_words

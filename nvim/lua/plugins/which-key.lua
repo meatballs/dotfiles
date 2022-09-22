@@ -55,9 +55,9 @@ wk.register({
         },
         s = {
             name = "+spell checker",
-            d = {":set nospell<CR>", "Disnable"},
-            e = {":set spell<CR>", "Enable"},
-            t = {":set spell!<CR>", "Toggle"},
+            d = {":setlocal nospell<CR>", "Disnable"},
+            e = {":setlocal spell<CR>", "Enable"},
+            t = {":setlocal spell!<CR>", "Toggle"},
         },
         t = {
             name = "+terminal",
