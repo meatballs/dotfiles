@@ -53,6 +53,12 @@ wk.register({
             d = {":lua lazydocker_toggle<CR>", "Docker"},
             g = {":lua lazygit_toggle()<CR>", "Git"},
         },
+        s = {
+            name = "+spell checker",
+            d = {":set nospell<CR>", "Disnable"},
+            e = {":set spell<CR>", "Enable"},
+            t = {":set spell!<CR>", "Toggle"},
+        },
         t = {
             name = "+terminal",
             h = {":ToggleTerm direction=horizontal<CR>", "Horizontal"},

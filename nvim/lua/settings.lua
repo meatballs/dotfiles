@@ -5,6 +5,7 @@ global_settings = {
     mapleader = " ",
     maplocalleader = ",",
     python3_host_prog = "~/.pyenv/versions/nvim/bin/python3",
+    spelllang = "en-gb",
     splitbelow = true,
     splitright = true,
     termguicolors = true,
