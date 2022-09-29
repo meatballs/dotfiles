@@ -52,8 +52,8 @@ wk.register({
         },
         l = {
             name = "+lazy",
-            d = { ":lua lazydocker_toggle<CR>", "Docker" },
-            g = { ":lua lazygit_toggle()<CR>", "Git" },
+            d = { ":lua Lazydocker_toggle<CR>", "Docker" },
+            g = { ":lua Lazygit_toggle()<CR>", "Git" },
         },
         s = {
             name = "+spell checker",

@@ -1,7 +1,7 @@
 local M = {}
 local map = require("keybindings")
 
-global_settings = {
+local global_settings = {
     mapleader = " ",
     maplocalleader = ",",
     python3_host_prog = "~/.pyenv/versions/nvim/bin/python3",
@@ -11,7 +11,7 @@ global_settings = {
     termguicolors = true,
 }
 
-options = {
+local options = {
     colorcolumn = { 88 },
     completeopt = { "menuone", "noinsert" },
     cursorline = true,
@@ -23,11 +23,11 @@ options = {
     foldexpr = "nvim_treesitter#foldexpr()",
 }
 
-keybindings = {
+local keybindings = {
     { "i", "jk", "<esc>" },
 }
 
-plugin_modules = {
+local plugin_modules = {
     "coq_nvim",
     "coq_3p",
     "firenvim",
@@ -50,7 +50,7 @@ plugin_modules = {
     "which-key",
 }
 
-function basic()
+local function basic()
     for k, v in pairs(global_settings) do
         vim.g[k] = v
     end
@@ -59,24 +59,24 @@ function basic()
         vim.opt[k] = v
     end
 
-    for k, v in pairs(keybindings) do
+    for _, v in pairs(keybindings) do
         map(v)
     end
 
     require("plugins.nord")
 end
 
-function full()
-    cmds = {
+local function full()
+    local cmds = {
         "autocmd FocusLost * :wa",
         "autocmd BufWinEnter * silent! :%foldopen!",
         "autocmd Filetype python setlocal makeprg=flake8",
     }
-    for k, v in pairs(cmds) do
+    for _, v in pairs(cmds) do
         vim.cmd(v)
     end
 
-    for k, v in pairs(plugin_modules) do
+    for _, v in pairs(plugin_modules) do
         require("plugins." .. v)
     end
 end

@@ -92,7 +92,7 @@ local full_plugins = {
     { "neovim/nvim-lspconfig" },
 
     -- Jupyter Integration
-    { "dccsillag/magma-nvim", config = "vim.cmd [[UpdateRemotePlugins]]" },
+    { "dccsillag/magma-nvim", run = ":UpdateRemotePlugins" },
 
     -- Popup notifications
     { "rcarriga/nvim-notify" },
@@ -136,7 +136,7 @@ local full_plugins = {
 }
 
 function M.load(config)
-    plugins = {}
+    local plugins = {}
     for _, value in ipairs(base_plugins) do
         table.insert(plugins, value)
     end

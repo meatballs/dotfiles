@@ -1,5 +1,3 @@
-local map = require("keybindings")
-
 vim.g.coq_settings = {
     auto_start = 'shut-up',
     keymap = {
@@ -7,7 +5,7 @@ vim.g.coq_settings = {
         recommended = false,
     },
 }
-local coq = require('coq')
+require('coq')
 
 
 
