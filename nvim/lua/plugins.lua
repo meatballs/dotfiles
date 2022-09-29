@@ -1,13 +1,13 @@
 local M = {}
 local execute = vim.api.nvim_command
 local fn = vim.fn
-local install_path = fn.stdpath("data").."/site/pack/packer/start/packer.nvim"
+local install_path = fn.stdpath("data") .. "/site/pack/packer/start/packer.nvim"
 
 
 if fn.empty(fn.glob(install_path)) > 0 then
-  fn.system({"git", "clone", "https://github.com/wbthomason/packer.nvim", install_path})
-  print("Installing packer. You'll need to restart neovim...")
-  execute "packadd packer.nvim"
+    fn.system({ "git", "clone", "https://github.com/wbthomason/packer.nvim", install_path })
+    print("Installing packer. You'll need to restart neovim...")
+    execute "packadd packer.nvim"
 end
 
 -- Autocommand that reloads neovim whenever you save the plugins.lua file
@@ -26,24 +26,24 @@ local packer_config = {
 
 local base_plugins = {
     -- Packer can manage itself
-    {"wbthomason/packer.nvim"},
+    { "wbthomason/packer.nvim" },
 
     -- Lua based status line
-    {"hoob3rt/lualine.nvim"},
+    { "hoob3rt/lualine.nvim" },
 
     -- Nord colour theme
-    {"shaunsingh/nord.nvim"},
+    { "shaunsingh/nord.nvim" },
 
     -- icon set
-    {"kyazdani42/nvim-web-devicons"},
+    { "kyazdani42/nvim-web-devicons" },
 
     --kitty navigation
-    {"knubie/vim-kitty-navigator"},
+    { "knubie/vim-kitty-navigator" },
 }
 
 local full_plugins = {
     -- CSV Tools
-    {"chrisbra/csv.vim"},
+    { "chrisbra/csv.vim" },
 
     -- Completion
     {
@@ -54,10 +54,10 @@ local full_plugins = {
         "ms-jpq/coq.artifacts",
         branch = "artifacts"
     },
-    {"ms-jpq/coq.thirdparty"},
+    { "ms-jpq/coq.thirdparty" },
 
     -- editorconfig support
-    {"editorconfig/editorconfig-vim"},
+    { "editorconfig/editorconfig-vim" },
 
     -- Neovim in the browser
     {
@@ -66,7 +66,7 @@ local full_plugins = {
     },
 
     -- Git decorations
-    {"lewis6991/gitsigns.nvim"},
+    { "lewis6991/gitsigns.nvim" },
     --
     -- Hop based navigation
     {
@@ -75,30 +75,30 @@ local full_plugins = {
     },
 
     -- Indentation guide lines
-    {"lukas-reineke/indent-blankline.nvim"},
+    { "lukas-reineke/indent-blankline.nvim" },
 
     -- Code commenting
-    {"b3nj5m1n/kommentary"},
+    { "b3nj5m1n/kommentary" },
 
     -- Improved lsp ui
-    {"tami5/lspsaga.nvim"},
+    { "tami5/lspsaga.nvim" },
 
     -- Debug Adapter Protocol
-    {"mfussenegger/nvim-dap"},
-    {"mfussenegger/nvim-dap-python"},
-    {"rcarriga/nvim-dap-ui"},
+    { "mfussenegger/nvim-dap" },
+    { "mfussenegger/nvim-dap-python" },
+    { "rcarriga/nvim-dap-ui" },
 
     --Common lsp config settings
-    {"neovim/nvim-lspconfig"},
+    { "neovim/nvim-lspconfig" },
 
     -- Jupyter Integration
-    {"dccsillag/magma-nvim", config = "vim.cmd [[UpdateRemotePlugins]]"},
+    { "dccsillag/magma-nvim", config = "vim.cmd [[UpdateRemotePlugins]]" },
 
     -- Popup notifications
-    {"rcarriga/nvim-notify"},
+    { "rcarriga/nvim-notify" },
 
     -- File Explorer Tree
-    {"kyazdani42/nvim-tree.lua"},
+    { "kyazdani42/nvim-tree.lua" },
 
     -- Treesitter
     {
@@ -106,39 +106,39 @@ local full_plugins = {
         run = ":TSUpdate"
     },
 
-    {"ahmedkhalf/project.nvim"},
+    { "ahmedkhalf/project.nvim" },
 
     -- Help file for strftime formats
-    {"sjl/strftimedammit.vim"},
+    { "sjl/strftimedammit.vim" },
 
     -- Telescope
-    {"nvim-lua/popup.nvim"},
-    {"nvim-lua/plenary.nvim"},
-    {"nvim-telescope/telescope.nvim"},
-    {"nvim-telescope/telescope-dap.nvim"},
+    { "nvim-lua/popup.nvim" },
+    { "nvim-lua/plenary.nvim" },
+    { "nvim-telescope/telescope.nvim" },
+    { "nvim-telescope/telescope-dap.nvim" },
 
     -- Persistent, toggled terminals
-    {"akinsho/toggleterm.nvim"},
+    { "akinsho/toggleterm.nvim" },
 
     -- Code linting helper
-    {"folke/trouble.nvim"},
+    { "folke/trouble.nvim" },
 
     -- LaTeX integration
-    {"lervag/vimtex"},
+    { "lervag/vimtex" },
 
-    {"folke/which-key.nvim"},
+    { "folke/which-key.nvim" },
 
     -- Git status flags in LHS gutter
     -- {"airblade/vim-gitgutter"},
 
     -- Syntax highlighting of .xsh and .xonshrc files
-    {"linkinpark342/xonsh-vim"},
+    { "linkinpark342/xonsh-vim" },
 }
 
 function M.load(config)
     plugins = {}
     for _, value in ipairs(base_plugins) do
-	table.insert(plugins, value)
+        table.insert(plugins, value)
     end
     if config == "full" then
         for _, value in ipairs(full_plugins) do
@@ -152,7 +152,7 @@ function M.load(config)
         }
     )
     if PACKER_BOOTSTRAP then
-	require("packer").sync()
+        require("packer").sync()
     end
 end
 

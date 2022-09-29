@@ -12,7 +12,7 @@ charset = utf-8
 trim_trailing_whitespace = true
 indent_style = space
 
-[*.{py, md, rst}]
+[*.{lua, py, md, rst}]
 indent_size = 4
 
 [*.yml]

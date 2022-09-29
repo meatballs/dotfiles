@@ -12,10 +12,10 @@ global_settings = {
 }
 
 options = {
-    colorcolumn = {88},
-    completeopt = {"menuone", "noinsert"},
+    colorcolumn = { 88 },
+    completeopt = { "menuone", "noinsert" },
     cursorline = true,
-    guifont= "SauceCodePro Nerd Font Mono:h10",
+    guifont = "SauceCodePro Nerd Font Mono:h10",
     hidden = true,
     number = true,
     shell = "/home/owen/.local/bin/xonsh",
@@ -24,7 +24,7 @@ options = {
 }
 
 keybindings = {
-    {"i", "jk", "<esc>"},
+    { "i", "jk", "<esc>" },
 }
 
 plugin_modules = {
@@ -88,7 +88,7 @@ end
 
 vim.api.nvim_create_autocmd(
     { "BufRead", "BufNewFile" },
-    { pattern = { "*.txt", "*.md", "*.tex", "*.rst"}, command = "setlocal spell" }
+    { pattern = { "*.txt", "*.md", "*.tex", "*.rst" }, command = "setlocal spell" }
 )
 
 return M
