@@ -63,9 +63,10 @@ local server_config = {
                         pylsp = {
                                 configurationSources = { "flake8" },
                                 plugins = {
-                                        jedi = {
-                                                environment = get_python_path(),
-                                        },
+                                        jedi = { environment = get_python_path() },
+                                        pycodestyle = { enabled = false },
+                                        pyflakes = { enabled = false },
+                                        flake8 = { enabled = true, },
                                 },
                         },
                 },

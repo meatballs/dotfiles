@@ -12,7 +12,7 @@ wk.register({
             d = {":Lspsaga preview_definition<CR>", "Definition"},
             c = {"<Plug>kommentary_line_default", "Comment"},
             f = {":lua vim.lsp.buf.formatting()<CR>", "Format"},
-            l = {":make --max-line-length 88<CR><CR>:copen<CR>", "Lint"},
+            l = {":make --max-line-length 88 --extend-ignore E203<CR><CR>:copen<CR>", "Lint"},
             n = {":set relativenumber!<CR>", "Line numbers"},
             r = {":Lspsaga rename<CR>", "Rename"},
             s = {":Lspsaga signature_help<CR>", "Signature"},
