@@ -47,10 +47,10 @@ local lazydocker = Terminal:new({
     },
 })
 
-function Lazygit_toggle()
+function _G.lazygit_toggle()
     lazygit:toggle()
 end
 
-function Lazydocker_toggle()
+function _G.lazydocker_toggle()
     lazydocker:toggle()
 end
