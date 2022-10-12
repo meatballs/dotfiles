@@ -92,12 +92,12 @@ local full_plugins = {
     { "mfussenegger/nvim-dap" },
     { "mfussenegger/nvim-dap-python" },
     { "rcarriga/nvim-dap-ui" },
+    --
+    -- Jupyter Integration
+    { "dccsillag/magma-nvim", run = ":UpdateRemotePlugins" },
 
     --Common lsp config settings
     { "neovim/nvim-lspconfig" },
-
-    -- Jupyter Integration
-    { "dccsillag/magma-nvim", run = ":UpdateRemotePlugins" },
 
     -- Popup notifications
     { "rcarriga/nvim-notify" },
@@ -114,6 +114,9 @@ local full_plugins = {
             "kyazdani42/nvim-web-devicons",
         },
     },
+
+    -- Project management
+    { "ahmedkhalf/project.nvim" },
 
     -- Treesitter
     {
