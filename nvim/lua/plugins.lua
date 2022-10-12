@@ -42,11 +42,6 @@ local base_plugins = {
 }
 
 local full_plugins = {
-    -- Startup screen
-    {
-        "goolord/alpha-nvim",
-        requires = { 'kyazdani42/nvim-web-devicons' },
-    },
     -- CSV Tools
     { "chrisbra/csv.vim" },
 
