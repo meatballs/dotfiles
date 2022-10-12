@@ -62,6 +62,9 @@ local full_plugins = {
     },
     { "ms-jpq/coq.thirdparty" },
 
+    -- Git diff view
+    { "sindrets/diffview.nvim", requires="nvim-lua/plenary.nvim"},
+
     -- editorconfig support
     { "editorconfig/editorconfig-vim" },
 
@@ -121,8 +124,6 @@ local full_plugins = {
         "nvim-treesitter/nvim-treesitter",
         run = ":TSUpdate"
     },
-
-    { "ahmedkhalf/project.nvim" },
 
     -- Help file for strftime formats
     { "sjl/strftimedammit.vim" },
