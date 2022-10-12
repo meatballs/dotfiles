@@ -29,13 +29,13 @@ local keybindings = {
 
 local plugin_modules = {
     "autopairs",
+    "comment",
     "coq_nvim",
     "coq_3p",
     "firenvim",
     "gitsigns",
     "hop",
     "indent_blankline",
-    "kommentary",
     "lspconfig",
     "lspsaga",
     "lualine",

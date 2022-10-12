@@ -45,6 +45,9 @@ local full_plugins = {
     -- Autopairs
     { "windwp/nvim-autopairs" },
 
+    -- Comments
+    { "numToStr/Comment.nvim"},
+
     -- CSV Tools
     { "chrisbra/csv.vim" },
 
@@ -79,9 +82,6 @@ local full_plugins = {
 
     -- Indentation guide lines
     { "lukas-reineke/indent-blankline.nvim" },
-
-    -- Code commenting
-    { "b3nj5m1n/kommentary" },
 
     -- Improved lsp ui
     { "tami5/lspsaga.nvim" },
