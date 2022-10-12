@@ -43,6 +43,7 @@ local plugin_modules = {
     "project",
     "telescope",
     "nvim_tree",
+    "octo",
     "toggleterm",
     "treesitter",
     "trouble",

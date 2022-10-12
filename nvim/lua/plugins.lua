@@ -105,6 +105,16 @@ local full_plugins = {
     -- File Explorer Tree
     { "kyazdani42/nvim-tree.lua" },
 
+    -- Github integration
+    {
+        "pwntester/octo.nvim",
+        requires = {
+            "nvim-lua/plenary.nvim",
+            "nvim-telescope/telescope.nvim",
+            "kyazdani42/nvim-web-devicons",
+        },
+    },
+
     -- Treesitter
     {
         "nvim-treesitter/nvim-treesitter",
