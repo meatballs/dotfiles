@@ -28,6 +28,7 @@ local keybindings = {
 }
 
 local plugin_modules = {
+    "alpha",
     "coq_nvim",
     "coq_3p",
     "firenvim",
