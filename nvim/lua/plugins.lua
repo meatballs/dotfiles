@@ -42,6 +42,9 @@ local base_plugins = {
 }
 
 local full_plugins = {
+    -- Autopairs
+    { "windwp/nvim-autopairs" },
+
     -- CSV Tools
     { "chrisbra/csv.vim" },
 
