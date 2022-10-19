@@ -44,6 +44,8 @@
 
     ~/.pylintrc: pylint/pylintrc
 
+    ~/.todotxt-machinerc: todotxt-machine/todotxt-machinerc
+
     ~/.config/xonsh/rc.d:
         create: true
         glob: true

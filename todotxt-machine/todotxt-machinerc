@@ -1,0 +1,8 @@
+[settings]
+file = ~/Nextcloud/todo/todo.txt
+archive = ~/Nextcloud/todo/done.txt
+auto-save = True
+show-toolbar = False
+show-filter-panel = False
+enable-borders = False
+enable-word-wrap = True
