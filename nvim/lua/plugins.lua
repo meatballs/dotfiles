@@ -65,8 +65,11 @@ local full_plugins = {
     -- Git diff view
     { "sindrets/diffview.nvim", requires="nvim-lua/plenary.nvim"},
 
+    -- UI improvements
+    { "stevearc/dressing.nvim" },
+
     -- editorconfig support
-    { "editorconfig/editorconfig-vim" },
+    { "gpanders/editorconfig.nvim" },
 
     -- Neovim in the browser
     {
@@ -147,9 +150,6 @@ local full_plugins = {
     { "lervag/vimtex" },
 
     { "folke/which-key.nvim" },
-
-    -- Git status flags in LHS gutter
-    -- {"airblade/vim-gitgutter"},
 
     -- Syntax highlighting of .xsh and .xonshrc files
     { "linkinpark342/xonsh-vim" },
