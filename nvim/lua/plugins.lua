@@ -116,6 +116,9 @@ local full_plugins = {
         },
     },
 
+    -- Task runner
+    { "stevearc/overseer.nvim"},
+
     -- Project management
     { "ahmedkhalf/project.nvim" },
 

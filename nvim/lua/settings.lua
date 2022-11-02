@@ -41,6 +41,7 @@ local plugin_modules = {
     "lspsaga",
     "lualine",
     "nvim_dap",
+    "overseer",
     "project",
     "telescope",
     "nvim_tree",
