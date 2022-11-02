@@ -54,9 +54,14 @@ wk.register({
             d = { ":lua lazydocker_toggle()<CR>", "Docker" },
             g = { ":lua lazygit_toggle()<CR>", "Git" },
         },
+        r = {
+            name = "+run",
+            r = { ":OverseerRun<CR>", "Run Task"},
+            t = { ":OverseerToggle<CR>", "Toggle List"},
+        },
         s = {
             name = "+spell checker",
-            d = { ":setlocal nospell<CR>", "Disnable" },
+            d = { ":setlocal nospell<CR>", "Disable" },
             e = { ":setlocal spell<CR>", "Enable" },
             t = { ":setlocal spell!<CR>", "Toggle" },
         },
