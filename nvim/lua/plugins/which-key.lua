@@ -79,10 +79,6 @@ wk.register({
 -- Visual mode bindings
 wk.register({
     ["<leader>"] = {
-        c = {
-            name = "+code",
-            c = { "<Plug>kommentary_visual_default", "Comment" },
-        },
         j = {
             name = "+jupyter",
             e = { ":<C-U>MagmaEvaluateVisual<CR>", "Evaluate" },
