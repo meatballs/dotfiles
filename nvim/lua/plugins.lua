@@ -96,9 +96,12 @@ local full_plugins = {
     { "mfussenegger/nvim-dap" },
     { "mfussenegger/nvim-dap-python" },
     { "rcarriga/nvim-dap-ui" },
-    --
+
     -- Jupyter Integration
     { "dccsillag/magma-nvim", run = ":UpdateRemotePlugins" },
+
+    -- Split Navigation
+    { "numToStr/Navigator.nvim"},
 
     --Common lsp config settings
     { "neovim/nvim-lspconfig" },
@@ -149,6 +152,7 @@ local full_plugins = {
     -- LaTeX integration
     { "lervag/vimtex" },
 
+    -- Key Bindings with prompt
     { "folke/which-key.nvim" },
 
     -- Syntax highlighting of .xsh and .xonshrc files

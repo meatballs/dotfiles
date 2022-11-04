@@ -7,6 +7,10 @@ wk.register({
         "Find (forward)" },
     ["F"] = { ":lua require'hop'.hint_char2({ direction = require'hop.hint'.HintDirection.BEFORE_CURSOR, current_line_only = true })<cr>",
         "Find (backward)" },
+    ["C-h"] = { ":NavigatorLeft<CR>" },
+    ["C-l"] = { ":NavigatorRight<CR>" },
+    ["C-j"] = { ":NavigatorDown<CR>" },
+    ["C-k"] = { ":NavigatorUp<CR>" },
     ["<leader>"] = {
         c = {
             name = "+code",

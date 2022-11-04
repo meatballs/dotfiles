@@ -40,6 +40,7 @@ local plugin_modules = {
     "lspconfig",
     "lspsaga",
     "lualine",
+    "navigator",
     "nvim_dap",
     "overseer",
     "project",
