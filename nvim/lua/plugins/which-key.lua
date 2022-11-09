@@ -16,7 +16,7 @@ wk.register({
             name = "+code",
             a = { ":Lspsaga code_action<CR>", "Action" },
             d = { ":Lspsaga preview_definition<CR>", "Definition" },
-            f = { ":lua vim.lsp.buf.formatting()<CR>", "Format" },
+            f = { ":lua vim.lsp.buf.format()<CR>", "Format" },
             l = { ":make --max-line-length 88 --extend-ignore E203<CR><CR>:copen<CR>", "Lint" },
             n = { ":set relativenumber!<CR>", "Line numbers" },
             r = { ":Lspsaga rename<CR>", "Rename" },
