@@ -8,7 +8,8 @@ local servers = {
     "marksman",
     "cssls",
     "texlab",
-    "sumneko_lua"
+    "sumneko_lua",
+    "rust_analyzer",
 }
 
 local path = util.path
