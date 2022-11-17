@@ -516,4 +516,5 @@ let-env config = {
   ]
 }
 
-source ~/.config/starship/init.nu
+let-env PATH = ($env.PATH | prepend '/home/linuxbrew/.linuxbrew/bin')
+source ~/.config/nushell/starship.nu

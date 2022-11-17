@@ -44,11 +44,9 @@
         path: nvim/**
         relink: true
 
-    ~/.config/starship:
+    ~/.config/starship.toml:
        create: true
-       glob: true
-       path: starship/**
-       relink: true
+       path: starship/starship.toml
 
     ~/.config/pudb/pudb.cfg:
         create: true
