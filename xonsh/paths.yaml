@@ -7,3 +7,4 @@ linux:
     - $HOME/bin
     - $HOME/.local/bin
     - $HOME/.cargo/bin
+    - /home/linuxbrew/.linuxbrew/bin
