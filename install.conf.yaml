@@ -32,11 +32,23 @@
         create: true
         path: lazygit/config.yml
 
+    ~/.config/nushell:
+       create: true
+       glob: true
+       path: nushell/**
+       relink: true
+
     ~/.config/nvim:
         create: true
         glob: true
         path: nvim/**
         relink: true
+
+    ~/.config/starship:
+       create: true
+       glob: true
+       path: starship/**
+       relink: true
 
     ~/.config/pudb/pudb.cfg:
         create: true
