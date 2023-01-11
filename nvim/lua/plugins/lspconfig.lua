@@ -10,6 +10,7 @@ local servers = {
     "texlab",
     "sumneko_lua",
     "rust_analyzer",
+    "esbonio",
 }
 
 local path = util.path
@@ -102,6 +103,7 @@ local server_config = {
             },
         },
     },
+    esbonio = { cmd = { "esbonio" } },
 }
 
 for _, server in pairs(servers) do
