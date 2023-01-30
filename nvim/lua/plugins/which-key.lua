@@ -1,6 +1,8 @@
 local wk = require("which-key")
 wk.setup {}
 
+
+
 -- Normal mode bindings
 wk.register({
     ["f"] = { ":lua require'hop'.hint_char2({ direction = require'hop.hint'.HintDirection.AFTER_CURSOR, current_line_only = true })<cr>",
@@ -14,14 +16,13 @@ wk.register({
     ["<leader>"] = {
         c = {
             name = "+code",
-            a = { ":Lspsaga code_action<CR>", "Action" },
-            d = { ":Lspsaga preview_definition<CR>", "Definition" },
+            a = { ":lua vim.lsp.buf.code_action()<CR>", "Action" },
+            d = { ":lua vim.lsp.buf.definition()<CR>", "Definition" },
             f = { ":lua vim.lsp.buf.format()<CR>", "Format" },
-            l = { ":make --max-line-length 88 --extend-ignore E203<CR><CR>:copen<CR>", "Lint" },
+            l = { ":cgetexpr system('ruff -q --ignore E902 check .')<CR>:Trouble quickfix<CR>", "Lint" },
             n = { ":set relativenumber!<CR>", "Line numbers" },
-            r = { ":Lspsaga rename<CR>", "Rename" },
-            s = { ":Lspsaga signature_help<CR>", "Signature" },
-            t = { ":Lspsaga show_line_diagnostics<CR>", "Diagnostics" },
+            r = { ":lua vim.lsp.buf.rename<CR>", "Rename" },
+            s = { ":lua vim.lsp.buf.signature_help()<CR>", "Signature" },
         },
         d = {
             name = "+debug",
@@ -40,6 +41,7 @@ wk.register({
             name = "+finder",
             b = { ":Telescope buffers<CR>", "Buffers" },
             f = { ":Telescope find_files<CR>", "Files" },
+            g = { ":Telescope live_grep<CR>", "Live grep" },
             m = { ":Telescope marks<CR>", "Marks" },
             n = { ":Telescope notify<CR>", "Notifications" },
             p = { ":Telescope projects<CR>", "Projects" },
@@ -60,8 +62,8 @@ wk.register({
         },
         r = {
             name = "+run",
-            r = { ":OverseerRun<CR>", "Run Task"},
-            t = { ":OverseerToggle<CR>", "Toggle List"},
+            r = { ":OverseerRun<CR>", "Run Task" },
+            t = { ":OverseerToggle<CR>", "Toggle List" },
         },
         s = {
             name = "+spell checker",

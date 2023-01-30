@@ -42,6 +42,8 @@ local base_plugins = {
 }
 
 local full_plugins = {
+    { "~/projects/personal/notebook.nvim"},
+
     -- Autopairs
     { "windwp/nvim-autopairs" },
 
@@ -90,7 +92,7 @@ local full_plugins = {
     { "lukas-reineke/indent-blankline.nvim" },
 
     -- Improved lsp ui
-    { "tami5/lspsaga.nvim" },
+    -- { "tami5/lspsaga.nvim" },
 
     -- Debug Adapter Protocol
     { "mfussenegger/nvim-dap" },

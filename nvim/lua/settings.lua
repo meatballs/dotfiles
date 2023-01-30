@@ -19,8 +19,8 @@ local options = {
     hidden = true,
     number = true,
     shell = "/home/owen/.local/bin/xonsh",
-    foldmethod = "expr",
-    foldexpr = "nvim_treesitter#foldexpr()",
+    -- foldmethod = "expr",
+    -- foldexpr = "nvim_treesitter#foldexpr()",
 }
 
 local keybindings = {
@@ -38,9 +38,9 @@ local plugin_modules = {
     "hop",
     "indent_blankline",
     "lspconfig",
-    "lspsaga",
     "lualine",
     "navigator",
+    "notebook",
     "nvim_dap",
     "overseer",
     "project",
@@ -78,7 +78,6 @@ local function full()
     local cmds = {
         "autocmd FocusLost * :wa",
         "autocmd BufWinEnter * silent! :%foldopen!",
-        "autocmd Filetype python setlocal makeprg=flake8",
     }
     for _, v in pairs(cmds) do
         vim.cmd(v)
