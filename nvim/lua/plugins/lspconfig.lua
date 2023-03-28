@@ -8,7 +8,7 @@ local servers = {
     "marksman",
     "cssls",
     "texlab",
-    "sumneko_lua",
+    "lua_ls",
     "rust_analyzer",
     "esbonio",
 }
