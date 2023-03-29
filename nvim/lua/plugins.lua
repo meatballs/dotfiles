@@ -135,6 +135,9 @@ local full_plugins = {
         "nvim-treesitter/nvim-treesitter",
         run = ":TSUpdate"
     },
+    { "nvim-treesitter/playground",
+       run = ":TSUpdate"
+    },
 
     -- Help file for strftime formats
     { "sjl/strftimedammit.vim" },
