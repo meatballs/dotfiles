@@ -78,7 +78,7 @@ local server_config = {
             }
         }
     },
-    sumneko_lua = {
+    lua_ls = {
         settings = {
             Lua = {
                 runtime = {
