@@ -100,7 +100,8 @@ local full_plugins = {
     { "rcarriga/nvim-dap-ui" },
 
     -- Jupyter Integration
-    { "dccsillag/magma-nvim", run = ":UpdateRemotePlugins" },
+    { "~/projects/personal/magma-nvim", run = ":UpdateRemotePlugins"},
+    -- { "dccsillag/magma-nvim", run = ":UpdateRemotePlugins" },
 
     -- Split Navigation
     { "numToStr/Navigator.nvim"},

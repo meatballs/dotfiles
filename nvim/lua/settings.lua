@@ -39,6 +39,7 @@ local plugin_modules = {
     "indent_blankline",
     "lspconfig",
     "lualine",
+    "magma",
     "navigator",
     "notebook",
     "nvim_dap",

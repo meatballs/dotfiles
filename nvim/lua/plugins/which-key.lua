@@ -49,9 +49,11 @@ wk.register({
         },
         j = {
             name = "+jupyter",
+            a = { ":lua define_all_cells()<CR>", "Define all cells"},
+            c = { ":lua define_cell()<CR>", "Defne cell" },
             d = { ":MagmaDelete<CR>", "Delete cell" },
-            e = { ":MagmaEvaluateLine<CR>", "Evaluate cell" },
             i = { ":MagmaInit<CR>", "Initialise" },
+            o = { ":MagmaShowOutput<CR>", "Show output"},
             r = { ":MagmaReevaluateCell<CR>", "Re-evaluate cell" },
             s = { ":MagmaDeinit<CR>", "Stop" },
         },
