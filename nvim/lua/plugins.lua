@@ -81,7 +81,10 @@ local full_plugins = {
 
     -- Git decorations
     { "lewis6991/gitsigns.nvim" },
-    --
+
+    -- Markdown preview
+    { "ellisonleao/glow.nvim" },
+
     -- Hop based navigation
     {
         "phaazon/hop.nvim",

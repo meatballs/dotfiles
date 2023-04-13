@@ -35,6 +35,7 @@ local plugin_modules = {
     "diffview",
     "firenvim",
     "gitsigns",
+    "glow",
     "hop",
     "indent_blankline",
     "lspconfig",
