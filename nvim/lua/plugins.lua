@@ -64,9 +64,6 @@ local full_plugins = {
     },
     { "ms-jpq/coq.thirdparty" },
 
-    -- Git diff view
-    { "sindrets/diffview.nvim", requires="nvim-lua/plenary.nvim"},
-
     -- UI improvements
     { "stevearc/dressing.nvim" },
 
@@ -82,9 +79,6 @@ local full_plugins = {
     -- Git decorations
     { "lewis6991/gitsigns.nvim" },
 
-    -- Markdown preview
-    { "ellisonleao/glow.nvim" },
-
     -- Hop based navigation
     {
         "phaazon/hop.nvim",
@@ -94,9 +88,6 @@ local full_plugins = {
     -- Indentation guide lines
     { "lukas-reineke/indent-blankline.nvim" },
 
-    -- Improved lsp ui
-    -- { "tami5/lspsaga.nvim" },
-
     -- Debug Adapter Protocol
     { "mfussenegger/nvim-dap" },
     { "mfussenegger/nvim-dap-python" },
@@ -104,7 +95,6 @@ local full_plugins = {
 
     -- Jupyter Integration
     { "~/projects/personal/magma-nvim", run = ":UpdateRemotePlugins"},
-    -- { "dccsillag/magma-nvim", run = ":UpdateRemotePlugins" },
 
     -- Split Navigation
     { "numToStr/Navigator.nvim"},
