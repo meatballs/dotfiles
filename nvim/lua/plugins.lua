@@ -67,9 +67,6 @@ local full_plugins = {
     -- UI improvements
     { "stevearc/dressing.nvim" },
 
-    -- editorconfig support
-    { "gpanders/editorconfig.nvim" },
-
     -- Neovim in the browser
     {
         "glacambre/firenvim",
