@@ -50,6 +50,9 @@ local full_plugins = {
     -- Comments
     { "numToStr/Comment.nvim"},
 
+    -- Copilot
+    { "github/copilot.vim"},
+
     -- CSV Tools
     { "chrisbra/csv.vim" },
 
