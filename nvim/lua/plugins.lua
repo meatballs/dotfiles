@@ -102,6 +102,9 @@ local full_plugins = {
     --Common lsp config settings
     { "neovim/nvim-lspconfig" },
 
+    -- Obsidian
+    { "epwalsh/obsidian.nvim" },
+
     -- Popup notifications
     { "rcarriga/nvim-notify" },
 
