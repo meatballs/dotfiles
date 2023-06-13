@@ -67,6 +67,7 @@ local server_config = {
                 plugins = {
                     jedi = { environment = get_python_path() },
                     ruff = { enabled = true, extendSelect = { "I" } },
+                    flake8 = { enabled = false },
                 },
             },
         },
