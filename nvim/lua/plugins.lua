@@ -76,6 +76,9 @@ local full_plugins = {
         run = function() vim.fn["firenvim#install"](0) end
     },
 
+    -- Git blame virtual text
+    { "f-person/git-blame.nvim"},
+
     -- Git decorations
     { "lewis6991/gitsigns.nvim" },
 
