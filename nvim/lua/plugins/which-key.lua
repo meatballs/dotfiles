@@ -83,10 +83,11 @@ wk.register({
         },
         x = {
             name = "+latex",
-            c = { ":VimtexCompile<CR>", "Start compiler" },
+            c = { ":VimtexClean<CR>", "Clean build files" },
             o = { ":VimtexCompileSS<CR>", "Compile once" },
-            s = { ":VimtexStop<CR>", "Stop compiler" },
+            s = { ":VimtexCompile<CR>", "Start compiler" },
             v = { ":VimtexView<CR>", "View" },
+            x = { ":VimtexStop<CR>", "Stop compiler" },
         },
     },
 })
