@@ -1,33 +1,20 @@
 local M = {}
 local execute = vim.api.nvim_command
 local fn = vim.fn
-local install_path = fn.stdpath("data") .. "/site/pack/packer/start/packer.nvim"
-
-
-if fn.empty(fn.glob(install_path)) > 0 then
-    fn.system({ "git", "clone", "https://github.com/wbthomason/packer.nvim", install_path })
-    print("Installing packer. You'll need to restart neovim...")
-    execute "packadd packer.nvim"
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+if not vim.loop.fs_stat(lazypath) then
+  vim.fn.system({
+    "git",
+    "clone",
+    "--filter=blob:none",
+    "https://github.com/folke/lazy.nvim.git",
+    "--branch=stable", -- latest stable release
+    lazypath,
+  })
 end
-
--- Autocommand that reloads neovim whenever you save the plugins.lua file
-vim.cmd([[
-  augroup packer_user_config
-    autocmd!
-    autocmd BufWritePost plugins.lua source <afile> | PackerSync
-  augroup end
-]])
-
-local packer_config = {
-    display = {
-        open_fn = require('packer.util').float,
-    },
-}
+vim.opt.rtp:prepend(lazypath)
 
 local base_plugins = {
-    -- Packer can manage itself
-    { "wbthomason/packer.nvim" },
-
     -- Lua based status line
     { "hoob3rt/lualine.nvim" },
 
@@ -42,7 +29,7 @@ local base_plugins = {
 }
 
 local full_plugins = {
-    { "~/projects/personal/notebook.nvim"},
+    { dir = "~/projects/personal/notebook.nvim"},
 
     -- Autopairs
     { "windwp/nvim-autopairs" },
@@ -73,7 +60,7 @@ local full_plugins = {
     -- Neovim in the browser
     {
         "glacambre/firenvim",
-        run = function() vim.fn["firenvim#install"](0) end
+        build = function() vim.fn["firenvim#install"](0) end
     },
 
     -- Git blame virtual text
@@ -97,7 +84,10 @@ local full_plugins = {
     { "rcarriga/nvim-dap-ui" },
 
     -- Jupyter Integration
-    { "~/projects/personal/magma-nvim", run = ":UpdateRemotePlugins"},
+    {
+        dir = "~/projects/personal/magma-nvim",
+        build = ":UpdateRemotePlugins"
+    },
 
     -- Split Navigation
     { "numToStr/Navigator.nvim"},
@@ -117,7 +107,7 @@ local full_plugins = {
     -- Github integration
     {
         "pwntester/octo.nvim",
-        requires = {
+        dependencies = {
             "nvim-lua/plenary.nvim",
             "nvim-telescope/telescope.nvim",
             "kyazdani42/nvim-web-devicons",
@@ -133,10 +123,10 @@ local full_plugins = {
     -- Treesitter
     {
         "nvim-treesitter/nvim-treesitter",
-        run = ":TSUpdate"
+        build = ":TSUpdate"
     },
     { "nvim-treesitter/playground",
-       run = ":TSUpdate"
+       build = ":TSUpdate"
     },
 
     -- Help file for strftime formats
@@ -174,15 +164,7 @@ function M.load(config)
             table.insert(plugins, value)
         end
     end
-    require("packer").startup(
-        {
-            plugins,
-            config = packer_config
-        }
-    )
-    if PACKER_BOOTSTRAP then
-        require("packer").sync()
-    end
+    require("lazy").setup(plugins)
 end
 
 return M
