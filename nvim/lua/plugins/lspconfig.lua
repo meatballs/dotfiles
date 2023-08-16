@@ -63,7 +63,6 @@ local server_config = {
         single_file_support = true,
         settings = {
             pylsp = {
-                configurationSources = { "flake8" },
                 plugins = {
                     jedi = { environment = get_python_path() },
                     ruff = { enabled = true, extendSelect = { "I" } },
