@@ -6,3 +6,7 @@ linux:
         rm: [trash]
     xclip:
         xclip: [xclip, -selection, c]
+    kitty:
+      ssh: [kitty, +kitten, ssh]
+    kubectl:
+      kube: [kubectl]
