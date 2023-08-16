@@ -3,14 +3,14 @@ local execute = vim.api.nvim_command
 local fn = vim.fn
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
-  vim.fn.system({
-    "git",
-    "clone",
-    "--filter=blob:none",
-    "https://github.com/folke/lazy.nvim.git",
-    "--branch=stable", -- latest stable release
-    lazypath,
-  })
+    vim.fn.system({
+        "git",
+        "clone",
+        "--filter=blob:none",
+        "https://github.com/folke/lazy.nvim.git",
+        "--branch=stable", -- latest stable release
+        lazypath,
+    })
 end
 vim.opt.rtp:prepend(lazypath)
 
@@ -19,7 +19,7 @@ local base_plugins = {
     { "hoob3rt/lualine.nvim" },
 
     -- Nord colour theme
-    { "shaunsingh/nord.nvim" },
+    { "shaunsingh/nord.nvim", lazy = false, priority = 1000 },
 
     -- icon set
     { "kyazdani42/nvim-web-devicons" },
@@ -29,16 +29,16 @@ local base_plugins = {
 }
 
 local full_plugins = {
-    { dir = "~/projects/personal/notebook.nvim"},
+    { dir = "~/projects/personal/notebook.nvim" },
 
     -- Autopairs
     { "windwp/nvim-autopairs" },
 
     -- Comments
-    { "numToStr/Comment.nvim"},
+    { "numToStr/Comment.nvim" },
 
     -- Copilot
-    { "github/copilot.vim"},
+    { "github/copilot.vim" },
 
     -- CSV Tools
     { "chrisbra/csv.vim" },
@@ -64,7 +64,7 @@ local full_plugins = {
     },
 
     -- Git blame virtual text
-    { "f-person/git-blame.nvim"},
+    { "f-person/git-blame.nvim" },
 
     -- Git decorations
     { "lewis6991/gitsigns.nvim" },
@@ -90,7 +90,7 @@ local full_plugins = {
     },
 
     -- Split Navigation
-    { "numToStr/Navigator.nvim"},
+    { "numToStr/Navigator.nvim" },
 
     --Common lsp config settings
     { "neovim/nvim-lspconfig" },
@@ -115,7 +115,7 @@ local full_plugins = {
     },
 
     -- Task runner
-    { "stevearc/overseer.nvim"},
+    { "stevearc/overseer.nvim" },
 
     -- Project management
     { "ahmedkhalf/project.nvim" },
@@ -126,7 +126,7 @@ local full_plugins = {
         build = ":TSUpdate"
     },
     { "nvim-treesitter/playground",
-       build = ":TSUpdate"
+        build = ":TSUpdate"
     },
 
     -- Help file for strftime formats
