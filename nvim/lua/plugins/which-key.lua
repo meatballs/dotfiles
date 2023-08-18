@@ -81,6 +81,13 @@ wk.register({
             f = { ":ToggleTerm direction=float<CR>", "Float" },
             v = { ":ToggleTerm direction=vertical<CR>", "Vertical" },
         },
+        w = {
+            name = "+window",
+            h = { ":vertical resize +5<CR>", "Increase width" },
+            j = { ":resize -5<CR>", "Decrease height" },
+            k = { ":resize +5<CR>", "Increase height" },
+            l = { ":vertical resize -5<CR>", "Decrease width" },
+        },
         x = {
             name = "+latex",
             c = { ":VimtexClean<CR>", "Clean build files" },
