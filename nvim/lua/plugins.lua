@@ -150,6 +150,9 @@ local full_plugins = {
     -- Key Bindings with prompt
     { "folke/which-key.nvim" },
 
+    -- Vyper syntax highlighting
+    { "vyperlang/vim-vyper" },
+
     -- Syntax highlighting of .xsh and .xonshrc files
     { "linkinpark342/xonsh-vim" },
 }
