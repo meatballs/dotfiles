@@ -32,6 +32,7 @@ local plugin_modules = {
     "comment",
     "coq_nvim",
     "coq_3p",
+    "csv",
     "firenvim",
     "gitsigns",
     "hop",
