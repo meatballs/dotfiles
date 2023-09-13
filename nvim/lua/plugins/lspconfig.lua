@@ -9,7 +9,7 @@ local servers = {
     "marksman",
     "pylsp",
     "rust_analyzer",
-    "solidity_ls_nomicfoundation",
+    "solc",
     "texlab",
     "tsserver",
     "yamlls",
@@ -70,6 +70,19 @@ local server_config = {
                 },
             },
         },
+    },
+    solc = {
+        root_dir = function(fname)
+            local root_files = {
+                'pyproject.toml',
+                'setup.py',
+                'setup.cfg',
+                'requirements.txt',
+                'Pipfile',
+                'ape-config.yaml',
+            }
+            return util.root_pattern(unpack(root_files))(fname) or util.find_git_ancestor(fname)
+        end,
     },
     yamlls = {
         settings = {
