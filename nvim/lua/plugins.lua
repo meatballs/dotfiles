@@ -76,7 +76,10 @@ local full_plugins = {
     },
 
     -- Indentation guide lines
-    { "lukas-reineke/indent-blankline.nvim" },
+    { "lukas-reineke/indent-blankline.nvim", main = "ibl", opts = {} },
+
+    -- Just files
+    {'NoahTheDuke/vim-just'},
 
     -- Debug Adapter Protocol
     { "mfussenegger/nvim-dap" },
