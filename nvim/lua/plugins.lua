@@ -81,6 +81,16 @@ local full_plugins = {
     -- Just files
     {'NoahTheDuke/vim-just'},
 
+    -- Markdown Preview
+    {
+        "iamcco/markdown-preview.nvim",
+        cmd = { "MarkdownPreview", "MarkdownPreviewStop", "MarkdownPreviewToggle" },
+        ft = { "markdown" },
+        build = function()
+            vim.fn["mkdp#util#install"]()
+        end,
+    },
+
     -- Debug Adapter Protocol
     { "mfussenegger/nvim-dap" },
     { "mfussenegger/nvim-dap-python" },

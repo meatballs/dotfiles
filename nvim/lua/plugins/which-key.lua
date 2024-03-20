@@ -64,6 +64,12 @@ wk.register({
             d = { ":lua lazydocker_toggle()<CR>", "Docker" },
             g = { ":lua lazygit_toggle()<CR>", "Git" },
         },
+        m = {
+            name = "+markdown",
+            c = { ":MarkdownPreview<CR>", "Preview" },
+            e = { ":MarkdownExport<CR>", "Export" },
+            p = { ":MarkdownPreview<CR>", "Preview" },
+        },
         r = {
             name = "+run",
             r = { ":OverseerRun<CR>", "Run Task" },
