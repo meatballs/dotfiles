@@ -140,6 +140,8 @@ local full_plugins = {
     { "nvim-lua/plenary.nvim" },
     { "nvim-telescope/telescope.nvim" },
     { "nvim-telescope/telescope-dap.nvim" },
+    { "nvim-telescope/telescope-file-browser.nvim" },
+    { "nvim-telescope/telescope-project.nvim" },
 
     -- Persistent, toggled terminals
     { "akinsho/toggleterm.nvim" },
