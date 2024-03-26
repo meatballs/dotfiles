@@ -8,6 +8,7 @@ local servers = {
     "lua_ls",
     "marksman",
     "pylsp",
+    "ruff_lsp",
     "rust_analyzer",
     "solidity_ls_nomicfoundation",
     "texlab",
@@ -65,11 +66,25 @@ local server_config = {
             pylsp = {
                 plugins = {
                     jedi = { environment = get_python_path() },
-                    ruff = { enabled = true, extendSelect = { "I" } },
-                    flake8 = { enabled = false },
+                    -- ruff = { enabled = true, extendSelect = { "I" } },
+                    -- flake8 = { enabled = false },
                 },
             },
         },
+    },
+    ruff_lsp = {
+        filetypes = { "python" },
+        root_dir = function(fname)
+            local root_files = {
+                'pyproject.toml',
+                'setup.py',
+                'setup.cfg',
+                'requirements.txt',
+                'Pipfile',
+                'anvil.yaml',
+            }
+            return util.root_pattern(unpack(root_files))(fname) or util.find_git_ancestor(fname)
+        end,
     },
     yamlls = {
         settings = {
