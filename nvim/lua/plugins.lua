@@ -156,6 +156,9 @@ local full_plugins = {
     -- Persistent, toggled terminals
     { "akinsho/toggleterm.nvim" },
 
+    -- Context
+    { "nvim-treesitter/nvim-treesitter-context" },
+
     -- Code linting helper
     { "folke/trouble.nvim" },
 

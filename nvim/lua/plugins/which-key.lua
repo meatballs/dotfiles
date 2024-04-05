@@ -17,6 +17,7 @@ wk.register({
         c = {
             name = "+code",
             a = { ":lua vim.lsp.buf.code_action()<CR>", "Action" },
+            c = { ":TSContextToggle<CR>", "Toggle Context" },
             d = { ":lua vim.lsp.buf.definition()<CR>", "Definition" },
             f = { ":lua vim.lsp.buf.format()<CR>", "Format" },
             l = { ":cgetexpr system('ruff -q --ignore E902 check .')<CR>:Trouble quickfix<CR>", "Lint" },
