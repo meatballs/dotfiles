@@ -92,9 +92,8 @@ local full_plugins = {
     },
 
     -- Debug Adapter Protocol
-    { "mfussenegger/nvim-dap" },
     { "mfussenegger/nvim-dap-python" },
-    { "rcarriga/nvim-dap-ui" },
+    { "rcarriga/nvim-dap-ui", dependencies = {"mfussenegger/nvim-dap", "nvim-neotest/nvim-nio"} },
 
     -- Jupyter Integration
     {
