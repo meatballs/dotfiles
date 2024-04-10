@@ -63,4 +63,9 @@
         relink: true
         exclude: [xonsh/xonshrc.xsh]
 
+    ~/.zshrc:
+        create: true
+        path: zsh/zshrc
+        relink: true
+
     ~/.xonshrc: xonsh/xonshrc.xsh
