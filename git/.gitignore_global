@@ -1,6 +1,7 @@
-.python-version
 .DS_Store
 .autoxsh
+.env
+.python-version
+.vscode/
 Session.vim
 pylsp-mypy.cfg
-.vscode/
