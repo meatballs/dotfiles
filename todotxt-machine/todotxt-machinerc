@@ -1,6 +1,6 @@
 [settings]
-file = ~/Dropbox/todo/todo.txt
-archive = ~/Dropbox/todo/done.txt
+file = ~/Nextcloud/todo/todo.txt
+archive = ~/Nextcloud/todo/done.txt
 auto-save = True
 show-toolbar = False
 show-filter-panel = False
