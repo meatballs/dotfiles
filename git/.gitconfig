@@ -26,3 +26,5 @@
     co = checkout
     s = switch
     sm = switch main
+    st = status
+    ls = log --oneline --decorate --graph
