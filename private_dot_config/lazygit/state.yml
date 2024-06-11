@@ -1,0 +1,115 @@
+lastupdatecheck: 0
+recentrepos:
+- /home/owen/projects/empiria/osmosis/ords/app/ords
+- /home/owen/projects/anvilistas/anvil-extras
+- /home/owen/projects/nucypher/threshold-nodes
+- /home/owen/projects/empiria/osmosis/aum
+- /home/owen/projects/personal/dotfiles
+- /home/owen/dotfiles
+- /home/owen/projects/anvilistas/media-manager
+- /home/owen/projects/temp/test
+- /home/owen/projects/empiria/osmosis/media_manager
+- /home/owen/projects/empiria/baker_tilly/Email_Handler
+- /home/owen/projects/nucypher/token-dashboard
+- /home/owen/projects/empiria/baker_tilly/Template_Preview
+- /home/owen/projects/empiria/osmosis/ords-em-migration
+- /home/owen/projects/personal/k8s-cluster
+- /home/owen/projects/personal/keep-core
+- /home/owen/projects/empiria/dragonfly/dragonfly-cloud
+- /home/owen/projects/anvilistas/amoni
+- /home/owen/projects/anvilistas/service-worker-demo
+- /home/owen/projects/personal/owencampbell.me.uk
+- /home/owen/projects/electora/electora-core
+- /home/owen/projects/electora/electora-app
+- /home/owen/projects/ukpa/ukpa-internaldocs
+- /home/owen/projects/ukpa/uk.python.org
+- /home/owen/projects/personal/web3auth-anvil
+- /home/owen/projects/empiria/empiria.github.io
+- /home/owen/projects/anvilistas/amoni-cookiecutter
+- /home/owen/projects/electora/electora-server
+- /home/owen/projects/electora/electora-bot
+- /home/owen/projects/empiria/baker_tilly/Baker_Tilly_Template
+- /home/owen/projects/empiria/baker_tilly/Anvil-BakerTilly-ORM
+- /home/owen/projects/personal/fastpdf
+- /home/owen/projects/personal/magma-nvim
+- /home/owen/projects/empiria/osmosis/contracts
+- /home/owen/projects/nucypher/nucypher
+- /home/owen/projects/empiria/osmosis/osm01
+- /home/owen/projects/electora/electora-py
+- /home/owen/projects/personal/cryptoclan
+- /home/owen/projects/electora/electora-ts
+- /home/owen/projects/empiria/osmosis/ords
+- /home/owen/projects/personal/notebook.nvim
+- /home/owen/projects/personal/dotfiles-private
+- /home/owen/projects/ukpa/2023.pyconuk.org
+- /home/owen/projects/anvilistas/anvil-labs
+- /home/owen/projects/personal/discord-bot
+- /home/owen/projects/ukpa/sponsorship-app
+- /home/owen/projects/personal/sql_python_tutorial/notebooks
+- /home/owen/projects/personal/sql_python_tutorial
+- /home/owen/projects/personal/sql_python_notebooks
+- /home/owen/projects/ukpa/discord-app
+- /home/owen/projects/personal/awesome-anvil
+- /home/owen/projects/ukpa/www-ukpatl
+- /home/owen/projects/personal/family-diary
+- /home/owen/projects/personal/hello-wasm
+- /home/owen/projects/personal/editor-adapter
+- /home/owen/projects/personal/inverter-comms
+- /home/owen/projects/empiria/baker_tilly/Tableau-Extension
+- /home/owen/projects/personal/accounts
+- /home/owen/projects/anvilistas/anvil-orm
+- /home/owen/projects/ukpa/OpenQuestion
+- /home/owen/projects/empiria/viper/viper-anvil-extras
+- /home/owen/projects/ukpa/trustees-annual-report
+- /home/owen/projects/empiria/baker_tilly/Dashboard-Portal
+startuppopupversion: 5
+customcommandshistory:
+- git push -u github 40-print-user
+- git push -u github fix-linting-error
+- git push -f anvil
+- git push anvil
+- git push -u github
+- git push github 35-my-account
+- git push github
+- git push -u github main
+- git pull anvil
+- git pull anvil master
+- git fetch --prune
+- git push -D seed_db
+- git push -d seed_db
+- git push -d origin seed_db
+- git push dev
+- git push -f dev
+- git push osmosis
+- git push -f osmosis persistence
+- git push origin
+- git push osmosis persistence:master
+- git push -f osmosis persistence:master
+- git push dev measurements master
+- git push -f dev measurements master
+- git push -f dev measurements:master
+- git push dev measurements:master
+- git push -u origin measurements
+- qa
+- git pull origin
+- q
+- git pull dev
+- git pull dev 16-data-tables
+- git push -f dev 16-data-tables
+- git push devtest
+- git push test
+- git push
+- git push origin uplink
+- git push -f test
+- git push -u origin menu_icons
+- git push --set-upstream origin 72-menu
+- git push dev -f
+- git push -f origin
+- git push test 85-barra-duplicates:main
+- git push -f test 85-barra-duplicates:main
+- git push -f
+- git push -u anvil api-updates
+- git push production
+- git push dev notes
+- git push -f dev notes
+hidecommandlog: false

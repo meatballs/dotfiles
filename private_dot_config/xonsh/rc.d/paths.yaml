@@ -8,3 +8,4 @@ linux:
     - $HOME/.local/bin
     - $HOME/.cargo/bin
     - /home/linuxbrew/.linuxbrew/bin
+    - /home/linuxbrew/.linuxbrew/sbin
