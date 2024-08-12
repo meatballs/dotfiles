@@ -8,7 +8,6 @@
     program = /usr/bin/gpg
 [commit]
     gpgsign = true
-    template = /home/owen/dotfiles/git/commit_template.txt
 [diff]
     tool = kitty
     guitool = kitty.gui

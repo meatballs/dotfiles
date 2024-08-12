@@ -1,3 +1,0 @@
-xonsh-autoxsh
-xontrib-powerline2
-daiquiri
