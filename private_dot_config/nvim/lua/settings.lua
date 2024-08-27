@@ -30,7 +30,7 @@ local keybindings = {
 local plugin_modules = {
     "autopairs",
     "comment",
-    "coq_nvim",
+    "copilot",
     "coq_3p",
     "csv",
     "firenvim",

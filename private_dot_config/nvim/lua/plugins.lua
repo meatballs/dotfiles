@@ -43,16 +43,6 @@ local full_plugins = {
     -- CSV Tools
     { "chrisbra/csv.vim" },
 
-    -- Completion
-    {
-        "ms-jpq/coq_nvim",
-        branch = "coq"
-    },
-    {
-        "ms-jpq/coq.artifacts",
-        branch = "artifacts"
-    },
-    { "ms-jpq/coq.thirdparty" },
 
     -- UI improvements
     { "stevearc/dressing.nvim" },
@@ -105,7 +95,24 @@ local full_plugins = {
     { "numToStr/Navigator.nvim" },
 
     --Common lsp config settings
-    { "neovim/nvim-lspconfig" },
+    {
+        "neovim/nvim-lspconfig",
+	lazy = false,
+        dependencies = {
+	    { "ms-jpq/coq_nvim", branch = "coq" },
+	    { "ms-jpq/coq.artifacts", branch = "artifacts" },
+	    { "ms-jpq/coq.thirdparty", branch = "3p" },
+	},
+	init = function()
+	    vim.g.coq_settings = {
+		auto_start = "shut-up",
+		keymap = {
+		    jump_to_mark = "<c-up>",
+		    recommended = false,
+	        }
+	    }
+	end,
+    },
 
     -- Obsidian
     { "epwalsh/obsidian.nvim" },
@@ -165,7 +172,12 @@ local full_plugins = {
     { "lervag/vimtex" },
 
     -- Key Bindings with prompt
-    { "folke/which-key.nvim" },
+    {
+        "folke/which-key.nvim",
+	dependencies = {
+	    { "echasnovski/mini.nvim", version = false },
+	}
+    },
 
     -- Vyper syntax highlighting
     { "vyperlang/vim-vyper" },
