@@ -42,6 +42,7 @@ wk.add(
     { "<leader>l", group = "lazy" },
     { "<leader>ld", ":lua lazydocker_toggle()<CR>", desc = "Docker" },
     { "<leader>lg", ":lua lazygit_toggle()<CR>", desc = "Git" },
+    { "<leader>lj", ":lua lazyjj_toggle()<CR>", desc = "Jujutsu" },
     { "<leader>m", group = "markdown" },
     { "<leader>mc", ":MarkdownPreview<CR>", desc = "Preview" },
     { "<leader>me", ":MarkdownExport<CR>", desc = "Export" },

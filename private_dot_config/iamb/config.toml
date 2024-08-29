@@ -1,0 +1,16 @@
+[profiles.user]
+user_id = "@owen:tanti.org.uk"
+url = "https://social.tanti.org.uk"
+
+[settings]
+image_preview = {}
+username_display = "displayname"
+
+[settings.notifications]
+enabled = true
+show_message = true
+via = "desktop"
+
+[settings.sort]
+rooms = ["recent", "name"]
+

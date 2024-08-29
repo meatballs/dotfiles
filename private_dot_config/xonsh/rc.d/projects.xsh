@@ -22,7 +22,7 @@ def _add_second_terminal(dir):
 
 
 def _open_layout(dir, with_extra_terminal=True):
-    kitty @ launch --title nvim --type overlay --cwd @(dir) nvim
+    kitty @ launch --title nvim --type overlay --copy-env --cwd @(dir) nvim
     kitty @ launch --title terminal --location hsplit --cwd @(dir)
     kitty @ focus-window --match title:nvim
     kitty @ resize-window --axis vertical --increment 15

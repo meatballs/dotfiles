@@ -14,7 +14,7 @@ def _dashboard():
     kitty @ launch --title todo --location vsplit
     kitty @ launch --type overlay todotxt-machine
     kitty @ focus-window --match title:chat
-    kitty @ launch --type overlay gomuks
+    kitty @ launch --type overlay iamb
     kitty @ send-text --match title:glances 4 f
     kitty @ focus-window --match title:mail
 

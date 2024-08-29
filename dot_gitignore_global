@@ -5,3 +5,5 @@
 .vscode/
 Session.vim
 pylsp-mypy.cfg
+.jj/
+.DS_Store

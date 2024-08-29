@@ -46,6 +46,14 @@ local lazydocker = Terminal:new({
         border = "single",
     },
 })
+local lazyjj = Terminal:new({
+    cmd = "lazyjj",
+    hidden = true,
+    direction = "float",
+    float_opts = {
+        border = "single",
+    },
+})
 
 function _G.lazygit_toggle()
     lazygit:toggle()
@@ -53,4 +61,8 @@ end
 
 function _G.lazydocker_toggle()
     lazydocker:toggle()
+end
+
+function _G.lazyjj_toggle()
+    lazyjj:toggle()
 end
