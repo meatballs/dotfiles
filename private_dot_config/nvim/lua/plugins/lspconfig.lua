@@ -8,7 +8,7 @@ local servers = {
     "lua_ls",
     "marksman",
     "pylsp",
-    "ruff_lsp",
+    "ruff",
     "rust_analyzer",
     "solidity_ls_nomicfoundation",
     "texlab",
@@ -66,13 +66,11 @@ local server_config = {
             pylsp = {
                 plugins = {
                     jedi = { environment = get_python_path() },
-                    -- ruff = { enabled = true, extendSelect = { "I" } },
-                    -- flake8 = { enabled = false },
                 },
             },
         },
     },
-    ruff_lsp = {
+    ruff = {
         filetypes = { "python" },
     },
     yamlls = {
