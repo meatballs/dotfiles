@@ -12,3 +12,7 @@ name = "Owen Campbell"
 sign-all = true
 backend = "gpg"
 key = "7E9EDA051C5A11EAB0BA0BA1628F79BCBE9C2B73"
+
+[fix.tools.ruff]
+command = ["ruff", "format", "-"]
+patterns = ["glob:'**/*.py'"]
