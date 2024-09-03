@@ -29,6 +29,7 @@ wk.add(
     { "<leader>fn", ":Telescope notify<CR>", desc = "Notifications" },
     { "<leader>fp", ":Telescope project display_type=full<CR>", desc = "Projects" },
     { "<leader>ft", ":Telescope treesitter<CR>", desc = "Treesitter" },
+    { "<leader>g", ":Smoji<CR>", desc="gitmoji"},
     { "<leader>j", group = "jupyter" },
     { "<leader>ja", ":NBAddCell<CR>", desc = "Add cell" },
     { "<leader>jd", ":NBDeleteCell<CR>", desc = "Delete cell" },

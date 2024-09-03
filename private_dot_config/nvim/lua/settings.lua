@@ -49,6 +49,7 @@ local plugin_modules = {
     "nvim_tree",
     "obsidian",
     "octo",
+    "smoji",
     "toggleterm",
     "treesitter",
     "trouble",

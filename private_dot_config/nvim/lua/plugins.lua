@@ -139,6 +139,9 @@ local full_plugins = {
     -- Project management
     { "ahmedkhalf/project.nvim" },
 
+    -- gitmoji
+    { "zakissimo/smoji.nvim" },
+
     -- Treesitter
     {
         "nvim-treesitter/nvim-treesitter",
