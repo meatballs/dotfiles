@@ -97,21 +97,20 @@ local full_plugins = {
     --Common lsp config settings
     {
         "neovim/nvim-lspconfig",
-	lazy = false,
+        lazy = false,
         dependencies = {
-	    { "ms-jpq/coq_nvim", branch = "coq" },
-	    { "ms-jpq/coq.artifacts", branch = "artifacts" },
-	    { "ms-jpq/coq.thirdparty", branch = "3p" },
-	},
-	init = function()
-	    vim.g.coq_settings = {
-		auto_start = "shut-up",
-		keymap = {
-		    jump_to_mark = "<c-up>",
-		    recommended = false,
-	        }
-	    }
-	end,
+            { "ms-jpq/coq_nvim", branch = "coq" },
+            { "ms-jpq/coq.artifacts", branch = "artifacts" },
+            { "ms-jpq/coq.thirdparty", branch = "3p" },
+        },
+        init = function()
+            vim.g.coq_settings = {
+                keymap = {
+                    recommended = false,
+                },
+                auto_start = "shut-up",
+            }
+        end,
     },
 
     -- Obsidian

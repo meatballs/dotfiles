@@ -40,7 +40,6 @@ local plugin_modules = {
     "lspconfig",
     "lualine",
     "magma",
-    "navigator",
     "notebook",
     "nvim_dap",
     "overseer",

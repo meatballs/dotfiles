@@ -12,7 +12,7 @@ local servers = {
     "rust_analyzer",
     "solidity_ls_nomicfoundation",
     "texlab",
-    "tsserver",
+    "ts_ls",
     "yamlls",
 }
 
