@@ -81,6 +81,9 @@ local full_plugins = {
         end,
     },
 
+    -- File explorer
+    { "echasnovski/mini.files", version = false },
+
     -- Debug Adapter Protocol
     { "mfussenegger/nvim-dap-python" },
     { "rcarriga/nvim-dap-ui", dependencies = {"mfussenegger/nvim-dap", "nvim-neotest/nvim-nio"} },
@@ -118,9 +121,6 @@ local full_plugins = {
 
     -- Popup notifications
     { "rcarriga/nvim-notify" },
-
-    -- File Explorer Tree
-    { "kyazdani42/nvim-tree.lua" },
 
     -- Github integration
     {

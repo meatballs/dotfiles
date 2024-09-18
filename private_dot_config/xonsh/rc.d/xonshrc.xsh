@@ -4,3 +4,4 @@ $VI_MODE = True
 $DOCKER_BUILDKIT = 1
 __xonsh__.commands_cache.threadable_predictors["glances"] = lambda x: False
 execx($(starship init xonsh))
+execx($(zoxide init --cmd cd xonsh), 'exec', __xonsh__.ctx, filename='zoxide')
