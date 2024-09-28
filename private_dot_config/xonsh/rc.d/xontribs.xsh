@@ -1,8 +1,6 @@
 xontrib load coreutils
 xontrib load vox
 xontrib load autovox
-xontrib load powerline2
-xontrib load kitty
 xontrib load pyenv
 
 

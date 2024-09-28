@@ -5,7 +5,5 @@ git:
     gcm: [git, checkout, main]
     gco: [git, checkout]
     glg: [git, log, --oneline, --graph, --decorate]
-docker-compose:
-    dc: [docker-compose]
 nvim:
     nvim.basic: [nvim, -u, ~/.config/nvim/basic.lua]

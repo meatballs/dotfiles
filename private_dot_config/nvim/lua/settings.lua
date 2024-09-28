@@ -18,7 +18,7 @@ local options = {
     guifont = "SauceCodePro Nerd Font Mono:h10",
     hidden = true,
     number = true,
-    shell = "/home/owen/.local/bin/xonsh",
+    shell = "/home/linuxbrew/.linuxbrew/bin/xonsh",
     -- foldmethod = "expr",
     -- foldexpr = "nvim_treesitter#foldexpr()",
 }

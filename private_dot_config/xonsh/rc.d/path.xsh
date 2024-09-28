@@ -26,4 +26,7 @@ def get_paths():
     return [Path(path) for path in paths if Path(path).exists]
 
 
-$PATH[:0] = get_paths()
+paths = [Path(path) for path in $PATH if Path(path).exists()]
+paths.extend(get_paths())
+paths = list(set(paths))
+$PATH = paths
