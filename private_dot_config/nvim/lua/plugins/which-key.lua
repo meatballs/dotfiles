@@ -19,7 +19,7 @@ wk.add(
     { "<leader>dso", ":lua require'dap'.step_over()<CR>", desc = "Step over" },
     { "<leader>dsx", ":lua require'dap'.step_out()<CR>", desc = "Step out" },
     { "<leader>e", group = "explorer" },
-    { "<leader>ef", ":lua MiniFiles.open()<CR>", desc = "Explore Files" },
+    { "<leader>ef", ":NnnPicker<CR>", desc = "Explore Files" },
     { "<leader>f", group = "finder" },
     { "<leader>fb", ":Telescope buffers<CR>", desc = "Buffers" },
     { "<leader>ff", ":Telescope file_browser path=%:p:help |select_buffer=true<CR>|", desc = "Files" },
@@ -73,8 +73,6 @@ wk.add(
     { "C-j", ":KittyNavigateDown<CR>" },
     { "C-k", ":KittyNavigateUp<CR>" },
     { "C-l", ":KittyNavigateRight<CR>" },
-    { "F", ":lua require'hop'.hint_char2({ direction = require'hop.hint'.HintDirection.BEFORE_CURSOR, current_line_only = true })<cr>", desc = "Find (backward)" },
-    { "f", ":lua require'hop'.hint_char2({ direction = require'hop.hint'.HintDirection.AFTER_CURSOR, current_line_only = true })<cr>", desc = "Find (forward)" },
   }
 
 )

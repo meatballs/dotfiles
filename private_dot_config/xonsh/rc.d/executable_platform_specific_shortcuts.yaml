@@ -10,3 +10,6 @@ linux:
       ssh: [kitty, +kitten, ssh]
     kubectl:
       kube: [kubectl]
+    batcat:
+      bat: [batcat]
+      cat: [batcat]

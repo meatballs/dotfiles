@@ -59,12 +59,6 @@ local full_plugins = {
     -- Git decorations
     { "lewis6991/gitsigns.nvim" },
 
-    -- Hop based navigation
-    {
-        "phaazon/hop.nvim",
-        branch = "v2",
-    },
-
     -- Indentation guide lines
     { "lukas-reineke/indent-blankline.nvim", main = "ibl", opts = {} },
 
@@ -80,9 +74,6 @@ local full_plugins = {
             vim.fn["mkdp#util#install"]()
         end,
     },
-
-    -- File explorer
-    { "echasnovski/mini.files", version = false },
 
     -- Debug Adapter Protocol
     { "mfussenegger/nvim-dap-python" },
@@ -101,20 +92,19 @@ local full_plugins = {
     {
         "neovim/nvim-lspconfig",
         lazy = false,
-        dependencies = {
-            { "ms-jpq/coq_nvim", branch = "coq" },
-            { "ms-jpq/coq.artifacts", branch = "artifacts" },
-            { "ms-jpq/coq.thirdparty", branch = "3p" },
-        },
-        init = function()
-            vim.g.coq_settings = {
-                keymap = {
-                    recommended = false,
-                },
-                auto_start = "shut-up",
-            }
-        end,
     },
+
+    -- File explorer using nnn
+    { "luukvbaal/nnn.nvim" },
+
+    { "hrsh7th/nvim-cmp" },
+    { "hrsh7th/cmp-nvim-lsp" },
+    { "hrsh7th/cmp-buffer" },
+    { "hrsh7th/cmp-path" },
+    { "hrsh7th/cmp-nvim-lua" },
+    { "hrsh7th/cmp-vsnip" },
+    { "hrsh7th/vim-vsnip" },
+    { "hrsh7th/vim-vsnip-integ" },
 
     -- Obsidian
     { "epwalsh/obsidian.nvim" },
@@ -134,9 +124,6 @@ local full_plugins = {
 
     -- Task runner
     { "stevearc/overseer.nvim" },
-
-    -- Project management
-    { "ahmedkhalf/project.nvim" },
 
     -- gitmoji
     { "zakissimo/smoji.nvim" },
@@ -180,9 +167,6 @@ local full_plugins = {
 	    { "echasnovski/mini.nvim", version = false },
 	}
     },
-
-    -- Vyper syntax highlighting
-    { "vyperlang/vim-vyper" },
 
     -- Syntax highlighting of .xsh and .xonshrc files
     { "linkinpark342/xonsh-vim" },
