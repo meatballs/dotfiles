@@ -1,0 +1,2 @@
+## text/html; /usr/bin/xdg-open %s ; nametemplate=%s.html
+text/html; lynx %s ; nametemplate=%s.html
