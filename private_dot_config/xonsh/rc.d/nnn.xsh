@@ -18,4 +18,4 @@ plugins = {
 $NNN_FCOLORS = "".join(colours.values())
 $NNN_PLUG = "".join([f"{key}:{value}" for key, value in plugins.items()])
 $SPLIT = "v"
-aliases["ls"] = "nnn -ade -Pp"
+aliases["ll"] = "nnn -aei"
