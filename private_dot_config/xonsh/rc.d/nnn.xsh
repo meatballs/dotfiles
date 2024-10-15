@@ -15,7 +15,12 @@ colours = {
 plugins = {
     "p": "preview-tui",
 }
-$NNN_FCOLORS = "".join(colours.values())
+bookmarks = {
+    "h": "/home/owen",
+    "d": "/home/owen/Downloads",
+}
+$NNN_OPTS = "aei"
+$NNN_BMS = "".join([f"{key}:{value};" for key, value in bookmarks.items()])
 $NNN_PLUG = "".join([f"{key}:{value}" for key, value in plugins.items()])
+$NNN_FCOLORS = "".join(colours.values())
 $SPLIT = "v"
-aliases["ll"] = "nnn -aei"
