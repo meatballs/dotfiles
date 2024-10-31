@@ -148,9 +148,6 @@ local full_plugins = {
     { "nvim-telescope/telescope-file-browser.nvim" },
     { "nvim-telescope/telescope-project.nvim" },
 
-    -- Persistent, toggled terminals
-    { "akinsho/toggleterm.nvim" },
-
     -- Context
     { "nvim-treesitter/nvim-treesitter-context" },
 

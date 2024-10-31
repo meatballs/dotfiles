@@ -47,7 +47,6 @@ local plugin_modules = {
     "obsidian",
     "octo",
     "smoji",
-    "toggleterm",
     "treesitter",
     "trouble",
     "vimtex",
