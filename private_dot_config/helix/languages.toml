@@ -1,0 +1,12 @@
+[language-server.ruff]
+command = "ruff"
+args = ["server"]
+
+[language-server.gpt]
+command = "helix-gpt"
+args = ["--handler", "copilot", "--triggerCharacters", "{||(|| || \n"]
+
+
+[[language]]
+name = "python"
+language-servers = ["ruff", "pylsp", "gpt"]

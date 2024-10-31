@@ -1,0 +1,9 @@
+theme = "nord"
+
+[editor.lsp]
+display-messages = true
+
+[keys.normal.space.l]
+d = ":sh kitten @ launch --type overlay --cwd current lazydocker"
+g = ":sh kitten @ launch --type overlay --cwd current lazygit"
+j = ":sh kitten @ launch --type overlay --cwd current lazyjj"
