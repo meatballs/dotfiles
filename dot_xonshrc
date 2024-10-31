@@ -1,7 +1,124 @@
+from pathlib import Path
+import sys
+import yaml
+from uuid import uuid4
+
 $PYTEST_ADDOPTS="--pdbcls pudb.debugger:Debugger --capture=no"
 $EDITOR = "nvim"
 $VI_MODE = True
 $DOCKER_BUILDKIT = 1
+$BAT_THEME = "Nord"
 __xonsh__.commands_cache.threadable_predictors["glances"] = lambda x: False
-execx($(starship init xonsh))
 
+
+def _dashboard():
+    kitty @ launch --title glances --type overlay glances --enable-plugin ip
+    kitty @ launch --title term --location vsplit
+    kitty @ launch --title mail --location hsplit
+    kitty @ launch --type overlay neomutt
+    kitty @ resize-window --axis vertical --increment 5
+    kitty @ focus-window --match title:term
+    kitty @ launch --title calendar --location vsplit
+    kitty @ launch --type overlay ikhal
+    kitty @ focus-window --match title:glances
+    kitty @ launch --title chat --location hsplit
+    kitty @ resize-window --axis vertical --increment 15
+    kitty @ focus-window --match title:glances
+    kitty @ launch --title todo --location vsplit
+    kitty @ launch --type overlay todotxt-machine
+    kitty @ focus-window --match title:chat
+    kitty @ launch --type overlay iamb
+    kitty @ send-text --match title:glances 4 f
+    kitty @ focus-window --match title:mail
+
+aliases["dashboard"] = _dashboard
+
+colours = {
+  "blk": "0B",
+  "chr": "0B",
+  "dir": "04",
+  "exe": "06",
+  "reg": "00",
+  "hardlink": "06",
+  "symlink": "06",
+  "missing": "00",
+  "orphan": "09",
+  "fifo": "06",
+  "sock": "0B",
+  "other": "06"
+}
+plugins = {
+    "p": "preview-tui",
+}
+bookmarks = {
+    "h": "/home/owen",
+    "d": "/home/owen/Downloads",
+}
+$NNN_OPTS = "aei"
+$NNN_BMS = "".join([f"{key}:{value};" for key, value in bookmarks.items()])
+$NNN_PLUG = "".join([f"{key}:{value}" for key, value in plugins.items()])
+$NNN_FCOLORS = "".join(colours.values())
+$SPLIT = "v"
+
+paths = [
+    "$HOME/bin",
+    "$HOME/.local/bin",
+    "$HOME/.cargo/bin",
+    "$HOME/.radicle/bin",
+]
+_paths = [Path(path) for path in $PATH if Path(path).exists()]
+_paths.extend(paths)
+_paths = list(set(_paths))
+
+$PATH = _paths
+$PL_COLORS = {
+    "who": ("BLACK", "GREEN"),
+    "venv": ("BLACK", "YELLOW"),
+    "branch": ("BLACK"),
+    "cwd": ("BLACK", "BLUE"),
+    "git_root": ("BLACK", "RED"),
+    "git_sub_dir": ("WHITE", "RED"),
+    "short_cwd": ("WHITE", "#444"),
+    "full_proc": ("WHITE", "RED", "#444"),
+    "timing": ("WHITE", "#444"),
+    "time": ("BLACK", "GREEN"),
+    "history": ("BLACK", "BLUE"),
+    "rtns": ("WHITE", "RED"),
+    "full_rtns": ("WHITE", "RED", "#444"),
+}
+$PL_EXTRA_SEC = {'fix_for_tmux': int}
+$PL_PROMPT = 'history'
+$PL_RPROMPT = '!'
+$PL_TOOLBAR = 'who>cwd>branch>virtualenv'
+
+
+def replay_command(args):
+    if not args:
+        history show -n
+    else:
+        @$(history @(args[0]))
+    return 0
+
+aliases['h'] = replay_command
+
+
+def _uuid():
+    return str(uuid4())
+
+aliases["uuid"] = _uuid
+
+
+aliases["gst"] = ["git", "status"]
+aliases["gco"] = ["git", "checkout"]
+aliases["gcm"] = ["git", "checkout", "main"]
+aliases["glg"] = ["git", "log", "--oneline", "--graph", "--decorate"]
+aliases["nvim.basic"] = ["nvim", "-u", "~/.config/nvim/basic.lua"]
+aliases["open"] = ["xdg-open"]
+aliases["rm"] = ["trash"]
+aliases["xclip"] = ["xclip", "-selection", "-c"]
+aliases["ssh"] = ["kitty", "+kitten", "ssh"]
+aliases["bat"] = ["batcat"]
+aliases["cat"] = ["batcat"]
+
+execx($(starship init xonsh))
+execx($(zoxide init --cmd cd xonsh), 'exec', __xonsh__.ctx, filename='zoxide')

@@ -1,9 +1,0 @@
-git:
-    gst: [git, status]
-    ga: [git, add]
-    gaa: [git, add, -A]
-    gcm: [git, checkout, main]
-    gco: [git, checkout]
-    glg: [git, log, --oneline, --graph, --decorate]
-nvim:
-    nvim.basic: [nvim, -u, ~/.config/nvim/basic.lua]
