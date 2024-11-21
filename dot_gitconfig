@@ -1,12 +1,13 @@
 [user]
     email = owen.campbell@tanti.org.uk
     name = Owen Campbell
+	signingkey = /home/owen/.ssh/git
 [core]
     excludesfile = /home/owen/.gitignore_global
     editor = nvim -u ~/.config/nvim/basic.lua
     pager = delta
 [gpg]
-    program = /usr/bin/gpg
+   format = ssh
 [commit]
     gpgsign = true
 [init]
