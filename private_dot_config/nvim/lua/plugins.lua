@@ -29,16 +29,24 @@ local base_plugins = {
 }
 
 local full_plugins = {
-    { dir = "~/projects/personal/notebook.nvim" },
+    -- { dir = "~/projects/personal/notebook.nvim" },
+
+    -- Autocomplete
+    {
+        "hrsh7th/nvim-cmp",
+        dependencies = {
+            "hrsh7th/cmp-nvim-lsp",
+            "hrsh7th/cmp-buffer",
+            "hrsh7th/cmp-path",
+            "onsails/lspkind.nvim",
+        }
+    },
 
     -- Autopairs
     { "windwp/nvim-autopairs" },
 
     -- Comments
     { "numToStr/Comment.nvim" },
-
-    -- Copilot
-    { "github/copilot.vim" },
 
     -- CSV Tools
     { "chrisbra/csv.vim" },
@@ -80,10 +88,10 @@ local full_plugins = {
     { "rcarriga/nvim-dap-ui", dependencies = {"mfussenegger/nvim-dap", "nvim-neotest/nvim-nio"} },
 
     -- Jupyter Integration
-    {
-        dir = "~/projects/personal/magma-nvim",
-        build = ":UpdateRemotePlugins"
-    },
+    -- {
+    --     dir = "~/projects/personal/magma-nvim",
+    --     build = ":UpdateRemotePlugins"
+    -- },
 
     -- Split Navigation
     { "numToStr/Navigator.nvim" },
@@ -96,15 +104,6 @@ local full_plugins = {
 
     -- File explorer using nnn
     { "luukvbaal/nnn.nvim" },
-
-    { "hrsh7th/nvim-cmp" },
-    { "hrsh7th/cmp-nvim-lsp" },
-    { "hrsh7th/cmp-buffer" },
-    { "hrsh7th/cmp-path" },
-    { "hrsh7th/cmp-nvim-lua" },
-    { "hrsh7th/cmp-vsnip" },
-    { "hrsh7th/vim-vsnip" },
-    { "hrsh7th/vim-vsnip-integ" },
 
     -- Obsidian
     { "epwalsh/obsidian.nvim" },
@@ -167,6 +166,10 @@ local full_plugins = {
 
     -- Syntax highlighting of .xsh and .xonshrc files
     { "linkinpark342/xonsh-vim" },
+
+    -- copilot
+    { "zbirenbaum/copilot.lua" },
+    { "zbirenbaum/copilot-cmp" },
 }
 
 function M.load(config)

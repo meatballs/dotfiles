@@ -4,7 +4,7 @@ local map = require("keybindings")
 local global_settings = {
     mapleader = " ",
     maplocalleader = ",",
-    python3_host_prog = "~/.pyenv/versions/nvim/bin/python3",
+    python3_host_prog = "/home/owen/.virtualenvs/neovim/bin/python",
     spelllang = "en-gb",
     splitbelow = true,
     splitright = true,
@@ -29,6 +29,7 @@ local keybindings = {
 
 local plugin_modules = {
     "autopairs",
+    "cmp",
     "comment",
     "copilot",
     "csv",
@@ -37,9 +38,9 @@ local plugin_modules = {
     "indent_blankline",
     "lspconfig",
     "lualine",
-    "magma",
+    -- "magma",
     "mini_files",
-    "notebook",
+    -- "notebook",
     "nnn",
     "nvim_dap",
     "overseer",
@@ -102,5 +103,13 @@ vim.api.nvim_create_autocmd(
     { "BufRead", "BufNewFile" },
     { pattern = { "*.txt", "*.md", "*.tex", "*.rst" }, command = "setlocal spell" }
 )
+
+vim.api.nvim_create_autocmd("FileType", {
+    pattern = "markdown",
+    callback = function()
+        vim.opt_local.conceallevel = 1
+    end,
+})
+
 
 return M
