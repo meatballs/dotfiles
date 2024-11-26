@@ -9,9 +9,20 @@ $DOCKER_BUILDKIT = 1
 $BAT_THEME = "Nord"
 __xonsh__.commands_cache.threadable_predictors["glances"] = lambda x: False
 
+xontrib load coreutils
+xontrib load vox
+xontrib load autovox
+
+
+@events.autovox_policy
+def vox_policy(path, **_):
+    venv = Path($VIRTUALENV_HOME, path.name)
+    if venv.exists():
+        return venv
+
 
 def _dashboard():
-    kitty @ launch --title glances --type overlay glances --enable-plugin ip
+    kitty @ launch --title sysmon --type overlay btm
     kitty @ launch --title term --location vsplit
     kitty @ launch --title mail --location hsplit
     kitty @ launch --type overlay neomutt
@@ -19,15 +30,15 @@ def _dashboard():
     kitty @ focus-window --match title:term
     kitty @ launch --title calendar --location vsplit
     kitty @ launch --type overlay ikhal
-    kitty @ focus-window --match title:glances
+    kitty @ focus-window --match title:sysmon
     kitty @ launch --title chat --location hsplit
-    kitty @ resize-window --axis vertical --increment 15
-    kitty @ focus-window --match title:glances
+    kitty @ resize-window --axis vertical --increment 10
+    kitty @ focus-window --match title:sysmon
     kitty @ launch --title todo --location vsplit
     kitty @ launch --type overlay todotxt-machine
     kitty @ focus-window --match title:chat
     kitty @ launch --type overlay gurk
-    kitty @ send-text --match title:glances 4 f
+
     kitty @ focus-window --match title:mail
 
 aliases["dashboard"] = _dashboard
