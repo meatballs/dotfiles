@@ -32,14 +32,15 @@ local full_plugins = {
     -- { dir = "~/projects/personal/notebook.nvim" },
 
     -- Autocomplete
+    { "hrsh7th/nvim-cmp" },
+    { "hrsh7th/cmp-nvim-lsp"},
+    { "hrsh7th/cmp-buffer"},
+    { "hrsh7th/cmp-path"},
+    { "onsails/lspkind.nvim"},
     {
-        "hrsh7th/nvim-cmp",
-        dependencies = {
-            "hrsh7th/cmp-nvim-lsp",
-            "hrsh7th/cmp-buffer",
-            "hrsh7th/cmp-path",
-            "onsails/lspkind.nvim",
-        }
+        "Dynge/gitmoji.nvim",
+        opts = {},
+        ft = "gitcommit",
     },
 
     -- Autopairs

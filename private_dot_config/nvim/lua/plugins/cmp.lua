@@ -22,6 +22,7 @@ cmp.setup({
         { name = 'nvim_lsp' },
         { name = 'buffer' },
         { name = 'path' },
+        { name = 'gitmoji' },
     }),
     formatting = {
         format = lspkind.cmp_format({
