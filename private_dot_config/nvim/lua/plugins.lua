@@ -125,9 +125,6 @@ local full_plugins = {
     -- Task runner
     { "stevearc/overseer.nvim" },
 
-    -- gitmoji
-    { "zakissimo/smoji.nvim" },
-
     -- Treesitter
     {
         "nvim-treesitter/nvim-treesitter",
