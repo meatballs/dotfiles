@@ -4,7 +4,7 @@
 	signingkey = /home/owen/.ssh/git
 [core]
     excludesfile = /home/owen/.gitignore_global
-    editor = nvim -u ~/.config/nvim/basic.lua
+    editor = nvim
     pager = delta
 [gpg]
    format = ssh
