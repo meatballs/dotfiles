@@ -12,7 +12,6 @@ local function get_config()
             openrouter = openrouter_settings,
         },
         provider = "openrouter",
-        auto_suggestions_provider = "openrouter",
     }
 end
 
