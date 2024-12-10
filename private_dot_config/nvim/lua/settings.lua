@@ -19,6 +19,7 @@ local options = {
     hidden = true,
     number = true,
     shell = "/home/linuxbrew/.linuxbrew/bin/xonsh",
+    laststatus = 3,
     -- foldmethod = "expr",
     -- foldexpr = "nvim_treesitter#foldexpr()",
 }
@@ -29,6 +30,7 @@ local keybindings = {
 
 local plugin_modules = {
     "autopairs",
+    "avante",
     "cmp",
     "comment",
     "copilot",
