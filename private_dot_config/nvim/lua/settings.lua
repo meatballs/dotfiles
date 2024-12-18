@@ -30,7 +30,7 @@ local keybindings = {
 
 local plugin_modules = {
     "autopairs",
-    "avante",
+    -- "avante",
     "cmp",
     "comment",
     "copilot",

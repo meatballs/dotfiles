@@ -1,4 +1,12 @@
 local options = {
-    dir = "~/Nextcloud/Obsidian/Owen",
+    workspaces = {
+        {
+            name = "Owen",
+            path = "~/Nextcloud/Obsidian/Owen/",
+        }
+    },
+    completion = {
+        nvim_cmp = true,
+    },
 }
 require("obsidian").setup(options)

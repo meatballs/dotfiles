@@ -30,28 +30,6 @@ local base_plugins = {
 
 local full_plugins = {
     -- { dir = "~/projects/personal/notebook.nvim" },
-    -- AI
-    {
-        "yetone/avante.nvim",
-        event = "VeryLazy",
-        lazy = false,
-        version = false,
-        build = "make",
-        dependencies = {
-            "stevearc/dressing.nvim",
-            "nvim-lua/plenary.nvim",
-            "MunifTanjim/nui.nvim",
-            "hrsh7th/nvim-cmp",
-            "zbirenbaum/copilot.lua",
-            {
-                "MeanderingProgrammer/render-markdown.nvim",
-                opts = {
-                    file_types = {"markdown", "Avante" },
-                },
-                ft = { "markdown", "Avante"},
-            }
-        },
-    },
 
     -- Autocomplete
     { "hrsh7th/nvim-cmp" },
