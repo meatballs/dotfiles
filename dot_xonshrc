@@ -76,6 +76,8 @@ paths = [
     "$HOME/.local/bin",
     "$HOME/.cargo/bin",
     "$HOME/.radicle/bin",
+    "/home/linuxbrew/.linuxbrew/bin",
+    "/home/linuxbrew/.linuxbrew/sbin",
 ]
 _paths = [Path(path) for path in $PATH if Path(path).exists()]
 _paths.extend(paths)
