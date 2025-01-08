@@ -18,7 +18,7 @@
     s = switch
     sm = switch main
     st = status
-    ls = log --oneline --decorate --graph
+    ls = log --pretty=format:'%C(yellow)%h%C(green)%d %Creset%s%C(blue) [%cn] %Cred(%cr)' --decorate
 [interactive]
     diffFilter = delta --color-only
 [delta]
