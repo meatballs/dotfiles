@@ -47,6 +47,8 @@ wk.add(
     { "<leader>mc", ":MarkdownPreview<CR>", desc = "Preview" },
     { "<leader>me", ":MarkdownExport<CR>", desc = "Export" },
     { "<leader>mp", ":MarkdownPreview<CR>", desc = "Preview" },
+    { "<leader>o", group = "obsidian"},
+    { "<leader>ot", ":ObsidianToday<CR>", desc = "Today's Note"},
     { "<leader>r", group = "run" },
     { "<leader>rr", ":OverseerRun<CR>", desc = "Run Task" },
     { "<leader>rt", ":OverseerToggle<CR>", desc = "Toggle List" },
