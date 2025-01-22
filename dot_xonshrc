@@ -7,6 +7,7 @@ $EDITOR = "nvim"
 $VI_MODE = True
 $DOCKER_BUILDKIT = 1
 $BAT_THEME = "Nord"
+$OLLAMA_API_BASE = "http://localhost:11434"
 __xonsh__.commands_cache.threadable_predictors["glances"] = lambda x: False
 
 xontrib load coreutils
