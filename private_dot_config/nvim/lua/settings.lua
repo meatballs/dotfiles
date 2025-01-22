@@ -30,6 +30,7 @@ local keybindings = {
 
 local plugin_modules = {
     "autopairs",
+    "blink",
     "comment",
     "csv",
     "firenvim",
@@ -38,6 +39,7 @@ local plugin_modules = {
     "lspconfig",
     "lualine",
     "mini_files",
+    "minuet",
     "nnn",
     "nvim_dap",
     "overseer",
