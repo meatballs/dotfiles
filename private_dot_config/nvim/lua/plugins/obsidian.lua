@@ -5,9 +5,6 @@ local options = {
             path = "~/Nextcloud/Obsidian/Owen/",
         }
     },
-    completion = {
-        nvim_cmp = true,
-    },
     notes_subdir = "Notes",
     daily_notes = {
         folder = "Journal",
