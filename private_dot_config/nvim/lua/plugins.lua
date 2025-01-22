@@ -165,9 +165,6 @@ local full_plugins = {
     -- Syntax highlighting of .xsh and .xonshrc files
     { "linkinpark342/xonsh-vim" },
 
-    -- copilot
-    { "zbirenbaum/copilot.lua" },
-    { "zbirenbaum/copilot-cmp" },
 }
 
 function M.load(config)
