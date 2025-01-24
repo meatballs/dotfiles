@@ -1,26 +1,39 @@
-require("blink-cmp").setup {
-    keymap = { preset = 'default' },
+local border_chars = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" }
 
+require("blink-cmp").setup {
+    keymap = {
+        preset = 'super-tab',
+        ['<A-y>'] = require('minuet').make_blink_map(),
+    },
     appearance = {
-        -- Sets the fallback highlight groups to nvim-cmp's highlight groups
-        -- Useful for when your theme doesn't support blink.cmp
-        -- Will be removed in a future release
         use_nvim_cmp_as_default = true,
-        -- Set to 'mono' for 'Nerd Font Mono' or 'normal' for 'Nerd Font'
-        -- Adjusts spacing to ensure icons are aligned
         nerd_font_variant = 'mono'
     },
-
-    -- Default list of enabled providers defined so that you can extend it
-    -- elsewhere in your config, without redefining it, due to `opts_extend`
     sources = {
-        default = { 'lsp', 'path', 'snippets', 'buffer', 'minuet' },
-        providers = {
-            minuet = {
-                name = 'minuet',
-                module = 'minuet.blink',
-                score_offset = 8, -- Gives minuet higher priority among suggestions
+        default = { 'lsp', 'path', 'snippets', 'buffer' },
+    },
+    completion = {
+        menu = {
+            auto_show = true,
+            border = border_chars,
+            draw = {
+                columns = {
+                    { "label", "label_description", gap = 1, "kind_icon", "kind" },
+                },
+                treesitter = { "lsp" },
             },
         },
+        documentation = {
+            auto_show = true,
+            window = {
+                border = border_chars,
+            }
+        },
+    },
+    signature = {
+        enabled = true,
+        window = {
+            border = border_chars,
+        }
     },
 }

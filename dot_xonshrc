@@ -8,6 +8,7 @@ $VI_MODE = True
 $DOCKER_BUILDKIT = 1
 $BAT_THEME = "Nord"
 $OLLAMA_API_BASE = "http://localhost:11434"
+$OLLAMA_FAKE_API_KEY = "fake"
 __xonsh__.commands_cache.threadable_predictors["glances"] = lambda x: False
 
 xontrib load coreutils
