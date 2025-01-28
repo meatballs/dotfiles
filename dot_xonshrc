@@ -184,6 +184,7 @@ def _dev_layout(dir=None):
 
 
 aliases["temp"] = _dev_layout
+aliases["docker"] = "podman"
 
 execx($(starship init xonsh))
 execx($(zoxide init --cmd cd xonsh), 'exec', __xonsh__.ctx, filename='zoxide')
