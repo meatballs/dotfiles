@@ -11,6 +11,13 @@ require("blink-cmp").setup {
     },
     sources = {
         default = { 'lsp', 'path', 'snippets', 'buffer' },
+        providers = {
+            minuet = {
+                name = 'minuet',
+                module = 'minuet.blink',
+                score_offset = 8,
+            },
+        },
     },
     completion = {
         menu = {
