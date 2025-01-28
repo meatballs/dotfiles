@@ -10,7 +10,7 @@ require("blink-cmp").setup {
         nerd_font_variant = 'mono'
     },
     sources = {
-        default = { 'lsp', 'path', 'snippets', 'buffer' },
+        default = { 'lsp', 'path', 'snippets', 'buffer', 'minuet' },
         providers = {
             minuet = {
                 name = 'minuet',
@@ -29,6 +29,9 @@ require("blink-cmp").setup {
                 },
                 treesitter = { "lsp" },
             },
+        },
+        trigger = {
+            prefetch_on_insert = false,
         },
         documentation = {
             auto_show = true,

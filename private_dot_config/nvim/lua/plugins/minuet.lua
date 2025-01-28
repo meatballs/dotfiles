@@ -1,6 +1,6 @@
 require('minuet').setup {
     notify = "verbose",
-    request_timeout = 60,
+    request_timeout = 10,
     after_cursor_filter_length = 20,
     provider = 'openai_compatible',
     provider_options = {
@@ -17,5 +17,5 @@ require('minuet').setup {
         },
     },
     cmp = { enable_auto_complete = false },
-    blink = { enable_auto_complete = false },
+    blink = { enable_auto_complete = true },
 }
