@@ -30,20 +30,59 @@ local base_plugins = {
 
 local full_plugins = {
     {
-      'saghen/blink.cmp',
-      -- optional: provides snippets for the snippet source
-      dependencies = 'rafamadriz/friendly-snippets',
+        "yetone/avante.nvim",
+        event = "VeryLazy",
+        lazy = false,
+        version = '*', -- Set this to "*" to always pull the latest release version, or set it to false to update to the latest code changes.
+        build = "make",
+        dependencies = {
+            "stevearc/dressing.nvim",
+            "nvim-lua/plenary.nvim",
+            "MunifTanjim/nui.nvim",
+            --- The below dependencies are optional,
+            "echasnovski/mini.pick", -- for file_selector provider mini.pick
+            "echasnovski/mini.icons",
+            "nvim-telescope/telescope.nvim", -- for file_selector provider telescope
+            "ibhagwan/fzf-lua", -- for file_selector provider fzf
+            {
+                -- support for image pasting
+                "HakonHarnes/img-clip.nvim",
+                event = "VeryLazy",
+                opts = {
+                    -- recommended settings
+                    default = {
+                        embed_image_as_base64 = false,
+                        prompt_for_file_name = false,
+                        drag_and_drop = {
+                            insert_mode = true,
+                        },
+                    },
+                },
+            },
+            {
+                'MeanderingProgrammer/render-markdown.nvim',
+                opts = {
+                    file_types = { "markdown", "Avante" },
+                },
+                ft = { "markdown", "Avante" },
+            },
+        },
+    },
+    {
+        'saghen/blink.cmp',
+        -- optional: provides snippets for the snippet source
+        dependencies = 'rafamadriz/friendly-snippets',
 
-      -- use a release tag to download pre-built binaries
-      version = '*',
-      -- AND/OR build from source, requires nightly: https://rust-lang.github.io/rustup/concepts/channels.html#working-with-nightly-rust
-      -- build = 'cargo build --release',
-      -- If you use nix, you can build from source using latest nightly rust with:
-      -- build = 'nix run .#build-plugin',
+        -- use a release tag to download pre-built binaries
+        version = '*',
+        -- AND/OR build from source, requires nightly: https://rust-lang.github.io/rustup/concepts/channels.html#working-with-nightly-rust
+        -- build = 'cargo build --release',
+        -- If you use nix, you can build from source using latest nightly rust with:
+        -- build = 'nix run .#build-plugin',
 
-      ---@module 'blink.cmp'
-      ---@type blink.cmp.Config
-      opts_extend = { "sources.default" }
+        ---@module 'blink.cmp'
+        ---@type blink.cmp.Config
+        opts_extend = { "sources.default" }
     },
 
     { "milanglacier/minuet-ai.nvim" },
@@ -77,7 +116,7 @@ local full_plugins = {
     { "lukas-reineke/indent-blankline.nvim", main = "ibl", opts = {} },
 
     -- Just files
-    {'NoahTheDuke/vim-just'},
+    { 'NoahTheDuke/vim-just' },
 
     -- Markdown Preview
     {
@@ -91,7 +130,7 @@ local full_plugins = {
 
     -- Debug Adapter Protocol
     { "mfussenegger/nvim-dap-python" },
-    { "rcarriga/nvim-dap-ui", dependencies = {"mfussenegger/nvim-dap", "nvim-neotest/nvim-nio"} },
+    { "rcarriga/nvim-dap-ui", dependencies = { "mfussenegger/nvim-dap", "nvim-neotest/nvim-nio" } },
 
     -- Jupyter Integration
     -- {
@@ -162,9 +201,9 @@ local full_plugins = {
     -- Key Bindings with prompt
     {
         "folke/which-key.nvim",
-	dependencies = {
-	    { "echasnovski/mini.nvim", version = false },
-	}
+        dependencies = {
+            { "echasnovski/mini.nvim", version = false },
+        }
     },
 
     -- Syntax highlighting of .xsh and .xonshrc files

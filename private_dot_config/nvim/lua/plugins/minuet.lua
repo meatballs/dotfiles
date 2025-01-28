@@ -2,6 +2,7 @@ require('minuet').setup {
     notify = "verbose",
     request_timeout = 10,
     after_cursor_filter_length = 20,
+    auto_trigger_ignore_ft = {'Avante', 'AvanteInput'},
     provider = 'openai_compatible',
     provider_options = {
         openai_compatible = {
@@ -17,5 +18,5 @@ require('minuet').setup {
         },
     },
     cmp = { enable_auto_complete = false },
-    blink = { enable_auto_complete = true },
+    blink = { enable_auto_complete = false },
 }
