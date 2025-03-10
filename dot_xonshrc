@@ -73,19 +73,12 @@ $NNN_FCOLORS = "".join(colours.values())
 $SPLIT = "v"
 
 paths = [
-    "/usr/local/bin",
-    "$HOME/bin",
-    "$HOME/.local/bin",
+    "$HOME/AppImages/",
     "$HOME/.cargo/bin",
     "$HOME/.radicle/bin",
-    "/home/linuxbrew/.linuxbrew/bin",
-    "/home/linuxbrew/.linuxbrew/sbin",
 ]
-_paths = [Path(path) for path in $PATH if Path(path).exists()]
-_paths.extend(paths)
-_paths = list(set(_paths))
+$PATH[:0] = paths
 
-$PATH = _paths
 $PL_COLORS = {
     "who": ("BLACK", "GREEN"),
     "venv": ("BLACK", "YELLOW"),
@@ -183,8 +176,26 @@ def _dev_layout(dir=None):
 
 
 
-aliases["temp"] = _dev_layout
-aliases["docker"] = "podman"
+aliases["gearlever"] = "flatpak run it.mijorus.gearlever"
 
+$PODMAN_COMPOSE_WARNING_LOGS = False
+
+def _radicle(args):
+    compose_file = Path(Path.home(), "projects", "personal", "radicle-in-containers", "compose.yaml")
+    profiles = ["node", "explorer"]
+    profile_args = [item for p in profiles for item in ("--profile", p)]
+    actions = {
+        "start": ["up", "--detach"],
+        "stop": ["down"],
+    }
+    if args and args[0] in actions:
+        podman compose -f @(compose_file) @(profile_args) @(actions[args[0]])
+        return 0
+
+    print("Usage: radicle <start|stop>")
+    return 1
+
+
+aliases["radicle"] = _radicle
 execx($(starship init xonsh))
 execx($(zoxide init --cmd cd xonsh), 'exec', __xonsh__.ctx, filename='zoxide')

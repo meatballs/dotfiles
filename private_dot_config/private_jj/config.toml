@@ -7,11 +7,12 @@ format = "git"
 
 [user]
 name = "Owen Campbell"
+email = "owen.campbell@empiria.co.uk"
 
 [signing]
-sign-all = true
-backend = "gpg"
-key = "7E9EDA051C5A11EAB0BA0BA1628F79BCBE9C2B73"
+behaviour = "own"
+backend = "ssh"
+key = "~/.ssh/git.pub"
 
 [fix.tools.ruff]
 command = ["ruff", "format", "-"]

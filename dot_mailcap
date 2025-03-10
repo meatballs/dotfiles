@@ -2,3 +2,4 @@
 # text/html; lynx %s ; nametemplate=%s.html
 text/html; kitty @ launch --type overlay --title neomutt-html w3m -I %{charset} -T text/html -graph -F -no-cookie -o confirm_qq=FALSE -o use_wide=TRUE -o display_link=TRUE -o display_link_number=TRUE -o color=TRUE -o auto_image=TRUE -o display_image=TRUE -o max_load_image=20 -o inline_img_protocol=4  %s; nametemplate=%s.html
 text/calendar; khal import %s; nametemplate=%s.ics
+application/pdf; /usr/bin/xdg-open %s
