@@ -189,7 +189,7 @@ def _radicle(args):
         "stop": ["down"],
     }
     if args and args[0] in actions:
-        podman compose -f @(compose_file) @(profile_args) @(actions[args[0]])
+        docker compose -f @(compose_file) @(profile_args) @(actions[args[0]])
         return 0
 
     print("Usage: radicle <start|stop>")

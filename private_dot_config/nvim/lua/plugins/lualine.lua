@@ -3,7 +3,7 @@ local function lsp_provider()
     local clients = {}
     local icon = ' '
 
-    for _, client in pairs(vim.lsp.buf_get_clients()) do
+    for _, client in pairs(vim.lsp.get_clients()) do
         local label = icon .. client.name
         clients[#clients + 1] = label
     end

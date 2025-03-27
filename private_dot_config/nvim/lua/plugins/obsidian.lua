@@ -10,5 +10,6 @@ local options = {
         folder = "Journal",
         date_format = "%d %b %Y"
     },
+    ui = { enable = false },
 }
 require("obsidian").setup(options)
