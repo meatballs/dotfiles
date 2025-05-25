@@ -147,9 +147,6 @@ local full_plugins = {
         lazy = false,
     },
 
-    -- File explorer using nnn
-    { "luukvbaal/nnn.nvim" },
-
     -- Obsidian
     { "epwalsh/obsidian.nvim" },
 
@@ -209,6 +206,15 @@ local full_plugins = {
     -- Syntax highlighting of .xsh and .xonshrc files
     { "linkinpark342/xonsh-vim" },
 
+    -- Yazi file manager integration
+    --@type LazySpec
+    {
+        "mikavilpas/yazi.nvim",
+        event = "VeryLazy",
+        dependencies = {
+            "folke/snacks.nvim"
+        },
+    },
 }
 
 function M.load(config)

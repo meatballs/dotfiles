@@ -41,7 +41,6 @@ local plugin_modules = {
     "lualine",
     "mini_files",
     "minuet",
-    "nnn",
     "nvim_dap",
     "overseer",
     "telescope",

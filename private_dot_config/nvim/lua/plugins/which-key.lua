@@ -19,7 +19,7 @@ wk.add(
     { "<leader>dso", ":lua require'dap'.step_over()<CR>", desc = "Step over" },
     { "<leader>dsx", ":lua require'dap'.step_out()<CR>", desc = "Step out" },
     { "<leader>e", group = "explorer" },
-    { "<leader>ef", ":NnnPicker<CR>", desc = "Explore Files" },
+    { "<leader>ef", ":Yazi cwd<CR>", desc = "Explore Files" },
     { "<leader>f", group = "finder" },
     { "<leader>fb", ":Telescope buffers<CR>", desc = "Buffers" },
     { "<leader>ff", ":Telescope file_browser path=%:p:help |select_buffer=true<CR>|", desc = "Files" },
