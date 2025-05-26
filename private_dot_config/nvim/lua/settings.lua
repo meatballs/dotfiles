@@ -50,6 +50,7 @@ local plugin_modules = {
     "trouble",
     "vimtex",
     "which-key",
+    "yazi",
 }
 
 local luajit_dependent_modules = {
