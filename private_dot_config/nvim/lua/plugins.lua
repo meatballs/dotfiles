@@ -14,6 +14,7 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
+---@type LazySpec
 local base_plugins = {
     -- Lua based status line
     { "hoob3rt/lualine.nvim" },
@@ -28,46 +29,8 @@ local base_plugins = {
     { "knubie/vim-kitty-navigator" },
 }
 
+---@type LazySpec
 local full_plugins = {
-    {
-        "yetone/avante.nvim",
-        event = "VeryLazy",
-        lazy = false,
-        version = '*', -- Set this to "*" to always pull the latest release version, or set it to false to update to the latest code changes.
-        build = "make",
-        dependencies = {
-            "stevearc/dressing.nvim",
-            "nvim-lua/plenary.nvim",
-            "MunifTanjim/nui.nvim",
-            --- The below dependencies are optional,
-            "echasnovski/mini.pick", -- for file_selector provider mini.pick
-            "echasnovski/mini.icons",
-            "nvim-telescope/telescope.nvim", -- for file_selector provider telescope
-            "ibhagwan/fzf-lua", -- for file_selector provider fzf
-            {
-                -- support for image pasting
-                "HakonHarnes/img-clip.nvim",
-                event = "VeryLazy",
-                opts = {
-                    -- recommended settings
-                    default = {
-                        embed_image_as_base64 = false,
-                        prompt_for_file_name = false,
-                        drag_and_drop = {
-                            insert_mode = true,
-                        },
-                    },
-                },
-            },
-            {
-                'MeanderingProgrammer/render-markdown.nvim',
-                opts = {
-                    file_types = { "markdown", "Avante" },
-                },
-                ft = { "markdown", "Avante" },
-            },
-        },
-    },
     {
         'saghen/blink.cmp',
         -- optional: provides snippets for the snippet source
@@ -207,12 +170,22 @@ local full_plugins = {
     { "linkinpark342/xonsh-vim" },
 
     -- Yazi file manager integration
-    --@type LazySpec
     {
         "mikavilpas/yazi.nvim",
         event = "VeryLazy",
         dependencies = {
-            "folke/snacks.nvim"
+          {
+            -- https://github.com/folke/snacks.nvim
+            "folke/snacks.nvim",
+            lazy = false,
+            priority = 1000,
+            opts = {},
+          },
+        },
+        ---@type YaziConfig | {}
+        opts = {
+          open_for_directories = true,
+          log_level = vim.log.levels.DEBUG,
         },
     },
 }

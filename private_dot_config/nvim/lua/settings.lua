@@ -30,7 +30,6 @@ local keybindings = {
 
 local plugin_modules = {
     "autopairs",
-    "avante",
     "blink",
     "comment",
     "csv",
@@ -39,7 +38,7 @@ local plugin_modules = {
     "indent_blankline",
     "lspconfig",
     "lualine",
-    "mini_files",
+    -- "mini_files",
     "minuet",
     "nvim_dap",
     "overseer",
@@ -50,7 +49,7 @@ local plugin_modules = {
     "trouble",
     "vimtex",
     "which-key",
-    "yazi",
+    -- "yazi",
 }
 
 local luajit_dependent_modules = {
