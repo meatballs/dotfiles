@@ -29,6 +29,7 @@ wk.add(
     { "<leader>fm", ":Telescope marks<CR>", desc = "Marks" },
     { "<leader>fn", ":Telescope notify<CR>", desc = "Notifications" },
     { "<leader>fp", ":Telescope project display_type=full<CR>", desc = "Projects" },
+    { "<leader>fr", ":GrugFar<CR>", desc="Find and Replace" },
     { "<leader>ft", ":Telescope treesitter<CR>", desc = "Treesitter" },
     { "<leader>g", ":Smoji<CR>", desc="gitmoji"},
     { "<leader>j", group = "jupyter" },

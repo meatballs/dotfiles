@@ -211,4 +211,8 @@ def _y(args):
 aliases["y"] = _y
 
 execx($(starship init xonsh))
+
+
 execx($(zoxide init --cmd cd xonsh), 'exec', __xonsh__.ctx, filename='zoxide')
+builtins.aliases["z"] = __zoxide_z  # type: ignore  # pylint:disable=no-member
+builtins.aliases["zi"] = __zoxide_zi  # type: ignore  # pylint:disable=no-member

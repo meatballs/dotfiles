@@ -75,6 +75,9 @@ local full_plugins = {
     -- Git decorations
     { "lewis6991/gitsigns.nvim" },
 
+    -- Find and Replace
+    { "MagicDuck/grug-far.nvim" },
+
     -- Indentation guide lines
     { "lukas-reineke/indent-blankline.nvim", main = "ibl", opts = {} },
 
