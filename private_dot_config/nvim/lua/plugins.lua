@@ -14,6 +14,7 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
+
 ---@type LazySpec
 local base_plugins = {
     -- Lua based status line
@@ -52,7 +53,12 @@ local full_plugins = {
     {
         "dgagn/diagflow.nvim",
         opts = {
-            show_borders = true,
+            scope = "line",
+            -- show_sign = true,
+            -- show_borders = true,
+            format = function(diagnostic)
+                return diagnostic.message .. " (" .. diagnostic.code .. ")"
+            end,
         }
     },
 

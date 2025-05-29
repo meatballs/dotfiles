@@ -28,6 +28,7 @@ local keybindings = {
     { "i", "jk", "<esc>" },
 }
 
+
 local severity = vim.diagnostic.severity
 vim.diagnostic.config({
     signs = {
@@ -38,7 +39,6 @@ vim.diagnostic.config({
             [severity.INFO] = " "
         }
     },
-    underline = true,
 })
 
 local plugin_modules = {
@@ -51,7 +51,6 @@ local plugin_modules = {
     "indent_blankline",
     "lspconfig",
     "lualine",
-    -- "mini_files",
     "minuet",
     "nvim_dap",
     "overseer",
@@ -62,7 +61,6 @@ local plugin_modules = {
     "trouble",
     "vimtex",
     "which-key",
-    -- "yazi",
 }
 
 local luajit_dependent_modules = {
