@@ -28,6 +28,19 @@ local keybindings = {
     { "i", "jk", "<esc>" },
 }
 
+local severity = vim.diagnostic.severity
+vim.diagnostic.config({
+    signs = {
+        text = {
+            [severity.ERROR] = " ",
+            [severity.WARN] = " ",
+            [severity.HINT] = " ",
+            [severity.INFO] = " "
+        }
+    },
+    underline = true,
+})
+
 local plugin_modules = {
     "autopairs",
     "blink",
@@ -109,10 +122,11 @@ vim.api.nvim_create_autocmd("FileType", {
     end,
 })
 
-vim.api.nvim_create_autocmd({'BufEnter'}, {
+vim.api.nvim_create_autocmd({ 'BufEnter' }, {
     pattern = "anvil.works*.txt",
     command = "set filetype=python"
 })
+
 
 
 return M

@@ -12,6 +12,7 @@ wk.add(
     { "<leader>cn", ":set relativenumber!<CR>", desc = "Line numbers" },
     { "<leader>cr", ":lua vim.lsp.buf.rename<CR>", desc = "Rename" },
     { "<leader>cs", ":lua vim.lsp.buf.signature_help()<CR>", desc = "Signature" },
+    { "<leader>ct", ":lua vim.diagnostic.open_float()<CR>", desc = "Show diagnostics"},
     { "<leader>d", group = "debug" },
     { "<leader>db", ":lua require'dap'.toggle_breakpoint()<CR>", desc = "Breakpoint" },
     { "<leader>dc", ":lua require'dap'.continue()<CR>", desc = "Continue" },

@@ -48,6 +48,14 @@ local full_plugins = {
         opts_extend = { "sources.default" }
     },
 
+    -- Diagnostics display
+    {
+        "dgagn/diagflow.nvim",
+        opts = {
+            show_borders = true,
+        }
+    },
+
     { "milanglacier/minuet-ai.nvim" },
 
     -- Autopairs
@@ -59,7 +67,6 @@ local full_plugins = {
     -- CSV Tools
     { "chrisbra/csv.vim" },
 
-
     -- UI improvements
     { "stevearc/dressing.nvim" },
 
@@ -68,9 +75,6 @@ local full_plugins = {
         "glacambre/firenvim",
         build = function() vim.fn["firenvim#install"](0) end
     },
-
-    -- Git blame virtual text
-    { "f-person/git-blame.nvim" },
 
     -- Git decorations
     { "lewis6991/gitsigns.nvim" },

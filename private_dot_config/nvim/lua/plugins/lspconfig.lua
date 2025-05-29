@@ -113,4 +113,5 @@ for _, server in pairs(servers) do
         end
     end
     nvim_lsp[server].setup(config)
+
 end
