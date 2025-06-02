@@ -28,6 +28,22 @@ local keybindings = {
     { "i", "jk", "<esc>" },
 }
 
+vim.lsp.enable({
+    "cssls",
+    "dockerls",
+    "esbonio",
+    "jsonls",
+    "lua_ls",
+    "marksman",
+    "pylsp",
+    "ruff",
+    "rust_analyzer",
+    "solidity_ls_nomicfoundation",
+    "texlab",
+    "ts_ls",
+    "yamlls",
+})
+
 
 local severity = vim.diagnostic.severity
 vim.diagnostic.config({
@@ -49,7 +65,6 @@ local plugin_modules = {
     "firenvim",
     "gitsigns",
     "indent_blankline",
-    "lspconfig",
     "lualine",
     "minuet",
     "nvim_dap",
