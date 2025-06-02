@@ -87,16 +87,10 @@ local full_plugins = {
 
     -- Debug Adapter Protocol
     { "mfussenegger/nvim-dap-python" },
-    { "rcarriga/nvim-dap-ui", dependencies = { "mfussenegger/nvim-dap", "nvim-neotest/nvim-nio" } },
-
-    -- Jupyter Integration
-    -- {
-    --     dir = "~/projects/personal/magma-nvim",
-    --     build = ":UpdateRemotePlugins"
-    -- },
-
-    -- Split Navigation
-    { "numToStr/Navigator.nvim" },
+    { "rcarriga/nvim-dap-ui", dependencies = {
+        "mfussenegger/nvim-dap",
+        "nvim-neotest/nvim-nio" }
+    },
 
     --Common lsp config settings
     {
@@ -110,19 +104,6 @@ local full_plugins = {
     -- Popup notifications
     { "rcarriga/nvim-notify" },
 
-    -- Github integration
-    {
-        "pwntester/octo.nvim",
-        dependencies = {
-            "nvim-lua/plenary.nvim",
-            "nvim-telescope/telescope.nvim",
-            "kyazdani42/nvim-web-devicons",
-        },
-    },
-
-    -- Task runner
-    { "stevearc/overseer.nvim" },
-
     -- Treesitter
     {
         "nvim-treesitter/nvim-treesitter",
@@ -131,9 +112,6 @@ local full_plugins = {
     { "nvim-treesitter/playground",
         build = ":TSUpdate"
     },
-
-    -- Help file for strftime formats
-    { "sjl/strftimedammit.vim" },
 
     -- Telescope
     { "nvim-lua/popup.nvim" },
@@ -168,18 +146,18 @@ local full_plugins = {
         "mikavilpas/yazi.nvim",
         event = "VeryLazy",
         dependencies = {
-          {
-            -- https://github.com/folke/snacks.nvim
-            "folke/snacks.nvim",
-            lazy = false,
-            priority = 1000,
-            opts = {},
-          },
+            {
+                -- https://github.com/folke/snacks.nvim
+                "folke/snacks.nvim",
+                lazy = false,
+                priority = 1000,
+                opts = {},
+            },
         },
         ---@type YaziConfig | {}
         opts = {
-          open_for_directories = true,
-          log_level = vim.log.levels.DEBUG,
+            open_for_directories = true,
+            log_level = vim.log.levels.DEBUG,
         },
     },
 }
