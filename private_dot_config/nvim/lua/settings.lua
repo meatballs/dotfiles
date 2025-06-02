@@ -20,6 +20,7 @@ local options = {
     number = true,
     shell = "/home/linuxbrew/.linuxbrew/bin/xonsh",
     laststatus = 3,
+    winborder = "rounded",
     -- foldmethod = "expr",
     -- foldexpr = "nvim_treesitter#foldexpr()",
 }
