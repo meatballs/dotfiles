@@ -60,14 +60,12 @@ vim.diagnostic.config({
 
 local plugin_modules = {
     "autopairs",
-    "blink",
     "comment",
     "csv",
     "firenvim",
     "gitsigns",
     "indent_blankline",
     "lualine",
-    "minuet",
     "nvim_dap",
     "overseer",
     "telescope",
@@ -107,6 +105,16 @@ local function full()
     for _, v in pairs(cmds) do
         vim.cmd(v)
     end
+
+    vim.api.nvim_create_autocmd('LspAttach', {
+      callback = function(ev)
+        local client = vim.lsp.get_client_by_id(ev.data.client_id)
+        if client:supports_method('textDocument/completion') then
+          vim.lsp.completion.enable(true, client.id, ev.buf, { autotrigger = true })
+        end
+      end,
+    })
+
 
     for _, v in pairs(plugin_modules) do
         require("plugins." .. v)
