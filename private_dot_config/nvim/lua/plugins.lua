@@ -32,18 +32,18 @@ local base_plugins = {
 
 ---@type LazySpec
 local full_plugins = {
-    -- Diagnostics display
-    {
-        "dgagn/diagflow.nvim",
-        opts = {
-            scope = "line",
-            -- show_sign = true,
-            -- show_borders = true,
-            format = function(diagnostic)
-                return diagnostic.message .. " (" .. diagnostic.code .. ")"
-            end,
-        }
-    },
+    -- -- Diagnostics display
+    -- {
+    --     "dgagn/diagflow.nvim",
+    --     opts = {
+    --         scope = "line",
+    --         -- show_sign = true,
+    --         -- show_borders = true,
+    --         format = function(diagnostic)
+    --             return diagnostic.message .. " (" .. diagnostic.code .. ")"
+    --         end,
+    --     }
+    -- },
 
     -- Autopairs
     { "windwp/nvim-autopairs" },

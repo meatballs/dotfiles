@@ -21,8 +21,6 @@ local options = {
     shell = "/home/linuxbrew/.linuxbrew/bin/xonsh",
     laststatus = 3,
     winborder = "rounded",
-    -- foldmethod = "expr",
-    -- foldexpr = "nvim_treesitter#foldexpr()",
 }
 
 local keybindings = {
@@ -55,6 +53,9 @@ vim.diagnostic.config({
             [severity.HINT] = " ",
             [severity.INFO] = " "
         }
+    },
+    virtual_lines = {
+        current_line = true,
     },
 })
 
