@@ -32,9 +32,6 @@ local base_plugins = {
 
 ---@type LazySpec
 local full_plugins = {
-    -- Autopairs
-    { "windwp/nvim-autopairs" },
-
     -- Comments
     { "numToStr/Comment.nvim" },
 
@@ -65,6 +62,10 @@ local full_plugins = {
             vim.fn["mkdp#util#install"]()
         end,
     },
+
+    -- Various QOL plugins
+    { "echasnovski/mini.nvim", version = false },
+
 
     -- Debug Adapter Protocol
     { "mfussenegger/nvim-dap-python" },

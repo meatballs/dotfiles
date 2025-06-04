@@ -60,12 +60,12 @@ vim.diagnostic.config({
 })
 
 local plugin_modules = {
-    "autopairs",
     "comment",
     "csv",
     "firenvim",
     "gitsigns",
     "lualine",
+    "mini",
     "nvim_dap",
     "telescope",
     "obsidian",
