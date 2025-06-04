@@ -32,19 +32,6 @@ local base_plugins = {
 
 ---@type LazySpec
 local full_plugins = {
-    -- -- Diagnostics display
-    -- {
-    --     "dgagn/diagflow.nvim",
-    --     opts = {
-    --         scope = "line",
-    --         -- show_sign = true,
-    --         -- show_borders = true,
-    --         format = function(diagnostic)
-    --             return diagnostic.message .. " (" .. diagnostic.code .. ")"
-    --         end,
-    --     }
-    -- },
-
     -- Autopairs
     { "windwp/nvim-autopairs" },
 
@@ -53,9 +40,6 @@ local full_plugins = {
 
     -- CSV Tools
     { "chrisbra/csv.vim" },
-
-    -- UI improvements
-    { "stevearc/dressing.nvim" },
 
     -- Neovim in the browser
     {
@@ -68,9 +52,6 @@ local full_plugins = {
 
     -- Find and Replace
     { "MagicDuck/grug-far.nvim" },
-
-    -- Indentation guide lines
-    { "lukas-reineke/indent-blankline.nvim", main = "ibl", opts = {} },
 
     -- Just files
     { 'NoahTheDuke/vim-just' },
@@ -101,9 +82,6 @@ local full_plugins = {
     -- Obsidian
     { "epwalsh/obsidian.nvim" },
 
-    -- Popup notifications
-    { "rcarriga/nvim-notify" },
-
     -- Treesitter
     {
         "nvim-treesitter/nvim-treesitter",
@@ -111,6 +89,17 @@ local full_plugins = {
     },
     { "nvim-treesitter/playground",
         build = ":TSUpdate"
+    },
+
+    -- Various QOL plugins
+    {
+        "folke/snacks.nvim",
+        lazy = false,
+        opts = {
+            indent = { enabled = true },
+            input= { enabled = true },
+            notifier = { enabled = true },
+        }
     },
 
     -- Telescope
@@ -147,7 +136,6 @@ local full_plugins = {
         event = "VeryLazy",
         dependencies = {
             {
-                -- https://github.com/folke/snacks.nvim
                 "folke/snacks.nvim",
                 lazy = false,
                 priority = 1000,

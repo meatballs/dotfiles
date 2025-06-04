@@ -65,7 +65,6 @@ local plugin_modules = {
     "csv",
     "firenvim",
     "gitsigns",
-    "indent_blankline",
     "lualine",
     "nvim_dap",
     "telescope",
@@ -74,10 +73,6 @@ local plugin_modules = {
     "trouble",
     "vimtex",
     "which-key",
-}
-
-local luajit_dependent_modules = {
-    "notify",
 }
 
 local function basic()
@@ -114,16 +109,10 @@ local function full()
       end,
     })
 
-
     for _, v in pairs(plugin_modules) do
         require("plugins." .. v)
     end
 
-    if type(jit) == "table" then
-        for _, v in pairs(luajit_dependent_modules) do
-            require("plugins." .. v)
-        end
-    end
 end
 
 function M.setup(config)
