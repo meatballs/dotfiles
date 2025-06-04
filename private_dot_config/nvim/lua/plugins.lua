@@ -32,9 +32,6 @@ local base_plugins = {
 
 ---@type LazySpec
 local full_plugins = {
-    -- Comments
-    { "numToStr/Comment.nvim" },
-
     -- CSV Tools
     { "chrisbra/csv.vim" },
 
