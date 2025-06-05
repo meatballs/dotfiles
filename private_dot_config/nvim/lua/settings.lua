@@ -59,21 +59,6 @@ vim.diagnostic.config({
     },
 })
 
-local plugin_modules = {
-    "bufferline",
-    "csv",
-    "firenvim",
-    "gitsigns",
-    "lualine",
-    "mini",
-    "nvim_dap",
-    "telescope",
-    "obsidian",
-    "treesitter",
-    "trouble",
-    "vimtex",
-    "which-key",
-}
 
 local function basic()
     for k, v in pairs(global_settings) do
@@ -109,8 +94,17 @@ local function full()
       end,
     })
 
-    for _, v in pairs(plugin_modules) do
-        require("plugins." .. v)
+    -- Load all plugin modules from the plugins directory
+    local plugins_path = vim.fn.stdpath("config") .. "/lua/plugins"
+    local scan = vim.fn.glob(plugins_path .. "/*.lua", false, true)
+    
+    for _, file in ipairs(scan) do
+        -- Extract the module name without path and extension
+        local module_name = vim.fn.fnamemodify(file, ":t:r")
+        -- Skip any files that might start with underscore (often used for helpers)
+        if not string.match(module_name, "^_") then
+            require("plugins." .. module_name)
+        end
     end
 
 end
