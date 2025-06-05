@@ -1,9 +1,7 @@
 [ui]
 editor = "nvim"
 pager = "delta"
-
-[ui.diff]
-format = "git"
+diff-formatter = "git"
 
 [user]
 name = "Owen Campbell"
