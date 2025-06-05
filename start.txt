@@ -1,0 +1,1253 @@
+--- Startup times for process: Primary (or UI client) ---
+
+times in msec
+ clock   self+sourced   self:  sourced script
+ clock   elapsed:              other lines
+
+000.002  000.002: --- NVIM STARTING ---
+000.141  000.139: event init
+000.217  000.077: early init
+000.262  000.044: locale set
+000.298  000.036: init first window
+000.604  000.306: inits 1
+000.610  000.006: window checked
+000.612  000.002: parsing arguments
+001.057  000.034  000.034: require('vim.shared')
+001.148  000.039  000.039: require('vim.inspect')
+001.199  000.042  000.042: require('vim._options')
+001.201  000.142  000.060: require('vim._editor')
+001.202  000.197  000.021: require('vim._init_packages')
+001.205  000.396: init lua interpreter
+003.682  002.477: nvim_ui_attach
+004.100  000.417: nvim_set_client_info
+004.102  000.002: --- NVIM STARTED ---
+
+--- Startup times for process: Embedded ---
+
+times in msec
+ clock   self+sourced   self:  sourced script
+ clock   elapsed:              other lines
+
+000.002  000.002: --- NVIM STARTING ---
+000.132  000.130: event init
+000.216  000.085: early init
+000.270  000.054: locale set
+000.309  000.039: init first window
+000.660  000.351: inits 1
+000.670  000.011: window checked
+000.672  000.002: parsing arguments
+001.102  000.034  000.034: require('vim.shared')
+001.183  000.036  000.036: require('vim.inspect')
+001.232  000.040  000.040: require('vim._options')
+001.234  000.130  000.054: require('vim._editor')
+001.235  000.183  000.019: require('vim._init_packages')
+001.237  000.382: init lua interpreter
+001.302  000.065: expanding arguments
+001.333  000.031: inits 2
+001.540  000.206: init highlight
+001.541  000.001: waiting for UI
+001.660  000.120: done waiting for UI
+001.667  000.007: clear screen
+001.768  000.008  000.008: require('vim.keymap')
+002.366  000.124  000.124: sourcing nvim_exec2()
+002.460  000.791  000.659: require('vim._defaults')
+002.462  000.003: init default mappings & autocommands
+003.032  000.032  000.032: sourcing /home/linuxbrew/.linuxbrew/Cellar/neovim/0.11.2/share/nvim/runtime/ftplugin.vim
+003.086  000.016  000.016: sourcing /home/linuxbrew/.linuxbrew/Cellar/neovim/0.11.2/share/nvim/runtime/indent.vim
+003.201  000.031  000.031: require('main')
+003.414  000.211  000.211: require('plugins')
+004.021  000.604  000.604: require('lazy')
+004.050  000.014  000.014: require('ffi')
+004.082  000.017  000.017: require('vim.fs')
+004.166  000.082  000.082: require('vim.uri')
+004.175  000.124  000.025: require('vim.loader')
+004.270  000.082  000.082: require('lazy.stats')
+004.364  000.078  000.078: require('lazy.core.util')
+004.463  000.097  000.097: require('lazy.core.config')
+004.613  000.074  000.074: require('lazy.core.handler')
+004.802  000.054  000.054: require('lazy.pkg')
+004.805  000.108  000.054: require('lazy.core.meta')
+004.814  000.199  000.091: require('lazy.core.plugin')
+004.820  000.356  000.083: require('lazy.core.loader')
+005.203  000.067  000.067: require('lazy.core.fragments')
+006.651  000.153  000.153: require('lazy.core.handler.keys')
+006.766  000.108  000.108: require('lazy.core.handler.cmd')
+006.835  000.066  000.066: require('lazy.core.handler.event')
+006.871  000.030  000.030: require('lazy.core.handler.ft')
+006.914  000.005  000.005: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+006.923  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+007.232  000.111  000.111: sourcing nvim_exec2() called at /home/linuxbrew/.linuxbrew/Cellar/neovim/0.11.2/share/nvim/runtime/filetype.lua:0
+007.235  000.157  000.046: sourcing /home/linuxbrew/.linuxbrew/Cellar/neovim/0.11.2/share/nvim/runtime/filetype.lua
+007.237  000.191  000.034: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+007.926  000.438  000.438: require('snacks')
+007.931  000.517  000.079: sourcing /home/owen/.local/share/nvim/lazy/snacks.nvim/plugin/snacks.lua
+007.935  000.544  000.027: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+007.940  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+007.948  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+008.013  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+008.020  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+008.140  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+008.147  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+008.367  000.003  000.003: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+008.375  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+009.628  000.054  000.054: require('nvim-treesitter.utils')
+010.757  000.171  000.171: require('vim.treesitter.language')
+010.830  000.070  000.070: require('vim.func')
+010.932  000.094  000.094: require('vim.func._memoize')
+010.955  000.494  000.159: require('vim.treesitter.query')
+011.009  000.053  000.053: require('vim.treesitter._range')
+011.019  000.777  000.230: require('vim.treesitter.languagetree')
+011.023  000.993  000.216: require('vim.treesitter')
+011.460  001.829  000.836: require('nvim-treesitter.parsers')
+011.599  000.026  000.026: require('nvim-treesitter.compat')
+011.659  000.032  000.032: require('nvim-treesitter.ts_utils')
+011.662  000.061  000.029: require('nvim-treesitter.tsrange')
+011.686  000.023  000.023: require('nvim-treesitter.caching')
+011.692  000.149  000.039: require('nvim-treesitter.query')
+011.699  000.199  000.050: require('nvim-treesitter.configs')
+011.701  000.239  000.041: require('nvim-treesitter.info')
+011.755  000.052  000.052: require('nvim-treesitter.shell_command_selectors')
+011.774  002.288  000.113: require('nvim-treesitter.install')
+011.810  000.035  000.035: require('nvim-treesitter.statusline')
+011.851  000.039  000.039: require('nvim-treesitter.query_predicates')
+011.853  002.585  000.223: require('nvim-treesitter')
+011.924  000.065  000.065: require('vim.iter')
+012.458  003.231  000.581: sourcing /home/owen/.local/share/nvim/lazy/nvim-treesitter/plugin/nvim-treesitter.lua
+012.463  003.259  000.028: sourcing nvim_exec2() called at /home/owen/.local/share/nvim/lazy/playground/plugin/nvim-treesitter-playground.lua:0
+012.468  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.local/share/nvim/lazy/playground/plugin/nvim-treesitter-playground.lua:0
+012.480  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.local/share/nvim/lazy/playground/plugin/nvim-treesitter-playground.lua:0
+012.483  003.595  000.334: require('nvim-treesitter.parsers')
+012.484  003.858  000.263: require('nvim-treesitter-playground')
+012.602  004.032  000.173: sourcing /home/owen/.local/share/nvim/lazy/playground/plugin/nvim-treesitter-playground.lua
+012.606  004.059  000.028: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+012.611  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+012.619  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+012.689  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+012.698  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+012.839  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+012.845  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+012.984  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+012.990  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+013.168  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+013.176  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+013.436  000.071  000.071: sourcing /home/owen/.local/share/nvim/lazy/nvim-dap/plugin/dap.lua
+013.440  000.097  000.026: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+013.445  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+013.453  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+013.624  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+013.631  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+013.811  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+013.818  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+014.165  000.103  000.103: sourcing /home/owen/.local/share/nvim/lazy/nvim-treesitter-context/plugin/treesitter-context.lua
+014.170  000.132  000.029: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+014.175  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+014.182  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+014.447  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+014.455  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+014.924  000.056  000.056: require('vim.lsp.log')
+015.326  000.399  000.399: require('vim.lsp.protocol')
+015.533  000.204  000.204: require('vim.lsp.util')
+015.659  000.064  000.064: require('vim.lsp.sync')
+015.673  000.138  000.074: require('vim.lsp._changetracking')
+015.823  000.072  000.072: require('vim.lsp._transport')
+015.837  000.162  000.090: require('vim.lsp.rpc')
+015.909  001.164  000.205: require('vim.lsp')
+016.307  000.396  000.396: require('lspconfig.util')
+016.660  000.345  000.345: require('vim.version')
+018.098  003.418  001.512: sourcing /home/owen/.local/share/nvim/lazy/nvim-lspconfig/plugin/lspconfig.lua
+018.103  003.446  000.028: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+018.111  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+018.123  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+018.440  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+018.449  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+018.460  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+018.467  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+018.791  000.065  000.065: sourcing /home/owen/.local/share/nvim/lazy/vim-kitty-navigator/plugin/kitty_navigator.vim
+018.795  000.091  000.027: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+018.819  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+018.831  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+019.202  000.072  000.072: sourcing /home/owen/.local/share/nvim/lazy/csv.vim/plugin/csv.vim
+019.206  000.099  000.027: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+019.211  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+019.267  000.016  000.016: sourcing /home/owen/.local/share/nvim/lazy/csv.vim/ftdetect/csv.vim
+019.270  000.043  000.026: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+019.274  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+019.566  000.021  000.021: sourcing /home/owen/.local/share/nvim/lazy/nvim-web-devicons/plugin/nvim-web-devicons.vim
+019.571  000.052  000.031: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+019.577  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+019.589  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+020.082  000.227  000.227: sourcing /home/owen/.local/share/nvim/lazy/telescope.nvim/plugin/telescope.lua
+020.087  000.255  000.027: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+020.092  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+020.109  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+020.478  000.010  000.010: sourcing /home/owen/.local/share/nvim/lazy/firenvim/plugin/firenvim.vim
+020.481  000.037  000.027: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+020.485  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+020.496  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+020.919  000.095  000.095: sourcing /home/owen/.local/share/nvim/lazy/grug-far.nvim/plugin/grug-far.lua
+020.923  000.123  000.028: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+020.928  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+020.951  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+021.339  000.065  000.065: sourcing /home/owen/.local/share/nvim/lazy/which-key.nvim/plugin/which-key.lua
+021.344  000.095  000.029: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+021.348  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+021.362  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+022.083  000.341  000.341: require('gitsigns')
+022.364  000.250  000.250: require('gitsigns.highlight')
+022.440  000.058  000.058: require('gitsigns.debug.log')
+022.515  000.073  000.073: require('gitsigns.config')
+022.977  000.038  000.038: require('gitsigns.debounce')
+022.985  001.285  000.526: sourcing /home/owen/.local/share/nvim/lazy/gitsigns.nvim/plugin/gitsigns.lua
+022.988  001.311  000.027: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+022.994  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+023.002  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+023.147  000.029  000.029: sourcing /home/owen/.local/share/nvim/lazy/vimtex/plugin/vimtex.vim
+023.151  000.059  000.030: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+023.157  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+023.226  000.017  000.017: sourcing /home/owen/.local/share/nvim/lazy/vimtex/ftdetect/cls.vim
+023.230  000.049  000.032: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+023.279  000.016  000.016: sourcing /home/owen/.local/share/nvim/lazy/vimtex/ftdetect/tex.vim
+023.283  000.047  000.032: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+023.345  000.018  000.018: sourcing /home/owen/.local/share/nvim/lazy/vimtex/ftdetect/tikz.vim
+023.349  000.062  000.044: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+023.354  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+023.628  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+024.707  000.978  000.978: require('vim.filetype')
+025.010  001.311  000.333: sourcing /home/owen/.local/share/nvim/lazy/vim-just/ftdetect/just.lua
+025.014  001.338  000.027: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+025.058  000.014  000.014: sourcing /home/owen/.local/share/nvim/lazy/vim-just/ftdetect/just.vim
+025.061  000.042  000.028: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+025.064  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+025.324  000.009  000.009: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+025.372  000.011  000.011: sourcing /home/owen/.local/share/nvim/lazy/xonsh-vim/ftdetect/xonsh.vim
+025.375  000.035  000.024: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+025.378  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+025.487  000.035  000.035: sourcing /home/linuxbrew/.linuxbrew/Cellar/neovim/0.11.2/share/nvim/runtime/plugin/editorconfig.lua
+025.490  000.064  000.029: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+025.631  000.113  000.113: sourcing /home/linuxbrew/.linuxbrew/Cellar/neovim/0.11.2/share/nvim/runtime/plugin/gzip.vim
+025.634  000.141  000.028: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+025.741  000.078  000.078: sourcing /home/linuxbrew/.linuxbrew/Cellar/neovim/0.11.2/share/nvim/runtime/plugin/man.lua
+025.745  000.107  000.029: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+026.427  000.134  000.134: sourcing /home/linuxbrew/.linuxbrew/Cellar/neovim/0.11.2/share/nvim/runtime/pack/dist/opt/matchit/plugin/matchit.vim
+026.443  000.669  000.534: sourcing /home/linuxbrew/.linuxbrew/Cellar/neovim/0.11.2/share/nvim/runtime/plugin/matchit.vim
+026.445  000.697  000.028: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+026.565  000.088  000.088: sourcing /home/linuxbrew/.linuxbrew/Cellar/neovim/0.11.2/share/nvim/runtime/plugin/matchparen.vim
+026.567  000.117  000.029: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+027.290  000.157  000.157: sourcing /home/linuxbrew/.linuxbrew/Cellar/neovim/0.11.2/share/nvim/runtime/pack/dist/opt/netrw/plugin/netrwPlugin.vim
+027.304  000.680  000.523: sourcing /home/linuxbrew/.linuxbrew/Cellar/neovim/0.11.2/share/nvim/runtime/plugin/netrwPlugin.vim
+027.306  000.709  000.029: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+027.416  000.064  000.064: sourcing /home/linuxbrew/.linuxbrew/Cellar/neovim/0.11.2/share/nvim/runtime/plugin/osc52.lua
+027.419  000.108  000.044: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+028.057  000.099  000.099: sourcing /home/linuxbrew/.linuxbrew/Cellar/neovim/0.11.2/share/nvim/runtime/autoload/remote/host.vim
+028.372  000.109  000.109: sourcing /home/linuxbrew/.linuxbrew/Cellar/neovim/0.11.2/share/nvim/runtime/autoload/remote/define.vim
+029.921  002.375  002.167: sourcing /home/owen/.local/share/nvim/rplugin.vim
+029.928  002.476  000.101: sourcing /home/linuxbrew/.linuxbrew/Cellar/neovim/0.11.2/share/nvim/runtime/plugin/rplugin.vim
+029.930  002.507  000.031: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+030.034  000.036  000.036: sourcing /home/linuxbrew/.linuxbrew/Cellar/neovim/0.11.2/share/nvim/runtime/plugin/shada.vim
+030.037  000.081  000.045: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+030.090  000.012  000.012: sourcing /home/linuxbrew/.linuxbrew/Cellar/neovim/0.11.2/share/nvim/runtime/plugin/spellfile.vim
+030.093  000.052  000.040: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+030.199  000.075  000.075: sourcing /home/linuxbrew/.linuxbrew/Cellar/neovim/0.11.2/share/nvim/runtime/plugin/tarPlugin.vim
+030.204  000.108  000.033: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+030.347  000.081  000.081: sourcing /home/linuxbrew/.linuxbrew/Cellar/neovim/0.11.2/share/nvim/runtime/plugin/tohtml.lua
+030.352  000.143  000.062: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+030.423  000.020  000.020: sourcing /home/linuxbrew/.linuxbrew/Cellar/neovim/0.11.2/share/nvim/runtime/plugin/tutor.vim
+030.427  000.069  000.049: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+030.570  000.099  000.099: sourcing /home/linuxbrew/.linuxbrew/Cellar/neovim/0.11.2/share/nvim/runtime/plugin/zipPlugin.vim
+030.573  000.142  000.043: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+030.891  000.045  000.045: require('keybindings')
+031.364  000.050  000.050: require('vim.F')
+031.447  000.503  000.453: require('vim.diagnostic')
+031.473  000.696  000.147: require('settings')
+032.094  000.031  000.031: require('nord.named_colors')
+032.101  000.083  000.052: require('nord.colors')
+032.104  000.439  000.356: require('nord.theme')
+032.107  000.475  000.036: require('nord.util')
+032.189  000.081  000.081: require('bufferline.theme')
+032.192  000.599  000.043: require('nord')
+032.413  000.218  000.218: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+032.566  000.144  000.144: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+032.627  000.004  000.004: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+032.632  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+032.637  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+032.644  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+032.648  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+032.652  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+032.656  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+032.660  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+032.664  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+032.668  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+032.672  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+032.676  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+032.680  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+032.685  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+032.689  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+032.693  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+032.697  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+032.701  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+032.709  000.003  000.003: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+032.714  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+032.718  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+032.722  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+032.726  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+032.730  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+032.734  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+032.738  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+032.742  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+032.745  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+032.750  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+032.754  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+032.758  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+032.762  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+032.766  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+032.770  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+032.776  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+032.780  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+032.784  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+032.814  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+032.819  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+032.823  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+032.827  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+032.831  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+032.835  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+032.839  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+032.844  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+032.848  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+032.852  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+032.896  000.003  000.003: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+032.901  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+032.910  000.007  000.007: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+032.915  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+032.919  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+032.923  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+032.927  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+032.954  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+032.958  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+032.962  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+032.966  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+032.971  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+032.975  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+032.978  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+032.983  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+032.989  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+032.993  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+032.997  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.001  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.005  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.009  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.044  000.003  000.003: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.048  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.052  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.056  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.060  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.064  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.068  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.075  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.079  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.083  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.087  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.091  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.094  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.118  000.023  000.023: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.121  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.124  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.127  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.130  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.133  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.136  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.139  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.143  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.146  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.148  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.154  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.157  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.160  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.163  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.166  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.169  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.172  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.175  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.178  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.181  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.184  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.187  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.189  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.193  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.196  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.200  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.206  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.209  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.212  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.215  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.218  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.221  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.224  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.226  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.230  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.232  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.235  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.238  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.241  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.243  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.246  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.249  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.251  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.254  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.259  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.262  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.265  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.267  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.270  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.273  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.275  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.278  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.281  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.284  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.287  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.290  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.292  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.295  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.299  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.312  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.335  000.020  000.020: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.362  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.365  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.368  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.371  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.374  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.378  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.381  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.384  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.386  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.390  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.393  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.397  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.402  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.406  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.409  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.412  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.415  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.418  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.421  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.423  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.426  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.429  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.432  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.435  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.438  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.441  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.444  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.447  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.449  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.454  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.458  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.460  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.463  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.466  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.469  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.472  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.474  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.477  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.480  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.482  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.485  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.488  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.491  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.494  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.497  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.499  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.502  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.507  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.510  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.513  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.516  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.518  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.521  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.524  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.527  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.530  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.533  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.535  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.538  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.541  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.544  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.546  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.549  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.552  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.557  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.560  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.562  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.565  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.569  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.571  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.574  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.577  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.580  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.583  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.586  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.589  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.592  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.594  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.597  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.600  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.603  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.608  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.611  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.613  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.616  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.630  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.633  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.636  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.639  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.642  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.644  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.647  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.650  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.653  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.656  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.659  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.661  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.664  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.672  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.675  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.678  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.681  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.684  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.687  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.690  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.693  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.696  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.698  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.701  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.704  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.707  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.710  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.784  000.073  000.073: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.788  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.791  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.794  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.797  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.800  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.803  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.806  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.808  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.811  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.814  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.817  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.911  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.914  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.917  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.920  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.924  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.928  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.931  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.934  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.937  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.941  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.946  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.948  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.952  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.955  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.959  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.962  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.965  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.968  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.970  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.976  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.980  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.983  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.986  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.989  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.995  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+033.999  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.001  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.007  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.010  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.015  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.018  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.020  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.023  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.026  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.031  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.034  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.037  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.040  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.043  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.046  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.049  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.052  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.054  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.060  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.063  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.066  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.068  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.071  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.074  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.086  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.089  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.092  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.096  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.099  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.102  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.105  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.108  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.110  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.114  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.118  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.123  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.126  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.129  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.132  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.135  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.138  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.141  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.165  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.169  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.172  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.174  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.177  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.186  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.190  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.193  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.196  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.199  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.203  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.206  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.208  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.211  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.214  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.218  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.221  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.224  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.227  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.229  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.233  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.236  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.241  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.244  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.247  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.251  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.254  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.257  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.260  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.262  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.266  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.269  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.272  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.274  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.278  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.282  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.285  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.288  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.290  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.296  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.300  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.303  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.306  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.310  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.313  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.328  000.003  000.003: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.333  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.336  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.339  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.342  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.346  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.348  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.351  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.354  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.357  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.361  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.382  000.017  000.017: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.385  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.388  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.391  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.394  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.397  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.400  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.403  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.405  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.409  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.412  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.415  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.418  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.432  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.436  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.439  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.442  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.447  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.450  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.453  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.456  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.459  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.469  000.009  000.009: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.472  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.476  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.478  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.481  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.484  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.487  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.490  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.493  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.495  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.498  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.501  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.508  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.511  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.514  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.517  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.520  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.524  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.527  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.530  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.533  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.536  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.539  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.542  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.546  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.548  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.552  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.556  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.559  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.564  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.567  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.570  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.574  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.577  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.580  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.582  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.585  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.589  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.591  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.594  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.597  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.600  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.603  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.606  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.609  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.612  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.617  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.621  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.624  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.627  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.630  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.633  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.636  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.639  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.642  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.645  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.648  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.653  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.657  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.690  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.694  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.698  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.701  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.704  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.710  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.714  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.717  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.721  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.724  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.728  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.731  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.734  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.737  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.741  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.745  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.752  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.756  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.760  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.775  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.780  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.783  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.787  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.791  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.795  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.800  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.802  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.805  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.808  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.810  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.814  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.817  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.819  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.825  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.828  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.832  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.835  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.839  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.843  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.846  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.851  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.853  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.856  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.859  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.862  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.867  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.870  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.873  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.876  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.879  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.883  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.886  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.889  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.891  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.894  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.898  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.901  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.903  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.906  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.909  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.913  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.916  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.918  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.921  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.924  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.928  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.931  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.942  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.946  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.949  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.954  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.957  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.960  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.963  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.966  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.970  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.972  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.975  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.978  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.981  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.985  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.988  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.992  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+034.998  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+035.003  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+035.006  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+035.009  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+035.012  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+035.016  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+035.019  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+035.022  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+035.026  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+035.030  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+035.033  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+035.038  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+035.041  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+035.045  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+035.048  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+035.051  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+035.056  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+035.063  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+035.068  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+035.071  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+035.077  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+035.081  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+035.085  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+035.100  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+035.104  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+035.109  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+035.113  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+035.116  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+035.119  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+035.123  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+035.127  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+035.131  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+035.134  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+035.140  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+035.144  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+035.149  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+035.154  000.003  000.003: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+035.157  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+035.162  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+035.166  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+035.171  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+035.174  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+035.177  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+035.180  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+035.183  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+035.188  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+035.191  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+035.193  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+035.196  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+035.203  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+035.206  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+035.208  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+035.211  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+035.214  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+035.218  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+035.221  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+035.224  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+035.227  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+035.230  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+035.234  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+035.236  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+035.239  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+035.242  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+035.245  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+035.249  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+035.253  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+035.267  000.010  000.010: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+035.270  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+035.273  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+035.276  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+035.279  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+035.283  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+035.286  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+035.314  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+035.325  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+035.329  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+035.334  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+035.342  000.003  000.003: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+035.347  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+035.351  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+035.355  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+035.359  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+035.365  000.003  000.003: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+035.369  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+035.373  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+035.376  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+035.379  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+035.382  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+035.385  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+035.388  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+035.390  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+035.393  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+035.397  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+035.448  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+035.516  000.066  000.066: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+035.521  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+035.524  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+035.528  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+035.530  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+035.533  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+035.536  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+035.540  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+035.545  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+035.549  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+035.553  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+035.557  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+035.561  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+035.577  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+035.580  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+035.585  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+035.600  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+035.603  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+035.609  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+035.612  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+035.615  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+035.619  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+035.622  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+035.628  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+035.631  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+035.634  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+035.638  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+035.641  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+035.646  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+035.649  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+035.653  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+035.656  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+035.662  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+035.668  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+035.672  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+035.675  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+035.678  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+035.682  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+035.687  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+035.692  000.003  000.003: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+035.696  004.148  001.940: require('plugins.nord')
+035.704  000.007  000.007: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+035.708  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+035.784  000.068  000.068: require('plugins.csv')
+035.844  000.058  000.058: require('plugins.firenvim')
+035.923  000.077  000.077: require('plugins.gitsigns')
+036.188  000.072  000.072: require('lualine_require')
+036.540  000.551  000.478: require('lualine')
+036.778  000.016  000.016: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+037.499  000.005  000.005: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+037.511  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+037.518  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+037.525  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+037.533  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+037.540  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+037.546  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+037.556  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+037.563  000.003  000.003: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+037.574  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+037.667  000.003  000.003: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+037.679  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+037.685  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+037.691  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+037.715  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+037.721  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+037.732  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+037.738  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+037.794  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+037.806  000.007  000.007: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+038.975  000.006  000.006: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+038.983  000.003  000.003: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+039.110  000.004  000.004: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+039.120  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+039.150  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+039.161  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+039.168  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+039.175  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+039.182  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+039.194  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+039.200  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+039.205  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+039.213  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+039.245  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+039.254  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+039.262  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+039.272  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+039.277  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+039.286  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+039.291  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+039.300  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+039.306  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+039.312  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+039.440  000.006  000.006: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+039.446  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+039.450  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+039.455  000.003  000.003: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+039.793  000.004  000.004: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+039.800  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+039.809  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+039.814  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+039.819  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+039.831  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+039.836  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+039.847  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+039.852  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+039.857  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+039.882  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+039.887  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+039.894  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+039.901  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+039.910  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+039.915  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+039.920  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+039.927  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+039.933  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+039.938  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+039.946  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+039.953  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+039.962  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+039.971  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+039.987  000.003  000.003: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+039.996  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+040.002  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+040.008  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+040.119  000.054  000.054: require('lualine.utils.mode')
+040.688  000.015  000.015: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+040.712  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+040.721  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+041.045  000.015  000.015: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+041.152  000.003  000.003: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+041.196  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+041.397  000.065  000.065: require('lualine.extensions.nerdtree')
+041.497  005.572  004.688: require('plugins.lualine')
+041.829  000.270  000.270: require('mini.comment')
+042.269  000.385  000.385: require('mini.pairs')
+043.195  001.695  001.041: require('plugins.mini')
+043.441  000.169  000.169: require('dap-python')
+043.593  000.049  000.049: require('dap.utils')
+043.636  000.193  000.144: require('dap')
+043.762  000.035  000.035: require('nio.tasks')
+043.800  000.036  000.036: require('nio.control')
+043.901  000.099  000.099: require('nio.uv')
+043.937  000.034  000.034: require('nio.tests')
+044.002  000.037  000.037: require('vim.ui')
+044.006  000.068  000.030: require('nio.ui')
+044.065  000.031  000.031: require('nio.streams')
+044.067  000.060  000.029: require('nio.file')
+044.171  000.031  000.031: require('nio.util')
+044.200  000.102  000.071: require('nio.logger')
+044.204  000.136  000.034: require('nio.lsp')
+044.236  000.031  000.031: require('nio.process')
+044.242  000.548  000.049: require('nio')
+044.466  000.012  000.012: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+044.469  000.051  000.039: require('dapui.config.highlights')
+044.501  000.028  000.028: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+044.543  000.216  000.137: require('dapui.config')
+044.548  000.267  000.050: require('dapui.util')
+044.588  000.039  000.039: require('dapui.windows.layout')
+044.591  000.348  000.043: require('dapui.windows')
+044.633  000.040  000.040: require('dapui.controls')
+044.638  000.988  000.052: require('dapui')
+044.681  000.024  000.024: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+044.792  000.042  000.042: require('dapui.client.types')
+044.796  000.086  000.044: require('dapui.client')
+044.832  000.035  000.035: require('dap.breakpoints')
+044.870  000.030  000.030: require('dapui.client.lib')
+044.974  000.066  000.066: require('dapui.render.canvas')
+044.976  000.101  000.035: require('dapui.elements.breakpoints')
+045.021  000.033  000.033: require('dapui.components.breakpoints')
+045.078  000.030  000.030: require('dapui.elements.repl')
+045.107  000.026  000.026: require('dapui.elements.scopes')
+045.144  000.028  000.028: require('dapui.components.scopes')
+045.175  000.029  000.029: require('dapui.components.variables')
+045.208  000.026  000.026: require('dapui.elements.stacks')
+045.275  000.027  000.027: require('dapui.components.frames')
+045.277  000.061  000.034: require('dapui.components.threads')
+045.315  000.028  000.028: require('dapui.elements.watches')
+045.375  000.044  000.044: require('dapui.components.watches')
+045.416  000.032  000.032: require('dapui.elements.hover')
+045.457  000.033  000.033: require('dapui.components.hover')
+045.492  000.031  000.031: require('dapui.elements.console')
+045.552  002.351  000.324: require('plugins.nvim_dap')
+046.132  000.020  000.020: sourcing /home/owen/.local/share/nvim/lazy/plenary.nvim/plugin/plenary.vim
+046.136  000.058  000.038: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+046.140  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+046.148  000.001  000.001: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+046.629  000.031  000.031: require('plenary.bit')
+046.658  000.026  000.026: require('plenary.functional')
+046.680  000.482  000.424: require('plenary.path')
+046.688  000.939  000.397: require('plenary.strings')
+046.715  000.026  000.026: require('telescope.deprecated')
+046.910  000.101  000.101: require('plenary.log')
+046.928  000.149  000.048: require('telescope.log')
+047.113  000.031  000.031: require('plenary.compat')
+047.123  000.110  000.079: require('plenary.job')
+047.163  000.039  000.039: require('telescope.state')
+047.178  000.250  000.100: require('telescope.utils')
+047.188  000.471  000.073: require('telescope.sorters')
+048.696  002.990  001.554: require('telescope.config')
+048.817  000.048  000.048: require('plenary.window.border')
+048.850  000.031  000.031: require('plenary.window')
+048.880  000.029  000.029: require('plenary.popup.utils')
+048.883  000.184  000.075: require('plenary.popup')
+048.925  000.042  000.042: require('telescope.pickers.scroller')
+048.969  000.042  000.042: require('telescope.actions.state')
+049.005  000.035  000.035: require('telescope.actions.utils')
+049.097  000.041  000.041: require('telescope.actions.mt')
+049.112  000.106  000.065: require('telescope.actions.set')
+049.195  000.045  000.045: require('telescope.config.resolve')
+049.197  000.084  000.039: require('telescope.pickers.entry_display')
+049.241  000.043  000.043: require('telescope.from_entry')
+049.440  003.819  000.295: require('telescope.actions')
+049.551  000.044  000.044: require('telescope._extensions')
+049.554  000.111  000.067: require('telescope')
+050.435  000.086  000.086: require('telescope.builtin')
+050.681  000.193  000.193: require('telescope.make_entry')
+051.093  000.052  000.052: require('plenary.tbl')
+051.099  000.129  000.077: require('plenary.vararg.rotate')
+051.101  000.236  000.107: require('plenary.vararg')
+051.145  000.044  000.044: require('plenary.errors')
+051.152  000.334  000.054: require('plenary.async.async')
+051.372  000.073  000.073: require('plenary.async.structs')
+051.380  000.144  000.070: require('plenary.async.control')
+051.384  000.192  000.048: require('plenary.async.util')
+051.386  000.233  000.041: require('plenary.async.tests')
+051.387  000.622  000.056: require('plenary.async')
+051.389  000.706  000.084: require('telescope.finders.async_static_finder')
+051.554  000.051  000.051: require('plenary.class')
+051.568  000.135  000.083: require('telescope._')
+051.571  000.181  000.047: require('telescope.finders.async_oneshot_finder')
+051.630  000.058  000.058: require('telescope.finders.async_job_finder')
+051.641  001.203  000.065: require('telescope.finders')
+052.092  000.203  000.203: require('telescope.debounce')
+052.280  000.184  000.184: require('telescope.mappings')
+052.440  000.157  000.157: require('telescope.pickers.highlights')
+052.513  000.070  000.070: require('telescope.pickers.window')
+052.583  000.068  000.068: require('telescope.pickers.layout')
+052.770  000.099  000.099: require('telescope.algos.linked_list')
+052.776  000.191  000.092: require('telescope.entry_manager')
+052.847  000.069  000.069: require('telescope.pickers.multi')
+052.866  001.198  000.257: require('telescope.pickers')
+052.975  000.055  000.055: require('telescope.previewers.previewer')
+053.237  000.153  000.153: require('telescope.previewers.utils')
+053.293  000.316  000.164: require('telescope.previewers.term_previewer')
+053.885  000.406  000.406: require('plenary.scandir')
+053.983  000.689  000.283: require('telescope.previewers.buffer_previewer')
+053.988  001.121  000.060: require('telescope.previewers')
+053.993  003.757  000.149: require('telescope._extensions.dap')
+054.015  000.015  000.015: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+054.026  000.002  000.002: sourcing nvim_exec2() called at /home/owen/.config/nvim/init.lua:0
+054.544  000.207  000.207: require('telescope._extensions.file_browser.utils')
+054.662  000.115  000.115: require('telescope._extensions.file_browser.lsp')
+054.778  000.641  000.320: require('telescope._extensions.file_browser.actions')
+055.142  000.100  000.100: require('telescope._extensions.file_browser.git')
+055.213  000.069  000.069: require('telescope._extensions.file_browser.make_entry_utils')
+055.606  000.390  000.390: require('telescope._extensions.file_browser.fs_stat')
+055.616  000.711  000.152: require('telescope._extensions.file_browser.make_entry')
+055.637  000.857  000.146: require('telescope._extensions.file_browser.finders')
+055.791  000.152  000.152: require('telescope._extensions.file_browser.picker')
+056.019  000.227  000.227: require('telescope._extensions.file_browser.config')
+056.045  002.016  000.138: require('telescope._extensions.file_browser')
+056.640  000.186  000.186: require('telescope.themes')
+057.394  000.144  000.144: require('telescope._extensions.project.project')
+057.409  000.279  000.135: require('telescope._extensions.project.utils')
+057.522  000.113  000.113: require('plenary.iterators')
+057.525  000.603  000.211: require('telescope._extensions.project.git')
+057.546  000.903  000.300: require('telescope._extensions.project.actions')
+057.585  000.038  000.038: require('telescope._extensions.project.finders')
+057.588  001.254  000.128: require('telescope._extensions.project.main')
+057.661  001.457  000.203: require('telescope._extensions.project')
+057.668  012.114  000.936: require('plugins.telescope')
+057.774  000.033  000.033: require('obsidian.log')
+057.777  000.076  000.043: require('obsidian')
+057.931  000.027  000.027: require('obsidian.compat')
+057.934  000.055  000.028: require('obsidian.itertools')
+057.944  000.125  000.070: require('obsidian.util')
+057.948  000.170  000.045: require('obsidian.config')
+058.160  000.033  000.033: require('obsidian.mappings')
+058.434  000.032  000.032: require('obsidian.abc')
+058.442  000.086  000.054: require('obsidian.path')
+058.557  000.063  000.063: require('obsidian.async')
+058.586  000.027  000.027: require('plenary.context_manager')
+058.681  000.027  000.027: require('obsidian.yaml.line')
+058.687  000.069  000.042: require('obsidian.yaml.parser')
+058.689  000.101  000.032: require('obsidian.yaml')
+058.776  000.086  000.086: require('obsidian.search')
+058.783  000.338  000.060: require('obsidian.note')
+058.819  000.035  000.035: require('obsidian.workspace')
+058.849  000.028  000.028: require('obsidian.callbacks')
+058.859  000.599  000.111: require('obsidian.client')
+059.538  000.054  000.054: require('obsidian.commands')
+059.612  001.943  001.011: require('plugins.obsidian')
+062.749  000.039  000.039: require('nvim-treesitter.highlight')
+062.998  000.060  000.060: require('vim.treesitter.highlighter')
+063.002  000.092  000.032: require('nvim-treesitter-playground.utils')
+063.007  000.128  000.036: require('nvim-treesitter-playground.printer')
+063.079  000.037  000.037: require('nvim-treesitter.locals')
+063.081  000.072  000.035: require('nvim-treesitter-playground.query')
+063.114  000.031  000.031: require('nvim-treesitter-playground.promise')
+063.127  000.312  000.080: require('nvim-treesitter-playground.internal')
+063.131  003.518  003.167: require('plugins.treesitter')
+063.180  000.024  000.024: require('trouble')
+063.248  000.067  000.067: require('trouble.config')
+063.414  000.055  000.055: require('trouble.util')
+063.418  000.128  000.073: require('trouble.config.highlights')
+063.643  000.025  000.025: require('trouble.cache')
+063.681  000.036  000.036: require('trouble.format')
+063.712  000.030  000.030: require('trouble.view.indent')
+063.748  000.034  000.034: require('trouble.view.text')
+063.751  000.164  000.039: require('trouble.view.render')
+063.753  000.196  000.033: require('trouble.view.preview')
+063.755  000.233  000.036: require('trouble.view.main')
+063.776  000.644  000.192: require('plugins.trouble')
+063.808  000.031  000.031: require('plugins.vimtex')
+063.882  000.027  000.027: require('which-key')
+063.887  000.077  000.050: require('plugins.which-key')
+063.889  060.738  008.382: sourcing /home/owen/.config/nvim/init.lua
+063.895  000.648: sourcing vimrc file(s)
+064.145  000.031  000.031: sourcing /home/linuxbrew/.linuxbrew/Cellar/neovim/0.11.2/share/nvim/runtime/filetype.lua
+064.526  000.073  000.073: sourcing /home/linuxbrew/.linuxbrew/Cellar/neovim/0.11.2/share/nvim/runtime/syntax/synload.vim
+064.612  000.364  000.291: sourcing /home/linuxbrew/.linuxbrew/Cellar/neovim/0.11.2/share/nvim/runtime/syntax/syntax.vim
+064.620  000.330: inits 3
+066.992  002.372: reading ShaDa
+067.070  000.078: opening buffers
+067.153  000.083: BufEnter autocommands
+067.155  000.002: editing files in windows
+067.218  000.063: VimEnter autocommands
+067.454  000.077  000.077: require('snacks.util')
+067.594  000.306  000.229: require('snacks.input')
+067.662  000.042  000.042: require('vim.termcap')
+067.683  000.012  000.012: require('vim.text')
+067.701  000.124: UIEnter autocommands
+067.703  000.001: before starting main loop
+067.903  000.200: first screen update
+067.904  000.001: --- NVIM STARTED ---
+
