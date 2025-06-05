@@ -103,9 +103,6 @@ local full_plugins = {
         "nvim-treesitter/nvim-treesitter",
         build = ":TSUpdate"
     },
-    { "nvim-treesitter/playground",
-        build = ":TSUpdate"
-    },
 
     -- Various QOL plugins
     {
