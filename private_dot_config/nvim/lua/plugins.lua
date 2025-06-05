@@ -47,6 +47,17 @@ local full_plugins = {
         build = function() vim.fn["firenvim#install"](0) end
     },
 
+    -- Flash search labels
+    {
+        "folke/flash.nvim",
+        event = "VeryLazy",
+        opts = {
+            modes = {
+                search = { enabled = true }
+            }
+        },
+    },
+
     -- Git decorations
     { "lewis6991/gitsigns.nvim" },
 
