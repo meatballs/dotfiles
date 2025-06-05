@@ -60,6 +60,7 @@ vim.diagnostic.config({
 })
 
 local plugin_modules = {
+    "bufferline",
     "csv",
     "firenvim",
     "gitsigns",
