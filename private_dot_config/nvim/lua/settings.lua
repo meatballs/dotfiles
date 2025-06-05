@@ -97,7 +97,7 @@ local function full()
     -- Load all plugin modules from the plugins directory
     local plugins_path = vim.fn.stdpath("config") .. "/lua/plugins"
     local scan = vim.fn.glob(plugins_path .. "/*.lua", false, true)
-    
+
     for _, file in ipairs(scan) do
         -- Extract the module name without path and extension
         local module_name = vim.fn.fnamemodify(file, ":t:r")

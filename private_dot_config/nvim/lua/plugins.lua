@@ -31,6 +31,13 @@ local base_plugins = {
 }
 
 local full_plugins = {
+    -- Fancy bufferline
+    {
+        'akinsho/bufferline.nvim',
+        version = "*",
+        dependencies = 'nvim-tree/nvim-web-devicons',
+    },
+
     -- CSV Tools
     { "chrisbra/csv.vim" },
 
