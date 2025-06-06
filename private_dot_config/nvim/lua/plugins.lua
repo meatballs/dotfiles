@@ -33,9 +33,9 @@ local base_plugins = {
 local full_plugins = {
     -- Fancy bufferline
     {
-        'akinsho/bufferline.nvim',
+        "akinsho/bufferline.nvim",
         version = "*",
-        dependencies = 'nvim-tree/nvim-web-devicons',
+        dependencies = "nvim-tree/nvim-web-devicons",
     },
 
     -- CSV Tools
@@ -44,7 +44,9 @@ local full_plugins = {
     -- Neovim in the browser
     {
         "glacambre/firenvim",
-        build = function() vim.fn["firenvim#install"](0) end
+        build = function()
+            vim.fn["firenvim#install"](0)
+        end,
     },
 
     -- Flash search labels
@@ -53,8 +55,8 @@ local full_plugins = {
         event = "VeryLazy",
         opts = {
             modes = {
-                search = { enabled = true }
-            }
+                search = { enabled = true },
+            },
         },
     },
 
@@ -65,7 +67,7 @@ local full_plugins = {
     { "MagicDuck/grug-far.nvim" },
 
     -- Just files
-    { 'NoahTheDuke/vim-just' },
+    { "NoahTheDuke/vim-just" },
 
     -- Markdown Preview
     {
@@ -80,13 +82,14 @@ local full_plugins = {
     -- Various QOL plugins
     { "echasnovski/mini.nvim", version = false },
 
-
     -- Debug Adapter Protocol
     { "mfussenegger/nvim-dap-python" },
-    { "rcarriga/nvim-dap-ui", dependencies = {
-        "mfussenegger/nvim-dap",
-        "nvim-neotest/nvim-nio"
-    }
+    {
+        "rcarriga/nvim-dap-ui",
+        dependencies = {
+            "mfussenegger/nvim-dap",
+            "nvim-neotest/nvim-nio",
+        },
     },
 
     --Common lsp config settings
@@ -101,7 +104,7 @@ local full_plugins = {
     -- Treesitter
     {
         "nvim-treesitter/nvim-treesitter",
-        build = ":TSUpdate"
+        build = ":TSUpdate",
     },
 
     -- Various QOL plugins
@@ -112,7 +115,7 @@ local full_plugins = {
             indent = { enabled = true },
             input = { enabled = true },
             notifier = { enabled = true },
-        }
+        },
     },
 
     -- Telescope
@@ -137,7 +140,7 @@ local full_plugins = {
         "folke/which-key.nvim",
         dependencies = {
             { "echasnovski/mini.nvim", version = false },
-        }
+        },
     },
 
     -- Syntax highlighting of .xsh and .xonshrc files
