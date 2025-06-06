@@ -21,31 +21,6 @@ return {
     },
   },
   {
-    "neovim/nvim-lspconfig",
-    opts = {
-      diagnostics = {
-        virtual_text = false,
-      },
-      servers = {
-        basedpyright = {
-          settings = {
-            basedpyright = {
-              disableLanguageServices = true,
-              disableOrganizeImports = true,
-              disableTaggedHints = true,
-              analysis = {
-                diagnosticSeverityOverrides = {
-                  reportUnusedVariable = false,
-                  reportUndefinedVariable = false,
-                },
-              },
-            },
-          },
-        },
-      },
-    },
-  },
-  {
     "lervag/vimtex",
     lazy = false, -- lazy-loading will disable inverse search
     config = function()
