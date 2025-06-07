@@ -37,4 +37,53 @@ return {
       { "<localLeader>l", "", desc = "+vimtex", ft = "tex" },
     },
   },
+  {
+    "chrisbra/csv.vim",
+    lazy = true,
+    ft = "csv",
+    config = function()
+      vim.g.csv_highlight_column = "y"
+    end,
+  },
+  {
+    "glacambre/firenvim",
+    build = function()
+      vim.fn["firenvim#install"](0)
+    end,
+    config = function()
+      vim.g.firenvim_config = {
+        globalSettings = {
+          alt = "all",
+        },
+        localSettings = {
+          [".*"] = {
+            cmdline = "neovim",
+            priority = 0,
+            selector = "textarea",
+            takeover = "never",
+          },
+        },
+      }
+    end,
+  },
+  {
+    "epwalsh/obsidian.nvim",
+    version = "*",
+    lazy = true,
+    ft = "markdown",
+    opts = {
+      workspaces = {
+        {
+          name = "Owen",
+          path = "~/Nextcloud/Obsidian/Owen/",
+        },
+      },
+      notes_subdir = "Notes",
+      daily_notes = {
+        folder = "Journal",
+        date_format = "%d %b %Y",
+      },
+      ui = { enable = false },
+    },
+  },
 }
