@@ -81,4 +81,11 @@ return {
       ui = { enable = false },
     },
   },
+  {
+    "swaits/lazyjj.nvim",
+    dependencies = "nvim-lua/plenary.nvim",
+    opts = {
+      mapping = "<leader>gj",
+    },
+  },
 }
