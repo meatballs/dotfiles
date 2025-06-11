@@ -16,7 +16,6 @@ return {
           },
         },
         ruff = {},
-        pylsp = {},
         basedpyright = {
           settings = {
             basedpyright = {
