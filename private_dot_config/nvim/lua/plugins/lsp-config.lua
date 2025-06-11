@@ -15,6 +15,8 @@ return {
             { "<leader>kx", ":VimtexStop<CR>", desc = "Stop compiler" },
           },
         },
+        ruff = {},
+        pylsp = {},
         basedpyright = {
           settings = {
             basedpyright = {

@@ -1,6 +1,5 @@
-!regolith.look.path: /usr/share/regolith-look/nord
-regolith.wallpaper.file: /usr/share/backgrounds/nord_theme_wallpaper.jpg
-regolith.look.path: /usr/share/regolith-look/nord
+! regolith.wallpaper.file: /usr/share/backgrounds/nord_theme_wallpaper.jpg
 wm.gaps.inner.size: 10
 gnome.terminal.use-transparent-background: true
 gnome.terminal.background-transparency-percent: 25
+regolith.look.path: /usr/share/regolith-look/catppuccin
