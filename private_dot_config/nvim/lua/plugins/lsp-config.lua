@@ -16,6 +16,19 @@ return {
           },
         },
         ruff = {},
+        pylsp = {
+          settings = {
+            pylsp = {
+              plugins = {
+                pyflakes = { enabled = false },
+                pycodestyle = { enabled = false },
+                pylint = { enabled = false },
+                pylsp_mypy = { enabled = false },
+                pylsp_rope = { enabled = false },
+              },
+            },
+          },
+        },
         basedpyright = {
           settings = {
             basedpyright = {
