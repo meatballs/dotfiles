@@ -2,5 +2,4 @@ read: [CONVENTIONS.md]
 editor: nvim
 dark-mode: true
 auto-commits: false
-cache-prompts: true
 pretty: true
