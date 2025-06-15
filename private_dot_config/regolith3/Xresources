@@ -2,5 +2,4 @@ wm.gaps.inner.size: 10
 gnome.terminal.use-transparent-background: true
 gnome.terminal.background-transparency-percent: 25
 regolith.look.path: /usr/share/regolith-look/catppuccin
-regolith.wallpaper.color.primary: blue
-regolith.wallpaper.file:
+regolith.wallpaper.file: /usr/share/backgrounds/prism.png
