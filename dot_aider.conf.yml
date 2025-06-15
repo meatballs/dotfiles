@@ -1,5 +1,5 @@
 read: [CONVENTIONS.md]
 editor: nvim
-dark-mode: true
+light-mode: true
 auto-commits: false
 pretty: true
