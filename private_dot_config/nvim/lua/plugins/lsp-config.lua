@@ -2,6 +2,7 @@ return {
   {
     "neovim/nvim-lspconfig",
     opts = {
+      autoformat = false,
       diagnostics = {
         virtual_text = false,
       },
@@ -50,11 +51,13 @@ return {
           settings = {
             pylsp = {
               plugins = {
+                autopep8 = { enabled = false },
                 pyflakes = { enabled = false },
                 pycodestyle = { enabled = false },
                 pylint = { enabled = false },
                 pylsp_mypy = { enabled = false },
                 pylsp_rope = { enabled = false },
+                yapf = { enabled = false },
               },
             },
           },

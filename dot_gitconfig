@@ -24,7 +24,12 @@
 [delta]
     navigate = true
     side-by-side = true
-[merge]
-    conflictstyle = diff3
 [diff]
     colorMoved = default
+[merge]
+  tool = diffview
+[mergetool]
+  prompt = false
+  keepBackup = false
+[mergetool "diffview"]
+  cmd = nvim -n -c "DiffviewOpen" "$MERGE"

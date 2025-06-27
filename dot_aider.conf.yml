@@ -3,3 +3,4 @@ editor: nvim
 light-mode: true
 auto-commits: false
 pretty: true
+vim: true
