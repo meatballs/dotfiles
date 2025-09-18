@@ -27,9 +27,9 @@
 [diff]
     colorMoved = default
 [merge]
-  tool = diffview
+	tool = meld
 [mergetool]
-  prompt = false
+	prompt = false
   keepBackup = false
-[mergetool "diffview"]
-  cmd = nvim -n -c "DiffviewOpen" "$MERGE"
+[mergetool "meld"]
+	trustExitCode = true

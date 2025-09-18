@@ -8,6 +8,15 @@ return {
   { "knubie/vim-kitty-navigator" },
   {
     "akinsho/bufferline.nvim",
+    --
+    -- temporary bug fix https://github.com/LazyVim/LazyVim/pull/6354
+    init = function()
+      local bufline = require("catppuccin.groups.integrations.bufferline")
+      function bufline.get()
+        return bufline.get_theme()
+      end
+    end,
+    --
     opts = {
       options = {
         always_show_bufferline = true,
@@ -16,8 +25,16 @@ return {
     },
   },
   {
+    "neovim/nvim-lspconfig",
+    opts = {
+      diagnostics = {
+        virtual_text = false,
+      },
+    },
+  },
+  {
     "lervag/vimtex",
-    -- lazy = false, -- lazy-loading will disable inverse search
+    lazy = false, -- lazy-loading will disable inverse search
     config = function()
       vim.g.vimtex_mappings_disable = { ["n"] = { "K" } } -- disable `K` as it conflicts with LSP hover
       vim.g.vimtex_quickfix_method = vim.fn.executable("pplatex") == 1 and "pplatex" or "latexlog"

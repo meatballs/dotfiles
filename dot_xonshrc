@@ -1,84 +1,122 @@
 from pathlib import Path
 import sys
 from uuid import uuid4
+from typing import List, Dict, Any
 
-$PYTEST_ADDOPTS="--pdbcls pudb.debugger:Debugger --capture=no"
+# Constants
+HOME = Path.home()
+PROJECTS_DIR = HOME / "projects" / "personal"
+KITTY_SLEEP_TIME = 0.1
+KITTY_RESIZE_INCREMENT = 5
+KITTY_RESIZE_INCREMENT_LARGE = 10
+KITTY_RESIZE_INCREMENT_XLARGE = 15
+
+# Environment Variables
+$PYTEST_ADDOPTS = "--pdbcls pudb.debugger:Debugger --capture=no"
 $EDITOR = "nvim"
 $VI_MODE = True
 $DOCKER_BUILDKIT = 1
 $BAT_THEME = "Nord"
 $OLLAMA_API_BASE = "http://localhost:11434"
 $OLLAMA_FAKE_API_KEY = "fake"
+$PODMAN_COMPOSE_WARNING_LOGS = False
+
+# Xonsh Configuration
 __xonsh__.commands_cache.threadable_predictors["glances"] = lambda x: False
 
+# Load Xontribs
 xontrib load coreutils
 xontrib load vox
 xontrib load autovox
 
 
+# Virtual Environment Policy
 @events.autovox_policy
-def vox_policy(path, **_):
+def vox_policy(path: Path, **_) -> Path | None:
+    """Automatically activate virtual environments based on directory name."""
     venv = Path($VIRTUALENV_HOME, path.name)
-    if venv.exists():
-        return venv
+    return venv if venv.exists() else None
 
 
-def _dashboard():
-    kitty @ launch --title sysmon --type overlay btm
-    kitty @ launch --title term --location vsplit
-    kitty @ launch --title mail --location hsplit
-    kitty @ launch --type overlay neomutt
-    kitty @ resize-window --axis vertical --increment 5
-    kitty @ focus-window --match title:term
-    kitty @ launch --title calendar --location vsplit
-    kitty @ launch --type overlay ikhal
-    kitty @ focus-window --match title:sysmon
-    kitty @ launch --title chat --location hsplit
-    kitty @ resize-window --axis vertical --increment 10
-    kitty @ focus-window --match title:sysmon
-    kitty @ launch --title todo --location vsplit
-    kitty @ launch --type overlay todotxt-machine
-    kitty @ focus-window --match title:chat
-    kitty @ launch --type overlay gurk
+# Kitty Helper Functions
+def _kitty_cmd(action: str, **kwargs) -> None:
+    """Execute kitty remote control commands."""
+    args = []
+    for key, value in kwargs.items():
+        key = key.replace('_', '-')
+        if isinstance(value, bool) and value:
+            args.append(f"--{key}")
+        elif value is not None:
+            args.append(f"--{key} {value}")
 
-    kitty @ focus-window --match title:mail
+    kitty @ @(action) @(args)
 
-aliases["dashboard"] = _dashboard
+def _dashboard() -> None:
+    """Launch comprehensive dashboard layout with monitoring tools."""
+    commands = [
+        ("launch", {"title": "sysmon", "type": "overlay"}, "btm"),
+        ("launch", {"title": "term", "location": "vsplit"}, None),
+        ("launch", {"title": "mail", "location": "hsplit"}, None),
+        ("launch", {"type": "overlay"}, "neomutt"),
+        ("resize-window", {"axis": "vertical", "increment": KITTY_RESIZE_INCREMENT}, None),
+        ("focus-window", {"match": "title:term"}, None),
+        ("launch", {"title": "calendar", "location": "vsplit"}, None),
+        ("launch", {"type": "overlay"}, "ikhal"),
+        ("focus-window", {"match": "title:sysmon"}, None),
+        ("launch", {"title": "chat", "location": "hsplit"}, None),
+        ("resize-window", {"axis": "vertical", "increment": KITTY_RESIZE_INCREMENT_LARGE}, None),
+        ("focus-window", {"match": "title:sysmon"}, None),
+        ("launch", {"title": "todo", "location": "vsplit"}, None),
+        ("launch", {"type": "overlay"}, "todotxt-machine"),
+        ("focus-window", {"match": "title:chat"}, None),
+        ("launch", {"type": "overlay"}, "gurk"),
+        ("focus-window", {"match": "title:mail"}, None),
+    ]
 
-colours = {
-  "blk": "0B",
-  "chr": "0B",
-  "dir": "04",
-  "exe": "06",
-  "reg": "00",
-  "hardlink": "06",
-  "symlink": "06",
-  "missing": "00",
-  "orphan": "09",
-  "fifo": "06",
-  "sock": "0B",
-  "other": "06"
+    for action, kwargs, command in commands:
+        cmd_args = []
+        for key, value in kwargs.items():
+            key = key.replace('_', '-')
+            cmd_args.extend([f"--{key}", str(value)])
+
+        if command:
+            kitty @ @(action) @(cmd_args) @(command)
+        else:
+            kitty @ @(action) @(cmd_args)
+
+# NNN File Manager Configuration
+NNN_COLOURS = {
+    "blk": "0B", "chr": "0B", "dir": "04", "exe": "06", "reg": "00",
+    "hardlink": "06", "symlink": "06", "missing": "00", "orphan": "09",
+    "fifo": "06", "sock": "0B", "other": "06"
 }
-plugins = {
-    "p": "preview-tui",
+
+NNN_PLUGINS = {"p": "preview-tui"}
+
+NNN_BOOKMARKS = {
+    "h": str(HOME),
+    "d": str(HOME / "Downloads"),
 }
-bookmarks = {
-    "h": "/home/owen",
-    "d": "/home/owen/Downloads",
-}
+
 $NNN_OPTS = "aei"
-$NNN_BMS = "".join([f"{key}:{value};" for key, value in bookmarks.items()])
-$NNN_PLUG = "".join([f"{key}:{value}" for key, value in plugins.items()])
-$NNN_FCOLORS = "".join(colours.values())
+$NNN_BMS = "".join(f"{k}:{v};" for k, v in NNN_BOOKMARKS.items())
+$NNN_PLUG = "".join(f"{k}:{v}" for k, v in NNN_PLUGINS.items())
+$NNN_FCOLORS = "".join(NNN_COLOURS.values())
 $SPLIT = "v"
 
-paths = [
-    "$HOME/AppImages/",
-    "$HOME/.cargo/bin",
-    "$HOME/.radicle/bin",
+# PATH Configuration
+ADDITIONAL_PATHS = [
+    f"{HOME}/AppImages/",
+    f"{HOME}/.cargo/bin",
+    f"{HOME}/.radicle/bin",
+    f"{HOME}/.local/bin",
+    "/home/linuxbrew/.linuxbrew/bin",
+    "/home/linuxbrew/.linuxbrew/sbin",
 ]
-$PATH[:0] = paths
 
+$PATH = [p for p in ADDITIONAL_PATHS if p not in $PATH] + $PATH
+
+# Powerline Prompt Configuration
 $PL_COLORS = {
     "who": ("BLACK", "GREEN"),
     "venv": ("BLACK", "YELLOW"),
@@ -100,94 +138,105 @@ $PL_RPROMPT = '!'
 $PL_TOOLBAR = 'who>cwd>branch>virtualenv'
 
 
-def replay_command(args):
+# Utility Functions
+def replay_command(args: List[str]) -> int:
+    """Replay command from history by index or show recent history."""
     if not args:
         history show -n
     else:
         @$(history @(args[0]))
     return 0
 
-aliases['h'] = replay_command
-
-
-def _uuid():
+def _uuid() -> str:
+    """Generate a random UUID string."""
     return str(uuid4())
 
-aliases["uuid"] = _uuid
+
+# Aliases
+GIT_ALIASES = {
+    "gst": ["git", "status"],
+    "gco": ["git", "checkout"],
+    "gcm": ["git", "checkout", "main"],
+    "glg": ["git", "log", "--oneline", "--graph", "--decorate"],
+}
+
+UTILITY_ALIASES = {
+    "h": replay_command,
+    "uuid": _uuid,
+    "dashboard": _dashboard,
+    "nvim.basic": ["nvim", "-u", "~/.config/nvim/basic.lua"],
+    "open": ["xdg-open"],
+    "rm": ["trash"],
+    "xclip": ["xclip", "-selection", "-c"],
+    "ssh": ["kitty", "+kitten", "ssh"],
+    "bat": ["batcat"],
+    "cat": ["batcat"],
+    "gearlever": "flatpak run it.mijorus.gearlever",
+}
+
+aliases.update(GIT_ALIASES)
+aliases.update(UTILITY_ALIASES)
 
 
-aliases["gst"] = ["git", "status"]
-aliases["gco"] = ["git", "checkout"]
-aliases["gcm"] = ["git", "checkout", "main"]
-aliases["glg"] = ["git", "log", "--oneline", "--graph", "--decorate"]
-aliases["nvim.basic"] = ["nvim", "-u", "~/.config/nvim/basic.lua"]
-aliases["open"] = ["xdg-open"]
-aliases["rm"] = ["trash"]
-aliases["xclip"] = ["xclip", "-selection", "-c"]
-aliases["ssh"] = ["kitty", "+kitten", "ssh"]
-aliases["bat"] = ["batcat"]
-aliases["cat"] = ["batcat"]
-
-
-def _add_second_terminal(dir):
+# Development Layout Functions
+def _add_second_terminal(directory: Path) -> None:
+    """Add a second terminal split to the current layout."""
     kitty @ focus-window --match title:terminal
-    kitty @ launch --location vsplit --cwd @(dir)
+    kitty @ launch --location vsplit --cwd @(directory)
 
-
-def _open_layout(dir, with_extra_terminal=True):
-    kitty @ launch --title nvim --type overlay --copy-env --cwd @(dir) nvim
-    kitty @ launch --title terminal --location hsplit --cwd @(dir)
+def _open_layout(directory: Path, with_extra_terminal: bool = True) -> None:
+    """Open development layout with nvim and terminal splits."""
+    kitty @ launch --title nvim --type overlay --copy-env --cwd @(directory) nvim
+    kitty @ launch --title terminal --location hsplit --cwd @(directory)
     kitty @ focus-window --match title:nvim
-    kitty @ resize-window --axis vertical --increment 15
+    kitty @ resize-window --axis vertical --increment @(KITTY_RESIZE_INCREMENT_XLARGE)
+
     if with_extra_terminal:
-        _add_second_terminal(dir)
+        _add_second_terminal(directory)
+
     kitty @ focus-window --match title:nvim
 
-
-def _dev(args):
-   dir = Path.cwd() if not args else Path(args[0])
-   _open_layout(dir)
-
-
-aliases["dev"] = _dev
+def _dev(args: List[str]) -> None:
+    """Open development layout in current or specified directory."""
+    directory = Path.cwd() if not args else Path(args[0])
+    _open_layout(directory)
 
 
-def _dev_layout(dir=None):
-    dir = Path(dir) if dir else Path.cwd()
+def _dev_layout_i3(directory: Path | None = None) -> None:
+    """Open development layout using i3 window manager (legacy function)."""
+    directory = Path(directory) if directory else Path.cwd()
 
-    if not dir.is_dir():
-        raise ValueError(f"Direcotry does not exist: {dir}")
+    if not directory.is_dir():
+        raise ValueError(f"Directory does not exist: {directory}")
 
-    i3-msg split v
-    kitty -d @(dir) &
-    sleep 0.1
+    commands = [
+        "i3-msg split v",
+        f"kitty -d {directory} &",
+        f"sleep {KITTY_SLEEP_TIME}",
+        "i3-msg resize set 100 ppt 75 ppt",
+        f"sleep {KITTY_SLEEP_TIME}",
+        "i3-msg split h",
+        f"sleep {KITTY_SLEEP_TIME}",
+        f"kitty -d {directory} &",
+        f"sleep {KITTY_SLEEP_TIME}",
+        "i3-msg focus right",
+        f"kitty -d {directory} &",
+    ]
 
-    i3-msg resize set 100 ppt 75 ppt
-    sleep 0.1
+    for cmd in commands:
+        @(cmd.split())
 
-    i3-msg split h
-    sleep 0.1
-
-    kitty -d @(dir) &
-    sleep 0.1
-
-    i3-msg focus right
-    kitty -d @(dir) &
-
-
-
-aliases["gearlever"] = "flatpak run it.mijorus.gearlever"
-
-$PODMAN_COMPOSE_WARNING_LOGS = False
-
-def _radicle(args):
-    compose_file = Path(Path.home(), "projects", "personal", "radicle-in-containers", "compose.yaml")
+# Project Management Functions
+def _radicle(args: List[str]) -> int:
+    """Manage Radicle containers (start/stop)."""
+    compose_file = PROJECTS_DIR / "radicle-in-containers" / "compose.yaml"
     profiles = ["node", "explorer"]
     profile_args = [item for p in profiles for item in ("--profile", p)]
     actions = {
         "start": ["up", "--detach"],
         "stop": ["down"],
     }
+
     if args and args[0] in actions:
         docker compose -f @(compose_file) @(profile_args) @(actions[args[0]])
         return 0
@@ -195,24 +244,35 @@ def _radicle(args):
     print("Usage: radicle <start|stop>")
     return 1
 
-
-aliases["radicle"] = _radicle
-
-def _y(args):
+def _yazi_with_cd(args: List[str]) -> None:
+    """Run yazi file manager and change to selected directory."""
     tmp = $(mktemp -t "yazi-cwd.XXXXXX")
     args.append(f"--cwd-file={tmp}")
     $[yazi @(args)]
+
     with open(tmp) as f:
-        cwd = f.read()
-    if cwd != $PWD:
+        cwd = f.read().strip()
+
+    if cwd and cwd != $PWD:
         cd @(cwd)
+
     rm -f -- @(tmp)
 
-aliases["y"] = _y
+# Add remaining aliases
+PROJECT_ALIASES = {
+    "dev": _dev,
+    "radicle": _radicle,
+    "y": _yazi_with_cd,
+}
 
+aliases.update(PROJECT_ALIASES)
+
+# External Tool Initialization
 execx($(starship init xonsh))
-
-
 execx($(zoxide init --cmd cd xonsh), 'exec', __xonsh__.ctx, filename='zoxide')
-builtins.aliases["z"] = __zoxide_z  # type: ignore  # pylint:disable=no-member
-builtins.aliases["zi"] = __zoxide_zi  # type: ignore  # pylint:disable=no-member
+
+# Zoxide aliases (with safety checks for SSH compatibility)
+if '__zoxide_z' in globals():
+    builtins.aliases["z"] = __zoxide_z  # type: ignore  # pylint:disable=no-member
+if '__zoxide_zi' in globals():
+    builtins.aliases["zi"] = __zoxide_zi  # type: ignore  # pylint:disable=no-member

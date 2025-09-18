@@ -45,3 +45,5 @@ vim.diagnostic.config({
     current_line = true,
   },
 })
+
+vim.g.autoformat = false
