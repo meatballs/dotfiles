@@ -12,6 +12,7 @@ vim.g.vimtex_fold_manual = 1
 vim.g.vimtex_view_method = "zathura"
 vim.g.vimtex_mappings_enabled = false
 vim.g.vimtex_compiler_method = "tectonic"
+vim.g.autoformat = false
 
 vim.opt.colorcolumn = { 88 }
 vim.opt.completeopt = { "menuone", "noinsert" }
@@ -46,4 +47,3 @@ vim.diagnostic.config({
   },
 })
 
-vim.g.autoformat = false
