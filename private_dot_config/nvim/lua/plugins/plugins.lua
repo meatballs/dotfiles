@@ -37,7 +37,7 @@ return {
       vim.g.vimtex_compiler_method = "tectonic"
     end,
     keys = {
-      { "<localLeader>l", "", desc = "+vimtex", ft = "tex" },
+      { "<localLeader>k, ", desc = "+vimtex", ft = "tex" },
     },
   },
   {
