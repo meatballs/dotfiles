@@ -166,7 +166,7 @@ return {
     "sindrets/diffview.nvim",
     opts = { view = { merge_tool = { layout = "diff4_mixed" } } },
   },
-  { "tiagovla/scope.nvim", config = true },
+  { "tiagovla/scope.nvim", dependencies = { "ahmedkhalf/project.nvim" }, config = true },
   {
     "ahmedkhalf/project.nvim",
     opts = {
