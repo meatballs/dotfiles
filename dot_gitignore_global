@@ -8,3 +8,4 @@ pylsp-mypy.cfg
 .jj/
 .DS_Store
 .aider*
+.serena
