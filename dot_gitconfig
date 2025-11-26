@@ -19,13 +19,22 @@
     sm = switch main
     st = status
     ls = log --pretty=format:'%C(yellow)%h%C(green)%d %Creset%s%C(blue) [%cn] %Cred(%cr)' --decorate
+    # `git log` with patches shown with difftastic.
+    dl = -c diff.external=difft log -p --ext-diff
+
+    # Show the most recent commit with difftastic.
+    ds = -c diff.external=difft show --ext-diff
+
+    # `git diff` with difftastic.
+    dft = -c diff.external=difft diff
 [interactive]
     diffFilter = delta --color-only
 [delta]
     navigate = true
     side-by-side = true
 [diff]
-    colorMoved = default
+  colorMoved = default
+  external = difft
 [merge]
 	tool = meld
 [mergetool]
