@@ -21,6 +21,7 @@ return {
       diagnostics = {
         virtual_text = false,
       },
+      { ensure_installed = { "json5" }},
     },
   },
   {
