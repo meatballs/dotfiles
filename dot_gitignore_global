@@ -9,3 +9,4 @@ pylsp-mypy.cfg
 .DS_Store
 .aider*
 .serena
+opencode.json

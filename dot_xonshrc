@@ -20,6 +20,7 @@ $BAT_THEME = "Nord"
 $OLLAMA_API_BASE = "http://localhost:11434"
 $OLLAMA_FAKE_API_KEY = "fake"
 $PODMAN_COMPOSE_WARNING_LOGS = False
+$OPENCODE_EXPERIMENTAL_LSP_TOOL = True
 
 # Xonsh Configuration
 __xonsh__.commands_cache.threadable_predictors["glances"] = lambda x: False
@@ -28,6 +29,7 @@ __xonsh__.commands_cache.threadable_predictors["glances"] = lambda x: False
 xontrib load coreutils
 xontrib load vox
 xontrib load autovox
+xontrib load direnv
 
 
 # Virtual Environment Policy
@@ -54,8 +56,8 @@ def _kitty_cmd(action: str, **kwargs) -> None:
 def _dashboard() -> None:
     """Launch comprehensive dashboard layout with monitoring tools."""
     commands = [
-        ("launch", {"title": "sysmon", "type": "overlay"}, "btm"),
-        ("launch", {"title": "term", "location": "vsplit"}, None),
+        ("launch", {"title": "sysmon", "type": "overlay"}, "btop"),
+        ("launch", {"title": "term", "location": "vsplit"}, ""),
         ("launch", {"title": "mail", "location": "hsplit"}, None),
         ("launch", {"type": "overlay"}, "neomutt"),
         ("resize-window", {"axis": "vertical", "increment": KITTY_RESIZE_INCREMENT}, None),
@@ -84,32 +86,13 @@ def _dashboard() -> None:
         else:
             kitty @ @(action) @(cmd_args)
 
-# NNN File Manager Configuration
-NNN_COLOURS = {
-    "blk": "0B", "chr": "0B", "dir": "04", "exe": "06", "reg": "00",
-    "hardlink": "06", "symlink": "06", "missing": "00", "orphan": "09",
-    "fifo": "06", "sock": "0B", "other": "06"
-}
-
-NNN_PLUGINS = {"p": "preview-tui"}
-
-NNN_BOOKMARKS = {
-    "h": str(HOME),
-    "d": str(HOME / "Downloads"),
-}
-
-$NNN_OPTS = "aei"
-$NNN_BMS = "".join(f"{k}:{v};" for k, v in NNN_BOOKMARKS.items())
-$NNN_PLUG = "".join(f"{k}:{v}" for k, v in NNN_PLUGINS.items())
-$NNN_FCOLORS = "".join(NNN_COLOURS.values())
-$SPLIT = "v"
-
 # PATH Configuration
 ADDITIONAL_PATHS = [
     f"{HOME}/AppImages/",
     f"{HOME}/.cargo/bin",
     f"{HOME}/.radicle/bin",
     f"{HOME}/.local/bin",
+    f"{HOME}/go/bin",
     "/home/linuxbrew/.linuxbrew/bin",
     "/home/linuxbrew/.linuxbrew/sbin",
 ]

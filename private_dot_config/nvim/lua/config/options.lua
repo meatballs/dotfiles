@@ -2,7 +2,6 @@
 -- Default options that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/options.lua
 -- Add any additional options here
 vim.g.python3_host_prog = "/home/owen/.virtualenvs/neovim/bin/python"
-vim.g.lazyvim_python_lsp = "basedpyright"
 vim.g.spelllang = "en-gb"
 vim.g.vimtex_mappings_disable = { ["n"] = { "K" } }
 vim.g.vimtex_quickfix_method = vim.fn.executable("pplatex") == 1 and "pplatex" or "latexlog"
@@ -26,13 +25,14 @@ vim.opt.laststatus = 3
 vim.opt.winborder = "rounded"
 
 vim.lsp.enable({
+  "anvil-pyright",
   "cssls",
   "dockerls",
   "esbonio",
   "jsonls",
   "lua_ls",
   "marksman",
-  "pyslp",
+  "pylsp",
   "rust_analyzer",
   "solidity_ls_nomicfoundation",
   "texlab",
