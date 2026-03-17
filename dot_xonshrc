@@ -59,8 +59,8 @@ def _dashboard() -> None:
         ("launch", {"title": "sysmon", "type": "overlay"}, "btop"),
         ("launch", {"title": "term", "location": "vsplit"}, ""),
         ("launch", {"title": "mail", "location": "hsplit"}, None),
-        ("launch", {"type": "overlay"}, "neomutt"),
         ("resize-window", {"axis": "vertical", "increment": KITTY_RESIZE_INCREMENT}, None),
+        ("launch", {"type": "overlay"}, "neomutt"),
         ("focus-window", {"match": "title:term"}, None),
         ("launch", {"title": "calendar", "location": "vsplit"}, None),
         ("launch", {"type": "overlay"}, "ikhal"),
@@ -72,7 +72,7 @@ def _dashboard() -> None:
         ("launch", {"type": "overlay"}, "todotxt-machine"),
         ("focus-window", {"match": "title:chat"}, None),
         ("launch", {"type": "overlay"}, "gurk"),
-        ("focus-window", {"match": "title:mail"}, None),
+        ("focus-window", {"match": "title:neomutt"}, None),
     ]
 
     for action, kwargs, command in commands:
