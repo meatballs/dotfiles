@@ -166,6 +166,16 @@ return {
     },
   },
   {
+    "mfussenegger/nvim-lint",
+    opts = {
+      linters = {
+        ["markdownlint-cli2"] = {
+          args = { "--config", '{"MD013": false}', "-" },
+        },
+      },
+    },
+  },
+  {
     "sindrets/diffview.nvim",
     opts = { view = { merge_tool = { layout = "diff4_mixed" } } },
   },
