@@ -26,7 +26,7 @@ return {
       diagnostics = {
         virtual_text = false,
       },
-      { ensure_installed = { "json5" }},
+      { ensure_installed = { "json5" } },
     },
   },
   {
@@ -76,23 +76,20 @@ return {
     end,
   },
   {
-    "epwalsh/obsidian.nvim",
+    "obsidian-nvim/obsidian.nvim",
     version = "*",
     lazy = true,
-    ft = "markdown",
     opts = {
       workspaces = {
         {
           name = "Owen",
           path = "~/Nextcloud/Obsidian/Owen/",
         },
+        {
+          name = "Mnemosyne",
+          path = "~/projects/empiria/mnemosyne/",
+        },
       },
-      notes_subdir = "Notes",
-      daily_notes = {
-        folder = "Journal",
-        date_format = "%d %b %Y",
-      },
-      ui = { enable = false },
     },
   },
   {
