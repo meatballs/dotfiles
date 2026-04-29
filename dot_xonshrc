@@ -93,6 +93,7 @@ ADDITIONAL_PATHS = [
     f"{HOME}/.radicle/bin",
     f"{HOME}/.local/bin",
     f"{HOME}/go/bin",
+    f"{HOME}/.bun/bin",
     "/home/linuxbrew/.linuxbrew/bin",
     "/home/linuxbrew/.linuxbrew/sbin",
 ]
@@ -253,6 +254,8 @@ aliases.update(PROJECT_ALIASES)
 # External Tool Initialization
 execx($(starship init xonsh))
 execx($(zoxide init --cmd cd xonsh), 'exec', __xonsh__.ctx, filename='zoxide')
+# Vault path env vars derived from ~/.config/mnemosyne/config.toml
+execx($(mnemosyne shellenv --shell xonsh))
 
 # Zoxide aliases (with safety checks for SSH compatibility)
 if '__zoxide_z' in globals():
