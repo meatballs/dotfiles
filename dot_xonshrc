@@ -1,5 +1,6 @@
 from pathlib import Path
 import sys
+from datetime import datetime
 from uuid import uuid4
 from typing import List, Dict, Any
 
@@ -135,6 +136,14 @@ def _uuid() -> str:
     """Generate a random UUID string."""
     return str(uuid4())
 
+def _record_call(args: List[str]) -> int:
+    """Record current call to ~/recordings/ via PipeWire Call Recorder loopback."""
+    name = args[0] if args else datetime.now().strftime('%Y-%m-%d-%H%M')
+    path = HOME / 'recordings' / f'{name}.wav'
+    print(f'Recording → {path} (Ctrl+C to stop)')
+    $[pw-record --target CallRecorderOutput @(str(path))]
+    return 0
+
 
 # Aliases
 GIT_ALIASES = {
@@ -148,6 +157,7 @@ UTILITY_ALIASES = {
     "h": replay_command,
     "uuid": _uuid,
     "dashboard": _dashboard,
+    "record-call": _record_call,
     "nvim.basic": ["nvim", "-u", "~/.config/nvim/basic.lua"],
     "open": ["xdg-open"],
     "rm": ["trash"],
