@@ -1,0 +1,4 @@
+# Agent instructions for the dotfiles repo itself.
+# Kept in the source repo, but not applied to ~/ — applying it there
+# would leak dotfiles guidance into every project under the home dir.
+CLAUDE.md
