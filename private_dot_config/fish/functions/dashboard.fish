@@ -5,7 +5,7 @@ function dashboard --description 'launch monitoring/email/todo/calendar/chat lay
     kitty @ resize-window --axis vertical --increment 5
     kitty @ launch --type overlay neomutt
     kitty @ focus-window --match title:todo
-    kitty @ launch --type overlay todotxt-machine
+    kitty @ launch --type overlay tuxedo /home/owen/Nextcloud/todo/todo.txt
     kitty @ launch --title calendar --location vsplit
     kitty @ launch --type overlay ikhal
     kitty @ focus-window --match title:sysmon

@@ -11,6 +11,9 @@ set -gx OLLAMA_API_BASE http://localhost:11434
 set -gx OLLAMA_FAKE_API_KEY fake
 set -gx PODMAN_COMPOSE_WARNING_LOGS false
 set -gx OPENCODE_EXPERIMENTAL_LSP_TOOL true
+set -gx TODO_DIR $HOME/Nextcloud/todo
+set -gx TODO_FILE $TODO_DIR/todo.txt
+set -gx DONE_FILE $TODO_DIR/done.txt
 
 # ───── PATH (prepended, idempotent) ─────
 fish_add_path -p \
