@@ -1,8 +1,8 @@
 function update
   sudo apt update
-  sudo apt upgrade
+  sudo apt upgrade -y
   brew update
-  brew upgrade
+  brew upgrade -y
   uv tool upgrade --all
   npm upgrade -g
   nvim --headless "+Lazy! update" +qa
