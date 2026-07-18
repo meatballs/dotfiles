@@ -1,0 +1,4 @@
+set spoolfile = +Inbox
+set from = $my_user
+unset trash
+mailboxes +Inbox +Sent +Drafts +Trash +Archive +Spam

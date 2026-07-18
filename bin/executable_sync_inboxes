@@ -1,0 +1,199 @@
+#!/usr/bin/env python3
+import logging
+import re
+import sqlite3
+import subprocess
+import sys
+from pathlib import Path
+
+ignore_dirs = [".DS_Store", "temporary", ".notmuch"]
+root_mail_folder = Path(Path.home(), "Mail")
+status_db_file = Path(root_mail_folder, "status.db")
+
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger()
+mail_folders = [
+    p for p in root_mail_folder.iterdir() if p.is_dir() and p.name not in ignore_dirs
+]
+
+
+def open_db_connection(db_file):
+    db = sqlite3.connect(status_db_file)
+    sql = """
+        CREATE TABLE IF NOT EXISTS messages(
+            id TEXT NOT NULL,
+            account TEXT NOT NULL,
+            sender TEXT,
+            subject TEXT,
+            notification_sent_at TIMESTAMP,
+            autocrypt_scanned_at TIMESTAMP,
+
+            CONSTRAINT messages_pk PRIMARY KEY (id, account)
+        )
+    """
+    cursor = db.cursor()
+    cursor.execute(sql)
+    db.commit()
+    return db
+
+
+def message_id(file_name):
+    match = re.search(r"(?<=U=)\d+(?=:)", file_name)
+    return match.group()
+
+
+def sender_subject(message):
+    subject = None
+    sender = None
+    with message.open("r") as f:
+        for line in f:
+            if subject is None and line.startswith("Subject: "):
+                subject = line.split()[1]
+            if sender is None and line.startswith("From: "):
+                sender = line.split()[1]
+            if sender and subject:
+                break
+    return {"sender": sender, "subject": subject}
+
+
+def purge_account(account, messages, db):
+    logger.info("Purging database of stale messages...")
+    message_ids = [message_id(message.name) for message in messages]
+    select_sql = """SELECT id FROM messages WHERE account = ?"""
+    delete_sql = """DELETE FROM messages where id = ?"""
+    cursor = db.cursor()
+    cursor.execute(select_sql, (account,))
+    records = cursor.fetchall()
+    for record in records:
+        if record[0] not in message_ids:
+            cursor.execute(delete_sql, (record[0],))
+    db.commit()
+    logger.info("Done")
+
+
+def log_new_messages(account, messages, db):
+    logger.info("Logging new messages in mail status database...")
+    sql = """INSERT INTO messages(id, account, sender, subject) VALUES (?, ?, ?, ?)"""
+    cursor = db.cursor()
+    for message in messages:
+        details = sender_subject(message)
+        try:
+            cursor.execute(
+                sql,
+                (
+                    message_id(message.name),
+                    account,
+                    details["sender"],
+                    details["subject"],
+                ),
+            )
+            db.commit()
+        except sqlite3.IntegrityError:
+            pass
+    logger.info("Done")
+
+
+def scan_autocrypt(account, inbox, db):
+    logger.info("Scanning for autocrypt headers...")
+    select_sql = """
+        SELECT id FROM messages
+        WHERE account = ? AND autocrypt_scanned_at IS NULL
+    """
+    update_sql = """
+        UPDATE messages
+        SET autocrypt_scanned_at = CURRENT_TIMESTAMP
+        WHERE account = ? and autocrypt_scanned_at IS NULL
+    """
+    cursor = db.cursor()
+    cursor.execute(select_sql, (account,))
+    records = cursor.fetchall()
+    if len(records) > 0:
+        cursor.execute(update_sql, (account,))
+        db.commit()
+        subprocess.run(["muacrypt", "scandir-incoming", inbox])
+        logger.info("Done")
+    else:
+        logger.info("No previously unseen messages to scan")
+
+
+def send_notifications(account, db):
+    logger.info("Sending notifications...")
+    title = f"New messages in {account} mailbox"
+    message = ""
+    select_sql = """
+        SELECT id FROM messages
+        WHERE account = ? AND notification_sent_at IS NULL
+    """
+    update_sql = """
+        UPDATE messages
+        SET notification_sent_at = CURRENT_TIMESTAMP
+        WHERE account = ? and notification_sent_at IS NULL
+    """
+    commands = {
+        "darwin": [
+            "terminal-notifier",
+            "-title",
+            title,
+            "-message",
+            message,
+            "-sender",
+            "com.Apple.Mail",
+        ],
+        "linux": ["notify-send", "-a", "Mail", title],
+    }
+    cursor = db.cursor()
+    cursor.execute(select_sql, (account,))
+    records = cursor.fetchall()
+    if len(records) > 0:
+        cursor.execute(update_sql, (account,))
+        db.commit()
+        subprocess.run(commands[sys.platform])
+        logger.info("Done")
+    else:
+        logger.info("No previously unseen messages to notify")
+
+
+def mark_as_read(mail_folder, folders=None):
+    if folders is None:
+        folders = ["Trash"]
+
+    for folder in folders:
+        new_folder = Path(mail_folder, folder, "new")
+        new_messages = list(new_folder.iterdir())
+        for message in new_messages:
+            target_folder = Path(new_folder.parent, "cur")
+            target_name = f"{message.name}:2,S"
+            message.rename(Path(target_folder, target_name))
+
+
+def main():
+    db = open_db_connection(status_db_file)
+
+    for mail_folder in mail_folders:
+        account = mail_folder.name
+
+        logger.info(f"Syncing {account}...")
+        subprocess.run(["mbsync", f"{account}-inbox"])
+        logger.info("Done")
+
+        inbox = Path(mail_folder, "Inbox", "new")
+        new_messages = list(inbox.iterdir())
+        purge_account(account, new_messages, db)
+        if len(new_messages) == 0:
+            logger.info("No new messages found")
+        else:
+            logger.info("New messages found")
+            log_new_messages(account, new_messages, db)
+            # scan_autocrypt(account, inbox, db)
+            send_notifications(account, db)
+
+    db.close()
+
+    for mail_folder in mail_folders:
+        mark_as_read(mail_folder)
+
+    subprocess.run(["notmuch", "new"])
+
+
+if __name__ == "__main__":
+    main()

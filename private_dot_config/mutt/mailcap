@@ -1,0 +1,18 @@
+# ~/.config/mutt/mailcap
+
+application/x-msexcel; ~/.config/mutt/view_attachment.sh %s
+application/ms-exc; ~/.config/mutt/view_attachment.sh %s
+application/excel; ~/.config/mutt/view_attachment.sh %s
+application/msexcel; ~/.config/mutt/view_attachment.sh %s
+application/pdf; ~/.config/mutt/view_attachment.sh %s pdf
+application/vnd.ms-exc; ~/.config/mutt/view_attachment.sh %s
+application/vnd.ms-excel; ~/.config/mutt/view_attachment.sh %s
+application/msword; ~/.config/mutt/view_attachment.sh %s - '/Applications/Microsoft Word.app/Contents/MacOS/Microsoft Word'
+image/jpg; ~/.config/mutt/view_attachment.sh %s jpg
+image/jpeg; ~/.config/mutt/view_attachment.sh %s jpg
+image/pjpeg; ~/.config/mutt/view_attachment.sh %s jpg
+image/png; ~/.config/mutt/view_attachment.sh %s png
+image/gif; ~/.config/mutt/view_attachment.sh %s gif
+text/html; ~/.config/mutt/view_attachment.sh %s html
+text/html; w3m -I %{charset} -T text/html; copiousoutput;pplication/octet-stream; ~/.config/mutt/view_attachment.sh %s "-"
+text/html;  elinks -dump %s; nametemplate=%s.html; copiousoutput

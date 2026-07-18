@@ -1,0 +1,21 @@
+set sidebar_visible = yes
+set sidebar_width = 35
+set sidebar_short_path = yes
+set sidebar_delim_chars = '/'
+set sidebar_folder_indent = yes
+set sidebar_indent_string = ''
+set sidebar_new_mail_only = no
+set sidebar_next_new_wrap = no
+set sidebar_divider_char = '|'
+set mail_check_stats
+set sidebar_format = '%B%* %?N?%N?'
+set sidebar_sort_method = 'unsorted'
+
+bind index,pager \Cp sidebar-prev
+bind index,pager \Cn sidebar-next
+bind index,pager \Co sidebar-open
+bind index,pager <F3> sidebar-page-up
+bind index,pager <F4> sidebar-page-down
+bind index,pager <F5> sidebar-prev-new
+bind index,pager <F6> sidebar-next-new
+bind index,pager B sidebar-toggle-visible

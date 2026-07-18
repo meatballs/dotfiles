@@ -1,0 +1,6 @@
+[settings]
+file = ~/Nextcloud/todo/todo.txt
+archive = ~/Nextcloud/todo/done.txt
+enable-word-wrap = True
+use_tags = True
+
