@@ -1,0 +1,18 @@
+/home/linuxbrew/.linuxbrew/lib
+├── @agentclientprotocol/claude-agent-acp@0.59.0
+├── @anvil-works/anvil-cli@0.7.4
+├── @anvil-works/anvil-pyright@0.0.3
+├── @displaydev/cli@0.27.0
+├── @ethersphere/bee-dashboard@0.36.0
+├── @ethersphere/swarm-cli@3.4.0
+├── @opengsd/gsd-core@1.7.0
+├── @sourcegraph/amp@0.0.1784369155-g049a72
+├── @tobilu/qmd@2.5.3
+├── @vedanth/context7@1.0.2
+├── corepack@0.35.0
+├── ctx7@0.5.5
+├── defuddle@0.19.1
+├── jspm@4.6.1
+├── npm@12.0.1
+└── omnipin@3.1.1
+

@@ -2,3 +2,10 @@
 # Kept in the source repo, but not applied to ~/ — applying it there
 # would leak dotfiles guidance into every project under the home dir.
 CLAUDE.md
+
+# Package manifests — tracked in the repo for machine recovery, but not
+# applied to ~/. Consumed by a future run_once_ bootstrap script (Stage 2).
+Brewfile
+apt-packages.txt
+uv-tools.txt
+npm-globals.txt
