@@ -1,6 +1,7 @@
 function update
   sudo apt update
   sudo apt upgrade -y
+  sudo apt autoremove -y
   brew update
   brew upgrade -y
   uv tool upgrade --all
