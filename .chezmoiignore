@@ -8,4 +8,5 @@ CLAUDE.md
 Brewfile
 apt-packages.txt
 uv-tools.txt
+uv-tools.gen.py
 npm-globals.txt

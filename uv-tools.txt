@@ -1,61 +1,28 @@
-accounts v0.28.0
-- accounts
-aider-chat v0.86.2
-- aider
-anvil-app-server v1.17.0
-- anvil-app-server
-- create-anvil-app
-- psql-anvil-app-server
-benchllama v0.2.7
-- benchllama
-claude-monitor v4.0.0
-- ccm
-- ccmonitor
-- claude-code-monitor
-- claude-monitor
-- cmonitor
-docdrop v0.1.0
-- docdrop
-git-filter-repo v2.47.0
-- git-filter-repo
-jrnl v4.3
-- jrnl
-keyring v25.7.0
-- keyring
-mcp-ocr v0.2.0
-- mcp-ocr
-mistral-vibe v2.21.0
-- vibe
-- vibe-acp
-mnemosyne-cli v0.12.0
-- mnemosyne
-my-scribe v0.1.0
-- my-scribe
-- my-scribe-gui
-pgcli v4.5.0
-- pgcli
-playwright v1.61.0
-- playwright
-podman-compose v1.6.0
-- podman-compose
-pre-commit v4.6.0
-- pre-commit
-pylatexenc v2.10
-- latex2text
-- latexencode
-- latexwalker
-python-lsp-server v1.14.0
-- pylsp
-sphinx v9.1.0
-- sphinx-apidoc
-- sphinx-autogen
-- sphinx-build
-- sphinx-quickstart
-stoicism-agent v0.1.2
-- stoic-agent
-todotxt-machine v2.2.2
-- todotxt-machine
-uvicorn v0.51.0
-- uvicorn
-whisperx v3.8.6
-- whisperx
+# uv tools — each line is the argument list for `uv tool install`.
+# Regenerate with: uv run gen_uv_manifest.py > uv-tools.txt
+# Lines with an absolute path are local-source installs; the
+# bootstrap skips (and logs) any whose path isn't checked out yet.
+/home/owen/projects/personal/accounts
+aider-chat --python 3.12 --with playwright
+anvil-app-server --with bcrypt
+benchllama
+claude-monitor
+--editable /home/owen/projects/personal/docdrop/cli
+git-filter-repo
+jrnl
+keyring
+mcp-ocr
+mistral-vibe
+/home/owen/projects/empiria/mnemosyne-cli
+/home/owen/projects/personal/my-scribe
+pgcli
+playwright
+podman-compose
+pre-commit
+pylatexenc
+python-lsp-server
+sphinx --with sphinx-rtd-theme
+/home/owen/projects/personal/stoicism-agent
+todotxt-machine
+uvicorn
+whisperx
