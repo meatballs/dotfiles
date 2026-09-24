@@ -66,6 +66,21 @@ function update --description 'Update system packages and tools, then summarise 
         end
     end
 
+    # --- kitty (official installer into ~/.local/kitty.app) ---
+    if test -d ~/.local/kitty.app
+        set -l have (~/.local/kitty.app/bin/kitty --version 2>/dev/null | string match -r '\d+\.\d+\.\d+')
+        set -l want (curl -fsSL https://sw.kovidgoyal.net/kitty/current-version.txt 2>$tmp/kitty.log | string trim)
+        if test -z "$want"
+            set -a fail "kitty version check (see $tmp/kitty.log)"
+        else if test "$have" != "$want"
+            if curl -fsSL https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin launch=n >>$tmp/kitty.log 2>&1
+                set -a updated "kitty: $have -> $want (restart kitty to use it)"
+            else
+                set -a fail "kitty install (see $tmp/kitty.log)"
+            end
+        end
+    end
+
     # --- reboot / service-restart checks ---
     set -l reboot_pkgs
     if test -f /var/run/reboot-required.pkgs
