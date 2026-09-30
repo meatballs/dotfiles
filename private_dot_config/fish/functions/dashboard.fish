@@ -14,6 +14,8 @@ function dashboard --description 'launch monitoring/email/todo/calendar/chat lay
     kitty @ focus-window --match title:sysmon
     kitty @ resize-window --axis vertical --increment 5
     kitty @ focus-window --match title:chat
-    kitty @ launch --type overlay gurk
+    # kitty @ launch runs the program directly, bypassing config.fish, so pass
+    # gurk's keyring lookup through explicitly or it will prompt for a passphrase
+    kitty @ launch --type overlay --env GURK_PASSPHRASE_COMMAND="$GURK_PASSPHRASE_COMMAND" gurk
     kitty @ focus-window --match title:neomutt
 end

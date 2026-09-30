@@ -56,3 +56,6 @@ if status is-interactive
     direnv hook fish | source
     mnemosyne shellenv --shell fish | source
 end
+
+# gurk: database passphrase comes from the login keyring, not the config file
+set -gx GURK_PASSPHRASE_COMMAND "secret-tool lookup service gurk key passphrase"
