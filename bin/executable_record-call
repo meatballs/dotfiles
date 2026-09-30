@@ -1,0 +1,51 @@
+#!/usr/bin/env bash
+# Record a call (everything you hear + your mic) to ~/recordings/.
+#
+# Audio flows: default output's monitor + default mic -> "Call Recorder" loopback
+# (~/.config/pipewire/pipewire.conf.d/call-recorder.conf) -> pw-record.
+#
+# The wiring into the loopback is redone on every run from whatever the
+# *current* default output and input are, so it survives the headset
+# switching profile (analog <-> iec958 renames the device) or a change of
+# headset. Pinning links to device names (as a saved patchbay does) breaks
+# silently on either and records only the mic.
+#
+# Usage: record-call [name]   -> ~/recordings/<name or YYYY-MM-DD-HHMM>.wav
+set -euo pipefail
+
+RECORDER=input.CallRecorder
+name=${1:-$(date +%Y-%m-%d-%H%M)}
+path="$HOME/recordings/$name.wav"
+mkdir -p "$HOME/recordings"
+
+sink=$(pactl get-default-sink)
+source=$(pactl get-default-source)
+
+# Drop any existing links into the recorder so a stale device can't double up.
+pw-link -l | awk -v r="$RECORDER" '
+    /^[^ ]/ { port = $0; next }
+    index(port, r ":playback_") == 1 && /\|<-/ { sub(/^ *\|<- */, ""); print $0 "\t" port }
+' | while IFS=$'\t' read -r out in; do
+    pw-link -d "$out" "$in" 2>/dev/null || true
+done
+
+# Link N output ports onto the recorder's two inputs (mono -> both channels).
+link_into_recorder() {
+    local -a ports
+    mapfile -t ports < <(pw-link -o | grep -F "$1:$2" || true)
+    if [[ ${#ports[@]} -eq 0 ]]; then
+        echo "warning: no '$2' ports on $1 - it will not be recorded" >&2
+        return
+    fi
+    local second=${ports[1]:-${ports[0]}}
+    pw-link "${ports[0]}" "$RECORDER:playback_1" 2>/dev/null || true
+    pw-link "$second" "$RECORDER:playback_2" 2>/dev/null || true
+}
+
+link_into_recorder "$sink" monitor_
+link_into_recorder "$source" capture_
+
+echo "Other side: $sink (monitor)"
+echo "Your mic:   $source"
+echo "Recording → $path (Ctrl+C to stop)"
+exec pw-record --target CallRecorderOutput "$path"
