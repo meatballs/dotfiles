@@ -4,7 +4,7 @@
 
 # ───── Environment ─────
 set -gx EDITOR nvim
-set -gx PYTEST_ADDOPTS "--pdbcls pudb.debugger:Debugger --capture=no"
+# set -gx PYTEST_ADDOPTS "--pdbcls pudb.debugger:Debugger --capture=no"
 set -gx DOCKER_BUILDKIT 1
 set -gx BAT_THEME Nord
 set -gx OLLAMA_API_BASE http://localhost:11434
