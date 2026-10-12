@@ -81,6 +81,24 @@ function update --description 'Update system packages and tools, then summarise 
         end
     end
 
+    # --- firmware (fwupd: UEFI dbx, drives, peripherals) ---
+    set -l fw_reboot
+    if type -q fwupdmgr; and type -q jq
+        # refresh exits non-zero when the metadata is already current.
+        sudo fwupdmgr refresh >$tmp/fwupd.log 2>&1
+        set -l json (fwupdmgr get-updates --json 2>>$tmp/fwupd.log)
+        set -l pkgs (printf '%s\n' $json | jq -r '.Devices[]? | "\(.Name) \(.Version) -> \(.Releases[0].Version)"' 2>/dev/null)
+        if test (count $pkgs) -gt 0
+            set -l reboot (printf '%s\n' $json | jq -r '.Devices[]? | select(.Flags | index("needs-reboot")) | .Name' 2>/dev/null)
+            if sudo fwupdmgr update -y --no-reboot-check >>$tmp/fwupd.log 2>&1
+                set -a updated "firmware ("(count $pkgs)"): $pkgs"
+                set fw_reboot $reboot
+            else
+                set -a fail "fwupdmgr update (see $tmp/fwupd.log)"
+            end
+        end
+    end
+
     # --- reboot / service-restart checks ---
     set -l reboot_pkgs
     if test -f /var/run/reboot-required.pkgs
@@ -118,8 +136,12 @@ function update --description 'Update system packages and tools, then summarise 
         set_color -o yellow; echo "Reboot required."; set_color normal
         test (count $reboot_pkgs) -gt 0
         and echo "  from: $reboot_pkgs"
-    else
+    else if test (count $fw_reboot) -eq 0
         echo "No reboot required."
+    end
+    if test (count $fw_reboot) -gt 0
+        set_color -o yellow; echo "Reboot to finish firmware updates."; set_color normal
+        echo "  for: $fw_reboot"
     end
 
     if test (count $svcs) -gt 0
